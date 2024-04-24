@@ -37,11 +37,51 @@
       </div>
     </header>
     <main>
-      <h1>Blog Post Title</h1>
+      <h1>Create Post</h1>
+      <a href="edit.html">My blog posts</a>
 
-      <img src="" alt="" />
+      <form action="submit_blog_post.php" method="post">
+        <form action="upload_image.php">
+          <input type="file" name="Upload-file" id="Upload-file" />
+        </form>
 
-      <p></p>
+        <label for="title">Title</label>
+        <input
+          type="text"
+          id="title"
+          name="title"
+          placeholder="Please enter the title of your blog post"
+          required
+        />
+
+        <label for="image">Image</label>
+        <input
+          type="text"
+          id="image"
+          name="image"
+          placeholder="Please enter the image URL"
+          required
+        />
+
+        <label for="content">Text</label>
+        <textarea
+          id="text"
+          name="text"
+          placeholder="Please enter your blog post text"
+          required
+        ></textarea>
+
+        <label for="tags">Tags</label>
+        <input
+          type="text"
+          id="tags"
+          name="tags"
+          placeholder="Please enter the tags for your blog post"
+          required
+        />
+
+        <button type="submit">Save</button>
+      </form>
 
       <h5>Subscribe to our Newsletter</h5>
       <form action=" " method="post">
