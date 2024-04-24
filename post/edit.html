@@ -130,6 +130,40 @@
         <button class="edit-btn">Edit</button>
         <button class="delete-btn">Delete</button>
       </div>
+
+      <div class="popup-form">
+        <form action="/action_page.php">
+          <h1>Login</h1>
+          <label for="title"><b>Title</b></label>
+          <input
+            type="text"
+            placeholder="Enter post title"
+            name="title"
+            required
+          />
+          <label for="body"><b>Body</b></label>
+          <textarea
+            id="body"
+            name="body"
+            placeholder="Please enter your blog post body text"
+            required
+          ></textarea>
+
+          <label for="tags">Tags</label>
+          <input
+            type="text"
+            id="tags"
+            name="tags"
+            placeholder="Please enter the tags for your blog post"
+            required
+          />
+
+          <button type="submit" class="save-btn">Save</button>
+          <button type="button" class="cancel-btn" onclick="closeForm()">
+            Cancel
+          </button>
+        </form>
+      </div>
     </main>
     <footer>
       <div class="SM-icons-container">
