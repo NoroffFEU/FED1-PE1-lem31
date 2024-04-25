@@ -52,7 +52,7 @@ nav {
 .Video-banner {
   display: flex;
   max-width: 1440px;
-  max-height: 432px;
+  /* max-height: 432px; */
   margin-top: 2rem;
 }
 
