@@ -5,11 +5,16 @@
   --secondary-color: #003472;
 }
 
+body,
+html,
+main {
+  margin: 0;
+  justify-items: center;
+}
+
 /*HEADER*/
 
 header {
-  height: 88px;
-  max-width: 1440px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 1fr;
@@ -38,8 +43,10 @@ nav {
   border: none;
   background: none;
   margin-left: -40px;
-  margin-top: 20px;
+  margin-top: 5px;
+  position: absolute;
 }
+
 .search-bar {
   width: 247px;
   height: 35px;
@@ -51,15 +58,18 @@ nav {
 
 .Video-banner {
   display: flex;
-  max-width: 1440px;
-  /* max-height: 432px; */
+  max-height: 432px;
   margin-top: 2rem;
+}
+
+.video {
+  width: 100%;
 }
 
 .h1-Home {
   position: absolute;
   top: 45%;
-  left: 45%;
+  left: 52%;
   transform: translate(-60%, -100%);
   text-align: center;
   z-index: 1;
