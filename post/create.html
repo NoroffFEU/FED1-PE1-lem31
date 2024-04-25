@@ -12,6 +12,7 @@
       type="image/x-icon"
       href="/Images/Snow-V-CaysLogo-Favicon.png"
     />
+    <script defer src="create.js"></script>
     <title>Blog Feed Page</title>
   </head>
   <body>
@@ -40,10 +41,23 @@
       <h1>Create Post</h1>
       <a href="edit.html">My blog posts</a>
 
-      <form action="create_blog_post.php" method="post">
-        <form action="upload_image.php">
-          <input type="file" name="Upload-file" id="Upload-file" />
-        </form>
+      <form id="create-post-form" action="create_blog_post.php" method="post">
+        <label for="id">ID</label>
+        <input
+          type="text"
+          id="id"
+          name="id"
+          placeholder="Please enter an id for your blog post"
+          required
+        />
+
+        <label for="name">name</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Please enter the blog post name"
+        />
 
         <label for="title">Title</label>
         <input
@@ -54,20 +68,11 @@
           required
         />
 
-        <label for="image">Image</label>
-        <input
-          type="text"
-          id="image"
-          name="image"
-          placeholder="Please enter the image URL"
-          required
-        />
-
-        <label for="content">Text</label>
+        <label for="body">Text</label>
         <textarea
-          id="text"
-          name="text"
-          placeholder="Please enter your blog post text"
+          id="body"
+          name="body"
+          placeholder="Please enter your blog post body text"
           required
         ></textarea>
 
@@ -78,6 +83,14 @@
           name="tags"
           placeholder="Please enter the tags for your blog post"
           required
+        />
+
+        <label for="media">Media</label>
+        <input
+          type="text"
+          id="media"
+          name="media"
+          placeholder="Please enter the image URL for your blog post"
         />
 
         <button type="submit">Save</button>
