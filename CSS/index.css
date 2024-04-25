@@ -136,33 +136,21 @@ nav {
   z-index: 1;
 }
 
-.carousel-container {
+.carousel {
+  width: 100%;
+  display: flex;
+  position: relative;
+  margin: auto;
+  overflow-x: hidden;
+}
+.Slide {
+  flex: 100% 0 0;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.carousel {
-  display: flex;
-  overflow: hidden;
-  width: 300%;
-  margin-top: 2rem;
-}
-
-.Slide {
-  display: flex;
-  flex: 1 0 100%;
-  transition: transform 0.5s ease-in-out;
-}
-/* 
 .Slide img {
-  max-width: 1000px;
-  height: auto;
-} */
-
-.BP-header-container {
-  display: flex;
-  justify-content: center;
-  margin-top: 20rem;
-  position: absolute;
+  max-width: 100%;
+  max-height: 100%;
 }
