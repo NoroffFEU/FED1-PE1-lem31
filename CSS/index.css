@@ -15,15 +15,31 @@
   --font-size-nav-Desktop: 16px;
 }
 
+body,
+html,
+main {
+  margin: 0;
+  justify-items: center;
+}
+
 nav a,
-.h1-home {
+.h1-home,
+.h2-home {
   color: var(--secondary-color);
 }
 
-.h1-home {
+.h1-home,
+.h2-home {
   font: var(--font-family-1);
-  font-size: var(--font-size-H1-Desktop);
   font-weight: bold;
+}
+
+.h1-home {
+  font-size: var(--font-size-H1-Desktop);
+}
+
+.h2-home {
+  font-size: var(--font-size-H2-H3-Desktop);
 }
 
 nav a {
@@ -31,6 +47,8 @@ nav a {
   font-size: var(--font-size-nav-Desktop);
   font-weight: bold;
   margin-left: 12px;
+  text-decoration: none;
+  gap: 12px;
 }
 
 nav a:hover {
@@ -45,13 +63,6 @@ nav a:active {
   background-color: var(--primary-color);
 }
 
-body,
-html,
-main {
-  margin: 0;
-  justify-items: center;
-}
-
 /*HEADER*/
 
 header {
@@ -60,6 +71,12 @@ header {
   grid-template-rows: 1fr;
   grid-template-areas: "One Two Three Four";
   align-items: center;
+}
+
+.h2-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
 }
 
 .Hamburger-menu {
@@ -77,11 +94,8 @@ header {
 
 nav {
   grid-area: Two;
-}
-
-nav a {
-  text-decoration: none;
-  gap: 12px;
+  display: flex;
+  flex-wrap: nowrap;
 }
 
 .Search-Btn {
@@ -101,6 +115,8 @@ nav a {
   grid-area: Four;
 }
 
+/*MAIN*/
+
 .Video-banner {
   display: flex;
   max-height: 432px;
@@ -118,4 +134,35 @@ nav a {
   transform: translate(-60%, -100%);
   text-align: center;
   z-index: 1;
+}
+
+.carousel-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel {
+  display: flex;
+  overflow: hidden;
+  width: 300%;
+  margin-top: 2rem;
+}
+
+.Slide {
+  display: flex;
+  flex: 1 0 100%;
+  transition: transform 0.5s ease-in-out;
+}
+/* 
+.Slide img {
+  max-width: 1000px;
+  height: auto;
+} */
+
+.BP-header-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20rem;
+  position: absolute;
 }
