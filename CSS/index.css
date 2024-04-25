@@ -3,6 +3,46 @@
 :root {
   --primary-color: #ffffff;
   --secondary-color: #003472;
+  --font-family-1: Playfair Display, serif;
+  --font-family-2: Georgia, "Times New Roman", Times, serif;
+  --font-size-H2-H3-Desktop: 40px;
+  --font-size-Blog-Post-Headers-Desktop: 28px;
+  --font-size-Blog-Post-Sub-Headers-Desktop: 22px;
+  --font-size-Body-Desktop: 18px;
+  --font-size-footer-Links-Desktop: 14px;
+  --font-size-buttons-Desktop: 16px;
+  --font-size-H1-Desktop: 50px;
+  --font-size-nav-Desktop: 16px;
+}
+
+nav a,
+.h1-home {
+  color: var(--secondary-color);
+}
+
+.h1-home {
+  font: var(--font-family-1);
+  font-size: var(--font-size-H1-Desktop);
+  font-weight: bold;
+}
+
+nav a {
+  font: var(--font-family-2);
+  font-size: var(--font-size-nav-Desktop);
+  font-weight: bold;
+  margin-left: 12px;
+}
+
+nav a:hover {
+  filter: drop-shadow(5px 5px 5px #27aae1);
+}
+
+nav a:active {
+  filter: drop-shadow(2px 5px 1px #27aae1);
+}
+
+.h1-home-bg {
+  background-color: var(--primary-color);
 }
 
 body,
@@ -39,6 +79,11 @@ nav {
   grid-area: Two;
 }
 
+nav a {
+  text-decoration: none;
+  gap: 12px;
+}
+
 .Search-Btn {
   border: none;
   background: none;
@@ -66,7 +111,7 @@ nav {
   width: 100%;
 }
 
-.h1-Home {
+.h1-home-bg {
   position: absolute;
   top: 45%;
   left: 52%;
