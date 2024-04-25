@@ -1,0 +1,66 @@
+/*GLOBAL STYLES*/
+
+:root {
+  --primary-color: #ffffff;
+  --secondary-color: #003472;
+}
+
+/*HEADER*/
+
+header {
+  height: 88px;
+  max-width: 1440px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr;
+  grid-template-areas: "One Two Three Four";
+  align-items: center;
+}
+
+.Hamburger-menu {
+  display: none;
+}
+
+.Search-icon {
+  width: 23px;
+}
+
+.header-logo {
+  width: 119px;
+  grid-area: One;
+}
+
+nav {
+  grid-area: Two;
+}
+
+.Search-Btn {
+  border: none;
+  background: none;
+  margin-left: -40px;
+  margin-top: 20px;
+}
+.search-bar {
+  width: 247px;
+  height: 35px;
+}
+
+.Search-bar {
+  grid-area: Four;
+}
+
+.Video-banner {
+  display: flex;
+  max-width: 1440px;
+  max-height: 432px;
+  margin-top: 2rem;
+}
+
+.h1-Home {
+  position: absolute;
+  top: 45%;
+  left: 45%;
+  transform: translate(-60%, -100%);
+  text-align: center;
+  z-index: 1;
+}
