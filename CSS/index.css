@@ -159,7 +159,7 @@ nav a:active {
 }
 
 .Slide img {
-  width: 40%;
+  width: 38%;
   height: 65%;
   align-items: center;
   align-self: center;
@@ -207,8 +207,4 @@ nav a:active {
 .Destinations-SH {
   display: flex;
   justify-content: center;
-}
-
-h4 {
-  justify-self: center;
 }
