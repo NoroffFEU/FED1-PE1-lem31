@@ -88,8 +88,12 @@ header {
   width: 23px;
 }
 
-.header-logo {
+.header-logo,
+.footer-logo {
   width: 119px;
+}
+
+.header-logo {
   grid-area: One;
 }
 
@@ -268,4 +272,33 @@ nav a:active {
   display: flex;
   justify-content: center;
   margin-top: 8rem;
+}
+
+.newsletter-form {
+  display: flex;
+  justify-content: center;
+}
+
+.SM-Icon {
+  width: 50px;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+  align-items: center;
+}
+
+.SM-icons-container {
+  padding-left: 2rem;
+}
+
+.right-side-footer {
+  padding-right: 2rem;
+}
+
+footer-logo-box {
+  display: flex;
+  justify-self: center;
 }
