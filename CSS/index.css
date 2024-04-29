@@ -219,6 +219,25 @@ nav a:active {
   opacity: 0.8;
 }
 
+.h2-Blog-Feed {
+  text-align: center;
+}
+
+.grid-post-header:hover,
+.h2-Blog-Feed:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--secondary-color);
+  cursor: pointer;
+}
+
+.grid-post-header:active,
+.h2-Blog-Feed:active {
+  text-decoration: underline;
+  text-decoration-color: var(--secondary-color);
+  text-decoration-thickness: 5px;
+  cursor: pointer;
+}
+
 #carousel-header-2,
 #carousel-header-3 {
   width: 400px;
