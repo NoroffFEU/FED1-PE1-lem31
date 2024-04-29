@@ -27,14 +27,16 @@ nav a,
 .h2-Blog-Feed,
 .h4-home,
 .Destinations-SH,
-.destination {
+.destination,
+.grid-post-header {
   color: var(--secondary-color);
 }
 
 .h1-home,
 .h2-home,
 .h2-Blog-Feed,
-.Destinations-SH {
+.Destinations-SH,
+.grid-post-header {
   font: var(--font-family-1);
   font-weight: bold;
 }
@@ -44,7 +46,8 @@ nav a,
   font-weight: bold;
 }
 
-.h2-Blog-Feed {
+.h2-Blog-Feed,
+.grid-post-header {
   font-size: var(--font-size-Blog-Post-Headers-Desktop);
 }
 
@@ -195,8 +198,10 @@ nav a:active {
   opacity: 0.8;
 }
 
-#carousel-header-2 {
-  width: 200px;
+#carousel-header-2,
+#carousel-header-3 {
+  width: 400px;
+  text-align: center;
 }
 .h2-Blog-Feed {
   display: flex;
@@ -266,7 +271,10 @@ nav a:active {
 
 .grid-post-header {
   width: 10%;
+  height: 3rem;
   position: absolute;
+  width: 400px;
+  text-align: center;
 }
 
 .text-background-grid {
