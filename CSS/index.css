@@ -165,6 +165,12 @@ nav a:active {
   margin: auto;
   overflow-x: hidden;
 }
+
+.carousel-button {
+  width: 200px;
+  border: none;
+  background: none;
+}
 .Slide {
   flex: 100% 0 0;
   display: flex;
@@ -187,6 +193,10 @@ nav a:active {
   width: 80rem;
   height: 8rem;
   opacity: 0.8;
+}
+
+#carousel-header-2 {
+  width: 200px;
 }
 .h2-Blog-Feed {
   display: flex;
