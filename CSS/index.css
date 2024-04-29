@@ -3,6 +3,7 @@
 :root {
   --primary-color: #ffffff;
   --secondary-color: #003472;
+  --tertiary-color: #27aae1;
   --font-family-1: Playfair Display, serif;
   --font-family-2: Georgia, "Times New Roman", Times, serif;
   --font-size-H2-H3-Desktop: 40px;
@@ -28,7 +29,8 @@ nav a,
 .h4-home,
 .Destinations-SH,
 .destination,
-.grid-post-header {
+.grid-post-header,
+.H5-home {
   color: var(--secondary-color);
 }
 
@@ -36,7 +38,8 @@ nav a,
 .h2-home,
 .h2-Blog-Feed,
 .Destinations-SH,
-.grid-post-header {
+.grid-post-header,
+.H5-home {
   font: var(--font-family-1);
   font-weight: bold;
 }
@@ -58,7 +61,8 @@ nav a,
 .h2-home,
 .h4-home,
 .Destinations-SH,
-.destination {
+.destination,
+.H5-home {
   font-size: var(--font-size-H2-H3-Desktop);
 }
 
@@ -276,6 +280,11 @@ nav a:active {
   width: 400px;
   text-align: center;
 }
+#grid-post-header-9,
+#grid-post-header-10,
+#grid-post-header-12 {
+  height: 3.8rem;
+}
 
 .text-background-grid {
   display: flex;
@@ -295,6 +304,20 @@ nav a:active {
 .newsletter-form {
   display: flex;
   justify-content: center;
+}
+
+#email {
+  width: 720px;
+  height: 66px;
+}
+
+.Subscribe-btn {
+  height: 70px;
+  width: 200px;
+  border: 8px var(--tertiary-color) solid;
+  padding: 30px 10px 40px 10px;
+  margin-top: -0.5rem;
+  margin-left: -1rem;
 }
 
 .SM-Icon {
