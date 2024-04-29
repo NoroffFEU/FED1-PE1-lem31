@@ -30,8 +30,15 @@ nav a,
 .destination,
 .grid-post-header,
 .H5-home,
-.Subscribe-btn {
+.Subscribe-btn,
+.right-side-footer a,
+.right-side-footer p {
   color: var(--secondary-color);
+}
+
+.right-side-footer a,
+.right-side-footer p {
+  font-size: var(--font-size-footer-Links-Desktop);
 }
 
 .h1-home,
@@ -46,7 +53,9 @@ nav a,
 
 .destination,
 .Subscribe-btn,
-nav a {
+nav a,
+.right-side-footer a,
+.right-side-footer p {
   font: var(--font-family-2);
   font-weight: bold;
 }
