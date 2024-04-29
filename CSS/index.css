@@ -11,9 +11,8 @@
   --font-size-Blog-Post-Sub-Headers-Desktop: 22px;
   --font-size-Body-Desktop: 18px;
   --font-size-footer-Links-Desktop: 14px;
-  --font-size-buttons-Desktop: 16px;
+  --font-size-nav-and-buttons-Desktop: 16px;
   --font-size-H1-Desktop: 50px;
-  --font-size-nav-Desktop: 16px;
 }
 
 body,
@@ -30,7 +29,8 @@ nav a,
 .Destinations-SH,
 .destination,
 .grid-post-header,
-.H5-home {
+.H5-home,
+.Subscribe-btn {
   color: var(--secondary-color);
 }
 
@@ -44,9 +44,16 @@ nav a,
   font-weight: bold;
 }
 
-.destination {
+.destination,
+.Subscribe-btn,
+nav a {
   font: var(--font-family-2);
   font-weight: bold;
+}
+
+nav a,
+.Subscribe-btn {
+  font-size: var(--font-size-nav-and-buttons-Desktop);
 }
 
 .h2-Blog-Feed,
@@ -112,7 +119,6 @@ nav {
 
 nav a {
   font: var(--font-family-2);
-  font-size: var(--font-size-nav-Desktop);
   font-weight: bold;
   margin-left: 12px;
   text-decoration: none;
@@ -178,6 +184,7 @@ nav a:active {
   border: none;
   background: none;
 }
+
 .Slide {
   flex: 100% 0 0;
   display: flex;
@@ -318,6 +325,7 @@ nav a:active {
   padding: 30px 10px 40px 10px;
   margin-top: -0.5rem;
   margin-left: -1rem;
+  background-color: var(--primary-color);
 }
 
 .SM-Icon {
