@@ -297,8 +297,3 @@ footer {
 .right-side-footer {
   padding-right: 2rem;
 }
-
-footer-logo-box {
-  display: flex;
-  justify-self: center;
-}
