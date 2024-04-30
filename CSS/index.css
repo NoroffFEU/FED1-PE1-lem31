@@ -415,3 +415,24 @@ footer {
 .Public-Blog-Post-Body {
   width: 80%;
 }
+
+/*CREATE POST PAGE*/
+
+.h1-box-create-post {
+  display: flex;
+  justify-content: center;
+}
+
+.Three-header-box {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas: "One Two Three Four";
+  justify-content: center;
+  align-items: center;
+}
+
+.Two-links-box {
+  display: flex;
+  justify-content: end;
+  grid-area: Four;
+}
