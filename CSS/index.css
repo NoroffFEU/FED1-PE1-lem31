@@ -392,3 +392,11 @@ footer {
 .right-side-footer {
   padding-right: 2rem;
 }
+
+/*PUBLIC BLOG POST PAGE*/
+
+.Public-Blog-Post-Wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
