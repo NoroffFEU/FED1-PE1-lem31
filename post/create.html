@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html>
+
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,29 +13,49 @@
       type="image/x-icon"
       href="/Images/Snow-V-CaysLogo-Favicon.png"
     />
-    <script defer src="create.js"></script>
-    <title>Blog Feed Page</title>
+    <link rel="stylesheet" href="/CSS/index.css" />
+    <script defer src="/JS/index.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Create Post Page</title>
   </head>
   <body>
     <header>
       <img
+        class="header-logo"
         src="/Images/Snow-V-CaysLogo.png"
         alt="Snow-V-Cays' blue snowflake logo"
       />
       <nav>
-        <a href="">Home</a>
+        <a href="/index.html">Home</a>
         <a href="">About</a>
         <a href="">Contact</a>
         <a href="">Admin Login</a>
         <a href="">Admin Register</a>
       </nav>
 
-      <img src="/Images/HamburgerMenu.png" alt="Hamburger Menu Icon" />
+      <img
+        class="Hamburger-menu"
+        src="/Images/HamburgerMenu.png"
+        alt="Hamburger Menu Icon"
+      />
+
+      <form action="" method="get"></form>
 
       <div class="Search-bar">
-        <input type="text" placeholder="Search..." />
-        <button>Search</button>
-        <img src="/Images/SearchIcon.png" alt="Blue Search Icon" />
+        <input class="search-bar" type="text" placeholder="Search..." />
+        <button class="Search-Btn">
+          <img
+            class="Search-icon"
+            src="/Images/SearchIcon.png"
+            alt="Blue Search Icon"
+          />
+        </button>
       </div>
     </header>
     <main>
@@ -96,9 +117,9 @@
         <button type="submit">Save</button>
       </form>
 
-      <h5>Subscribe to our Newsletter</h5>
-      <form action=" " method="post">
-        <label for="email">Email</label>
+      <h5 class="H5-home">Subscribe to our Newsletter</h5>
+      <form class="newsletter-form" action="form.html " method="get">
+        <label for="email"></label>
         <input
           type="email"
           id="email"
@@ -106,23 +127,38 @@
           placeholder="Please enter your email"
           required
         />
-        <button type="submit">Subscribe</button>
+        <button class="Subscribe-btn" type="submit">Subscribe</button>
       </form>
     </main>
     <footer>
       <div class="SM-icons-container">
-        <img src="/Images/FacebookIcon.png" alt="Facebook Icon" />
-        <img src="/Images/icons8-instagram-100.png" alt="Instagram Icon" />
-        <img src="/Images/TiktokIcon.png" alt="Tiktok icon" />
-        <img src="/Images/TwitterIcon.png" alt="Twitter icon" />
+        <img
+          class="SM-Icon"
+          src="/Images/FacebookIcon.png"
+          alt="Facebook Icon"
+        />
+        <img
+          class="SM-Icon"
+          src="/Images/icons8-instagram-100.png"
+          alt="Instagram Icon"
+        />
+        <img class="SM-Icon" src="/Images/TiktokIcon.png" alt="Tiktok icon" />
+        <img class="SM-Icon" src="/Images/TwitterIcon.png" alt="Twitter icon" />
       </div>
-      <img
-        src="/Images/Snow-V-CaysLogo -Footer.png"
-        alt="Snow-V-Cays snowflake logo"
-      />
-      <a href="">Contact Us</a>
-      <a href="">Privacy Policy</a>
-      <p>©2024 All rights reserved</p>
+
+      <div class="footer-logo-box">
+        <img
+          class="footer-logo"
+          src="/Images/Snow-V-CaysLogo -Footer.png"
+          alt="Snow-V-Cays snowflake logo"
+        />
+      </div>
+
+      <div class="right-side-footer">
+        <a href="">Contact Us</a>
+        <a href="">Privacy Policy</a>
+        <p>©2024 All rights reserved</p>
+      </div>
     </footer>
   </body>
 </html>
