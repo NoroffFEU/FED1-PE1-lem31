@@ -69,66 +69,49 @@
         </div>
       </div>
 
-      <form id="create-post-form" action="create_blog_post.php" method="post">
-        <label for="id">ID</label>
-        <input
-          class="create-post-input"
-          type="text"
-          id="id"
-          name="id"
-          placeholder="Please enter an id for your blog post"
-          required
-        />
+      <div class="Create-Post-form-wrapper">
+        <form id="create-post-form" action="create_blog_post.php" method="post">
+          <label class="input-label-create" for="title">Title</label>
+          <input
+            class="create-post-input"
+            type="text"
+            id="title"
+            name="title"
+            placeholder="Please enter the title of your blog post"
+            required
+          />
 
-        <label for="name">name</label>
-        <input
-          class="create-post-input"
-          type="text"
-          id="name"
-          name="name"
-          placeholder="Please enter the blog post name"
-        />
+          <label class="input-label-create" for="body">Text</label>
+          <textarea
+            class="create-post-input"
+            id="body"
+            name="body"
+            placeholder="Please enter your blog post body text"
+            required
+          ></textarea>
 
-        <label for="title">Title</label>
-        <input
-          class="create-post-input"
-          type="text"
-          id="title"
-          name="title"
-          placeholder="Please enter the title of your blog post"
-          required
-        />
+          <label class="input-label-create" for="tags">Tags</label>
+          <input
+            class="create-post-input"
+            type="text"
+            id="tags"
+            name="tags"
+            placeholder="Please enter the tags for your blog post"
+            required
+          />
 
-        <label for="body">Text</label>
-        <textarea
-          class="create-post-input"
-          id="body"
-          name="body"
-          placeholder="Please enter your blog post body text"
-          required
-        ></textarea>
+          <label class="input-label-create" for="media">Media</label>
+          <input
+            class="create-post-input"
+            type="text"
+            id="media"
+            name="media"
+            placeholder="Please enter the image URL for your blog post"
+          />
 
-        <label for="tags">Tags</label>
-        <input
-          class="create-post-input"
-          type="text"
-          id="tags"
-          name="tags"
-          placeholder="Please enter the tags for your blog post"
-          required
-        />
-
-        <label for="media">Media</label>
-        <input
-          class="create-post-input"
-          type="text"
-          id="media"
-          name="media"
-          placeholder="Please enter the image URL for your blog post"
-        />
-
-        <button type="submit">Save</button>
-      </form>
+          <button class="Save-button" type="submit">Save</button>
+        </form>
+      </div>
 
       <h5 class="H5-home">Subscribe to our Newsletter</h5>
       <form class="newsletter-form" action="form.html " method="get">
