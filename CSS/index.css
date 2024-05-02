@@ -34,7 +34,7 @@ h1,
 .right-side-footer a,
 .right-side-footer p,
 .Public-Blog-Post-Body,
-.My-blog-posts-link,
+.post-link,
 .Logout-link,
 .input-label-create,
 .Save-button {
@@ -52,7 +52,7 @@ h1,
 .Destinations-SH,
 .grid-post-header,
 .H5-home,
-.My-blog-posts-link,
+.post-link,
 .Logout-link {
   font: var(--font-family-1);
   font-weight: bold;
@@ -71,7 +71,7 @@ nav a,
 
 nav a,
 .Subscribe-btn,
-.My-blog-posts-link,
+.post-link,
 .Logout-link,
 .input-label-create,
 .Save-button {
@@ -430,7 +430,8 @@ footer {
 
 /*CREATE POST PAGE*/
 
-.Three-header-box {
+.Three-header-box,
+.Three-header-box-2 {
   display: grid;
   grid-template-columns: 0% 80% 20%;
   align-items: center;
@@ -439,7 +440,8 @@ footer {
   width: 100vw;
 }
 
-.h1-box-create-post {
+.h1-box-create-post,
+.h1-edit-box {
   display: flex;
   justify-content: center;
   grid-area: Two;
@@ -451,7 +453,7 @@ footer {
   grid-area: Three;
 }
 
-.My-blog-posts-link,
+.post-link,
 .Logout-link {
   text-decoration: none;
 }
@@ -460,11 +462,11 @@ footer {
   margin-left: 2rem;
 }
 
-.My-blog-posts-link:hover {
+.post-link:hover {
   filter: drop-shadow(5px 5px 5px #27aae1);
 }
 
-.My-blog-posts-link:active {
+.post-link:active {
   filter: drop-shadow(2px 5px 1px #27aae1);
 }
 
@@ -508,3 +510,5 @@ footer {
   flex-direction: column;
   align-items: center;
 }
+
+/*Edit Post Page*/
