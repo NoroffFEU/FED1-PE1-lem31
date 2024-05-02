@@ -428,7 +428,7 @@ footer {
   width: 80%;
 }
 
-/*CREATE POST PAGE*/
+/*CREATE POST PAGE and Edit Post Page*/
 
 .Three-header-box,
 .Three-header-box-2 {
@@ -511,4 +511,8 @@ footer {
   align-items: center;
 }
 
-/*Edit Post Page*/
+.blog-posts-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+}
