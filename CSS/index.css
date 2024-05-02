@@ -469,3 +469,10 @@ footer {
 .Logout-link:active {
   filter: drop-shadow(2px 5px 1px #27aae1);
 }
+
+#create-post-form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  justify-content: center;
+}
