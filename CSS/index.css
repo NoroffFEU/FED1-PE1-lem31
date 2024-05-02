@@ -33,7 +33,9 @@ h1,
 .Subscribe-btn,
 .right-side-footer a,
 .right-side-footer p,
-.Public-Blog-Post-Body {
+.Public-Blog-Post-Body,
+.My-blog-posts-link,
+.Logout-link {
   color: var(--secondary-color);
 }
 
@@ -47,7 +49,9 @@ h1,
 .h2-Blog-Feed,
 .Destinations-SH,
 .grid-post-header,
-.H5-home {
+.H5-home,
+.My-blog-posts-link,
+.Logout-link {
   font: var(--font-family-1);
   font-weight: bold;
 }
@@ -62,7 +66,9 @@ nav a,
 }
 
 nav a,
-.Subscribe-btn {
+.Subscribe-btn,
+.My-blog-posts-link,
+.Logout-link {
   font-size: var(--font-size-nav-and-buttons-Desktop);
 }
 
@@ -418,21 +424,40 @@ footer {
 
 /*CREATE POST PAGE*/
 
-.h1-box-create-post {
+.Three-header-box {
   display: flex;
+  justify-content: start;
   justify-content: center;
 }
 
-.Three-header-box {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-areas: "One Two Three Four";
+.h1-box-create-post {
+  display: flex;
   justify-content: center;
-  align-items: center;
+  width: 100vw;
 }
 
 .Two-links-box {
   display: flex;
   justify-content: center;
-  grid-area: Four;
+}
+
+.My-blog-posts-link,
+.Logout-link {
+  text-decoration: none;
+}
+
+.My-blog-posts-link:hover {
+  filter: drop-shadow(5px 5px 5px #27aae1);
+}
+
+.My-blog-posts-link:active {
+  filter: drop-shadow(2px 5px 1px #27aae1);
+}
+
+.Logout-link:hover {
+  filter: drop-shadow(5px 5px 5px #27aae1);
+}
+
+.Logout-link:active {
+  filter: drop-shadow(2px 5px 1px #27aae1);
 }
