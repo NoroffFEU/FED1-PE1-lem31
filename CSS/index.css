@@ -433,6 +433,6 @@ footer {
 
 .Two-links-box {
   display: flex;
-  justify-content: end;
+  justify-content: center;
   grid-area: Four;
 }
