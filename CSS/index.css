@@ -425,25 +425,33 @@ footer {
 /*CREATE POST PAGE*/
 
 .Three-header-box {
-  display: flex;
-  justify-content: start;
+  display: grid;
+  grid-template-columns: 0% 80% 20%;
+  align-items: center;
   justify-content: center;
+  grid-template-areas: "One Two Three";
+  width: 100vw;
 }
 
 .h1-box-create-post {
   display: flex;
   justify-content: center;
+  grid-area: Two;
   width: 100vw;
 }
 
 .Two-links-box {
   display: flex;
-  justify-content: center;
+  grid-area: Three;
 }
 
 .My-blog-posts-link,
 .Logout-link {
   text-decoration: none;
+}
+
+.Logout-link {
+  margin-left: 2rem;
 }
 
 .My-blog-posts-link:hover {
