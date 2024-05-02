@@ -487,6 +487,10 @@ footer {
   padding: 1rem;
 }
 
+.input-label-create {
+  margin-top: 1rem;
+}
+
 #body {
   padding: 10rem;
 }
