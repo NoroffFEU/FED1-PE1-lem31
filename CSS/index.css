@@ -451,11 +451,14 @@ footer {
 .Two-links-box {
   display: flex;
   grid-area: Three;
+  justify-content: center;
+  width: 100px;
 }
 
 .post-link,
 .Logout-link {
   text-decoration: none;
+  text-wrap: nowrap;
 }
 
 .Logout-link {
@@ -514,5 +517,4 @@ footer {
 .blog-posts-wrapper {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  justify-content: center;
 }
