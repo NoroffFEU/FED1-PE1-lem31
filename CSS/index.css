@@ -546,4 +546,10 @@ footer {
   width: 50rem;
   height: 10rem;
   opacity: 0.8;
+  z-index: 11;
+}
+
+.h2-Edit-Page {
+  width: 450px;
+  z-index: 12;
 }
