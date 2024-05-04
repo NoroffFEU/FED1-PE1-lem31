@@ -96,7 +96,8 @@ h1 {
 }
 
 .h1-home-bg,
-.BP-header-container {
+.BP-header-container,
+.header-container {
   background-color: var(--primary-color);
 }
 
@@ -527,7 +528,7 @@ footer {
 .blog-post {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: end;
   align-items: center;
   width: 100%;
 }
@@ -537,4 +538,12 @@ footer {
   height: 80%;
   margin: 0;
   padding: 0;
+}
+
+.header-container {
+  display: flex;
+  position: absolute;
+  width: 50rem;
+  height: 10rem;
+  opacity: 0.8;
 }
