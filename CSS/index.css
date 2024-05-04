@@ -544,7 +544,7 @@ footer {
   display: flex;
   position: absolute;
   width: 50rem;
-  height: 10rem;
+  height: 15rem;
   opacity: 0.8;
   z-index: 11;
 }
@@ -552,4 +552,5 @@ footer {
 .h2-Edit-Page {
   width: 450px;
   z-index: 12;
+  position: absolute;
 }
