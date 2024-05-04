@@ -556,6 +556,10 @@ footer {
 }
 
 .btn-wrapper {
+  display: flex;
+  flex-direction: row;
   padding-top: 2rem;
   z-index: 12;
+  justify-content: space-evenly;
+  width: 100%;
 }
