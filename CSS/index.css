@@ -554,3 +554,8 @@ footer {
   z-index: 12;
   margin-top: -6rem;
 }
+
+.btn-wrapper {
+  padding-top: 2rem;
+  z-index: 12;
+}
