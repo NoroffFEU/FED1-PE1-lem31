@@ -515,7 +515,9 @@ footer {
   padding: 10rem;
 }
 
-.Save-button {
+.Save-button,
+.save-btn,
+.cancel-btn {
   width: 10rem;
   height: 3rem;
   margin-top: 2rem;
@@ -587,26 +589,28 @@ footer {
   margin-top: -1.2rem;
 }
 
-.edit-page-btn:hover {
+.edit-page-btn:hover,
+.Save-button:hover,
+.save-btn:hover,
+.cancel-btn:hover {
   border: 4px var(--tertiary-color) solid;
 }
 
-.edit-page-btn:active {
+.edit-page-btn:active,
+.Save-button:active,
+.save-btn:active,
+.cancel-btn:active {
   border: 6px var(--tertiary-color) solid;
-}
-
-.popup-form-wrapper {
-  width: 800px;
-  background-color: var(--tertiary-color);
 }
 
 .popup-form {
   position: fixed;
-  top: 5rem;
+  top: 1rem;
   left: 25rem;
   z-index: 12;
-  background-color: var(--tertiary-color);
+  background-color: var(--primary-color);
   padding-bottom: 5rem;
+  border: 8px var(--tertiary-color) solid;
 }
 
 .button-wrapper-edit {
