@@ -38,7 +38,8 @@ h1,
 .Logout-link,
 .input-label-create,
 .Save-button,
-.h2-Edit-Page {
+.h2-Edit-Page,
+.edit-label {
   color: var(--secondary-color);
 }
 
@@ -66,7 +67,8 @@ nav a,
 .right-side-footer a,
 .right-side-footer p,
 .input-label-create,
-.Save-button {
+.Save-button,
+.edit-label {
   font: var(--font-family-2);
   font-weight: bold;
 }
@@ -76,7 +78,8 @@ nav a,
 .post-link,
 .Logout-link,
 .input-label-create,
-.Save-button {
+.Save-button,
+.edit-label {
   font-size: var(--font-size-nav-and-buttons-Desktop);
 }
 
@@ -583,4 +586,9 @@ footer {
 
 .edit-page-btn:active {
   border: 6px var(--tertiary-color) solid;
+}
+
+.popup-form {
+  display: flex;
+  flex-direction: column;
 }

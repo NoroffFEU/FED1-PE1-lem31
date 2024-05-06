@@ -237,17 +237,27 @@
         </div>
       </div>
 
-      <div class="popup-form">
-        <form action="/action_page.php">
+      <div class="popup-form-wrapper">
+        <form class="popup-form" action="/action_page.php">
           <h1>Edit Post</h1>
-          <label for="title"><b>Title</b></label>
+
+          <label class="edit-label" for="url"><b>Replace Image</b></label>
+          <input
+            type="text"
+            id="url"
+            name="url"
+            placeholder="Enter the image URL"
+            required
+          />
+
+          <label class="edit-label" for="title"><b>Title</b></label>
           <input
             type="text"
             placeholder="Enter post title"
             name="title"
             required
           />
-          <label for="body"><b>Body</b></label>
+          <label class="edit-label" for="body"><b>Body</b></label>
           <textarea
             id="body"
             name="body"
@@ -255,7 +265,7 @@
             required
           ></textarea>
 
-          <label for="tags">Tags</label>
+          <label class="edit-label" for="tags">Tags</label>
           <input
             type="text"
             id="tags"
