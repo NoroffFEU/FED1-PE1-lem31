@@ -657,12 +657,11 @@ footer {
 .login-form {
   display: flex;
   flex-direction: column;
-  width: 80%;
 }
 
 .login-input {
   padding: 1rem;
-  width: 50%;
+  width: 500px;
 }
 
 .login-btn {
@@ -672,5 +671,18 @@ footer {
 .login-btn-box {
   display: flex;
   justify-content: center;
-  width: 50%;
+}
+
+.login-form-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+}
+
+.no-account-link,
+.forgot-pw-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
