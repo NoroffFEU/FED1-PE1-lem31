@@ -239,8 +239,9 @@
 
       <div class="popup-form-wrapper">
         <form class="popup-form" action="/action_page.php">
-          <h1>Edit Post</h1>
-
+          <div class="h3-edit-box">
+            <h3 class="h3-edit">Edit Post</h3>
+          </div>
           <label class="edit-label" for="url"><b>Replace Image</b></label>
           <input
             class="edit-input"
@@ -277,11 +278,12 @@
             placeholder="Please enter the tags for your blog post"
             required
           />
-
-          <button type="submit" class="save-btn">Save</button>
-          <button type="button" class="cancel-btn" onclick="closeForm()">
-            Cancel
-          </button>
+          <div class="button-wrapper-edit">
+            <button type="submit" class="save-btn">Save</button>
+            <button type="button" class="cancel-btn" onclick="closeForm()">
+              Cancel
+            </button>
+          </div>
         </form>
       </div>
     </main>

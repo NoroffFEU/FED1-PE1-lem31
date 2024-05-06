@@ -39,7 +39,8 @@ h1,
 .input-label-create,
 .Save-button,
 .h2-Edit-Page,
-.edit-label {
+.edit-label,
+.h3-edit {
   color: var(--secondary-color);
 }
 
@@ -56,7 +57,8 @@ h1,
 .H5-home,
 .post-link,
 .Logout-link,
-.h2-Edit-Page {
+.h2-Edit-Page,
+.h3-edit {
   font: var(--font-family-1);
   font-weight: bold;
 }
@@ -97,7 +99,8 @@ h1 {
 .h4-home,
 .Destinations-SH,
 .destination,
-.H5-home {
+.H5-home,
+.h3-edit {
   font-size: var(--font-size-H2-H3-Desktop);
 }
 
@@ -593,13 +596,38 @@ footer {
 }
 
 .popup-form-wrapper {
-  width: 100%;
+  width: 800px;
+  background-color: var(--tertiary-color);
 }
 
 .popup-form {
-  background-color: var(--tertiary-color);
   position: fixed;
-  top: 0;
+  top: 5rem;
   left: 25rem;
   z-index: 12;
+  background-color: var(--tertiary-color);
+  padding-bottom: 5rem;
+}
+
+.button-wrapper-edit {
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  justify-content: space-between;
+  margin-left: 25%;
+}
+
+.edit-input,
+.body-edit {
+  width: 50%;
+  margin-left: 25%;
+}
+
+.edit-label {
+  margin-left: 25%;
+}
+
+.h3-edit-box {
+  display: flex;
+  justify-content: center;
 }
