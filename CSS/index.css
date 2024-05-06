@@ -37,7 +37,8 @@ h1,
 .post-link,
 .Logout-link,
 .input-label-create,
-.Save-button {
+.Save-button,
+.h2-Edit-Page {
   color: var(--secondary-color);
 }
 
@@ -53,7 +54,8 @@ h1,
 .grid-post-header,
 .H5-home,
 .post-link,
-.Logout-link {
+.Logout-link,
+.h2-Edit-Page {
   font: var(--font-family-1);
   font-weight: bold;
 }
@@ -79,7 +81,8 @@ nav a,
 }
 
 .h2-Blog-Feed,
-.grid-post-header {
+.grid-post-header,
+.h2-Edit-Page {
   font-size: var(--font-size-Blog-Post-Headers-Desktop);
 }
 
@@ -97,7 +100,8 @@ h1 {
 
 .h1-home-bg,
 .BP-header-container,
-.header-container {
+.header-container,
+.edit-page-btn {
   background-color: var(--primary-color);
 }
 
@@ -553,6 +557,7 @@ footer {
   width: 450px;
   z-index: 12;
   margin-top: -6rem;
+  text-align: center;
 }
 
 .btn-wrapper {
@@ -562,4 +567,9 @@ footer {
   z-index: 12;
   justify-content: space-evenly;
   width: 100%;
+}
+
+.edit-page-btn {
+  width: 160px;
+  height: 70px;
 }
