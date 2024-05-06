@@ -40,7 +40,10 @@ h1,
 .Save-button,
 .h2-Edit-Page,
 .edit-label,
-.h3-edit {
+.h3-edit,
+.save-btn,
+.cancel-btn,
+.edit-page-btn {
   color: var(--secondary-color);
 }
 
@@ -70,7 +73,10 @@ nav a,
 .right-side-footer p,
 .input-label-create,
 .Save-button,
-.edit-label {
+.edit-label,
+.save-btn,
+.cancel-btn,
+.edit-page-btn {
   font: var(--font-family-2);
   font-weight: bold;
 }
@@ -81,7 +87,10 @@ nav a,
 .Logout-link,
 .input-label-create,
 .Save-button,
-.edit-label {
+.edit-label,
+.save-btn,
+.cancel-btn,
+.edit-page-btn {
   font-size: var(--font-size-nav-and-buttons-Desktop);
 }
 
@@ -611,6 +620,7 @@ footer {
   background-color: var(--primary-color);
   padding-bottom: 5rem;
   border: 8px var(--tertiary-color) solid;
+  display: none;
 }
 
 .button-wrapper-edit {
