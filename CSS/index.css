@@ -572,4 +572,13 @@ footer {
 .edit-page-btn {
   width: 160px;
   height: 70px;
+  border: 3px var(--tertiary-color) solid;
+}
+
+.edit-page-btn:hover {
+  border: 4px var(--tertiary-color) solid;
+}
+
+.edit-page-btn:active {
+  border: 6px var(--tertiary-color) solid;
 }
