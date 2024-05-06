@@ -490,14 +490,16 @@ footer {
   filter: drop-shadow(2px 5px 1px #27aae1);
 }
 
-#create-post-form {
+#create-post-form,
+.popup-form {
   display: flex;
   flex-direction: column;
   width: 50%;
   justify-content: center;
 }
 
-.create-post-input {
+.create-post-input,
+.edit-input {
   padding: 1rem;
 }
 
@@ -586,9 +588,4 @@ footer {
 
 .edit-page-btn:active {
   border: 6px var(--tertiary-color) solid;
-}
-
-.popup-form {
-  display: flex;
-  flex-direction: column;
 }
