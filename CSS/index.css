@@ -507,7 +507,8 @@ footer {
   margin-top: 1rem;
 }
 
-#body {
+#body,
+.body-edit {
   padding: 10rem;
 }
 
@@ -519,7 +520,8 @@ footer {
   background-color: var(--primary-color);
 }
 
-.Create-Post-form-wrapper {
+.Create-Post-form-wrapper,
+.popup-form-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -588,4 +590,16 @@ footer {
 
 .edit-page-btn:active {
   border: 6px var(--tertiary-color) solid;
+}
+
+.popup-form-wrapper {
+  width: 100%;
+}
+
+.popup-form {
+  background-color: var(--tertiary-color);
+  position: fixed;
+  top: 0;
+  left: 25rem;
+  z-index: 12;
 }
