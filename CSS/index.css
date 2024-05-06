@@ -686,3 +686,7 @@ footer {
   justify-content: center;
   align-items: center;
 }
+
+#pw-label {
+  margin-top: 1rem;
+}
