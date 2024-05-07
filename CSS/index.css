@@ -264,6 +264,7 @@ nav a:active {
   position: relative;
   margin: auto;
   overflow-x: hidden;
+  margin-top: -5rem;
 }
 
 .carousel-button {
@@ -326,17 +327,11 @@ nav a:active {
   cursor: pointer;
 }
 
-#carousel-header-2,
-#carousel-header-3 {
-  width: 400px;
-  text-align: center;
-}
-
 .h2-Blog-Feed {
   display: flex;
   position: absolute;
   bottom: 18%;
-  width: 20rem;
+  width: 30vw;
 }
 
 .mountain-img-container {
@@ -371,7 +366,7 @@ nav a:active {
 .h4-home {
   display: flex;
   justify-content: center;
-  margin-top: -15rem;
+  margin-top: -10rem;
 }
 
 .Twelve-img-grid-container {
