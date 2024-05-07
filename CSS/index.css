@@ -269,6 +269,7 @@ nav a:active {
   width: 200px;
   border: none;
   background: none;
+  z-index: 12;
 }
 
 .btn-img-carousel:hover {
