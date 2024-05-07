@@ -48,7 +48,11 @@ h1,
 .login-btn,
 .click-here-link,
 .no-account-link,
-.forgot-pw {
+.forgot-pw,
+.register-label,
+.register-btn,
+.have-account-txt,
+.login-here-link {
   color: var(--secondary-color);
 }
 
@@ -81,7 +85,9 @@ h1,
 .h3-edit,
 .click-here-link,
 .no-account-link,
-.forgot-pw {
+.forgot-pw,
+.have-account-txt,
+.login-here-link {
   font: var(--font-family-1);
   font-weight: bold;
 }
@@ -98,7 +104,9 @@ nav a,
 .cancel-btn,
 .edit-page-btn,
 .login-label,
-.login-btn {
+.login-btn,
+.register-label,
+.register-btn {
   font: var(--font-family-2);
   font-weight: bold;
 }
@@ -117,7 +125,11 @@ nav a,
 .login-btn,
 .click-here-link,
 .no-account-link,
-.forgot-pw {
+.forgot-pw,
+.register-label,
+.register-btn,
+.have-account-txt,
+.login-here-link {
   font-size: var(--font-size-nav-and-buttons-Desktop);
 }
 
