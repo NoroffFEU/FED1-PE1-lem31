@@ -153,7 +153,6 @@ h1 {
   font-size: var(--font-size-H2-H3-Desktop);
 }
 
-.h1-home-bg,
 .BP-header-container,
 .header-container,
 .edit-page-btn {
@@ -249,15 +248,16 @@ nav a:active {
   width: 100%;
 }
 
-.h1-home-bg {
+.h1-home {
+  background-color: rgba(255, 255, 255, 0.5);
   position: absolute;
   top: 55%;
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
   z-index: 1;
+  text-wrap: nowrap;
 }
-
 .carousel {
   width: 100%;
   display: flex;
@@ -397,7 +397,7 @@ nav a:active {
   width: 10%;
   height: 3rem;
   position: absolute;
-  width: 400px;
+  width: 30vw;
   text-align: center;
 }
 #grid-post-header-9,
