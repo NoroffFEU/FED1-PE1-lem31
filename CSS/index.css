@@ -258,6 +258,7 @@ nav a:active {
   z-index: 1;
   text-wrap: nowrap;
 }
+
 .carousel {
   width: 100%;
   display: flex;
