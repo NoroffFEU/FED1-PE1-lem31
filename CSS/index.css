@@ -52,6 +52,18 @@ h1,
   color: var(--secondary-color);
 }
 
+.Save-button,
+.save-btn,
+.cancel-btn,
+.login-btn,
+.register-btn {
+  width: 10rem;
+  height: 3rem;
+  margin-top: 2rem;
+  border: var(--tertiary-color) 3px solid;
+  background-color: var(--primary-color);
+}
+
 .right-side-footer a,
 .right-side-footer p {
   font-size: var(--font-size-footer-Links-Desktop);
@@ -539,17 +551,6 @@ footer {
   padding: 10rem;
 }
 
-.Save-button,
-.save-btn,
-.cancel-btn,
-.login-btn {
-  width: 10rem;
-  height: 3rem;
-  margin-top: 2rem;
-  border: var(--tertiary-color) 3px solid;
-  background-color: var(--primary-color);
-}
-
 .Create-Post-form-wrapper,
 .popup-form-wrapper {
   display: flex;
@@ -662,34 +663,40 @@ footer {
   justify-content: center;
 }
 
-/*LOGIN PAGE*/
+/*LOGIN PAGE and REGISTER PAGE*/
 
-.h1-login {
+.h1-login,
+.h1-register {
   display: flex;
   justify-content: center;
 }
 
-.login-form {
+.login-form,
+.register-form {
   display: flex;
   flex-direction: column;
   margin-bottom: 0;
 }
 
-.login-input {
+.login-input,
+.register-input {
   padding: 1rem;
   width: 500px;
 }
 
-.login-btn {
+.login-btn,
+.register-btn {
   margin-top: 1rem;
 }
 
-.login-btn-box {
+.login-btn-box,
+.register-btn-box {
   display: flex;
   justify-content: center;
 }
 
-.login-form-wrapper {
+.login-form-wrapper,
+.register-form-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -698,12 +705,17 @@ footer {
 }
 
 .no-account-link,
-.forgot-pw-link {
+.forgot-pw-link,
+.have-account-box {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-#pw-label {
+#pw-label,
+.forgot-pw-link,
+#username-label,
+#pw-label-register,
+#repeat-pw-label {
   margin-top: 1rem;
 }
