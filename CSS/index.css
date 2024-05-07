@@ -250,9 +250,9 @@ nav a:active {
 
 .h1-home-bg {
   position: absolute;
-  top: 60%;
-  left: 52%;
-  transform: translate(-60%, -100%);
+  top: 40%;
+  left: 32%;
+  /* transform: translate(-60%, -100%); */
   text-align: center;
   z-index: 1;
 }
