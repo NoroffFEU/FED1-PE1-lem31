@@ -43,7 +43,9 @@ h1,
 .h3-edit,
 .save-btn,
 .cancel-btn,
-.edit-page-btn {
+.edit-page-btn,
+.login-label,
+.login-btn {
   color: var(--secondary-color);
 }
 
@@ -76,7 +78,9 @@ nav a,
 .edit-label,
 .save-btn,
 .cancel-btn,
-.edit-page-btn {
+.edit-page-btn,
+.login-label,
+.login-btn {
   font: var(--font-family-2);
   font-weight: bold;
 }
@@ -90,7 +94,9 @@ nav a,
 .edit-label,
 .save-btn,
 .cancel-btn,
-.edit-page-btn {
+.edit-page-btn,
+.login-label,
+.login-btn {
   font-size: var(--font-size-nav-and-buttons-Desktop);
 }
 
