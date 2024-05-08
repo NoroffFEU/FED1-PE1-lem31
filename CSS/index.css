@@ -243,8 +243,8 @@ nav a:active {
 .Search-Btn {
   border: none;
   background: none;
-  margin-left: -40px;
-  margin-top: 5px;
+  margin-left: 205px;
+  margin-top: 8px;
   position: absolute;
 }
 
@@ -749,6 +749,13 @@ footer {
 /*MEDIA QUERIES*/
 
 @media (max-width: 700px) {
+  header {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-template-areas: "One Two Three";
+    align-items: center;
+  }
   .navigation {
     display: none;
     list-style: none;
@@ -785,9 +792,31 @@ footer {
 
   .search-bar {
     display: none;
+    width: 200px;
+    margin-left: -10rem;
+    margin-top: -2rem;
+    position: absolute;
+  }
+
+  .Search-Btn,
+  .Search-icon {
+    grid-area: Three;
+    position: static;
+    z-index: 12;
+    margin-top: -3.5rem;
   }
 
   .Search-icon {
-    grid-area: Three;
+    width: 40px;
+  }
+
+  .Search-Btn {
+    margin-left: 0;
+  }
+
+  .Search-bar {
+    position: relative;
+    display: flex;
+    flex-direction: column;
   }
 }
