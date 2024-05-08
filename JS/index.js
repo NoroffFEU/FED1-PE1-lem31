@@ -56,3 +56,32 @@ buttonSix.addEventListener('click', () => {
   slideThree.style.display = 'none';
   
 });
+
+
+
+//**HAMBURGER MENU */
+
+
+
+const navHamburger = document.querySelector('.Hamburger-menu');
+const nav = document.querySelector('.navigation');
+
+window.addEventListener('resize', displayNavDropdown);
+navHamburger.addEventListener('click', displayNavDropdown);
+
+function displayNavDropdown() {
+  if (window.innerWidth <= 700 && navHamburger.clicked && nav.style.display === 'none') {
+    nav.style.display = 'block';
+  } else if (nav.style.display === 'block') {
+    nav.style.display = 'none';
+  }
+}
+
+
+
+   
+
+
+
+
+displayNavDropdown();
