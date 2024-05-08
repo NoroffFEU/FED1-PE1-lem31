@@ -13,6 +13,15 @@
   --font-size-footer-Links-Desktop: 14px;
   --font-size-nav-and-buttons-Desktop: 16px;
   --font-size-H1-Desktop: 50px;
+
+  --font-size-H1-Mobile: 25px;
+  --font-size-H2-Mobile: 20px;
+  --font-size-H3-Mobile: 18px;
+  --font-size-Blog-Post-Headers-Mobile: 18px;
+  --font-size-Blog-Post-Sub-Headers-Mobile: 16px;
+  --font-size-Body-Mobile: 16px;
+  --font-size-nav-and-buttons-Mobile: 14px;
+  --font-size-footer-Links-Mobile: 12px;
 }
 
 body,
@@ -260,6 +269,10 @@ nav a:active {
   display: flex;
   width: 100%;
   justify-content: center;
+}
+
+.h2-container {
+  height: 8rem;
 }
 
 .Destinations-SH-box {
@@ -751,6 +764,62 @@ footer {
 /*MEDIA QUERIES*/
 
 @media (max-width: 800px) {
+  /*GLOBAL STYLES*/
+
+  nav a,
+  .Subscribe-btn,
+  .post-link,
+  .Logout-link,
+  .input-label-create,
+  .Save-button,
+  .edit-label,
+  .save-btn,
+  .cancel-btn,
+  .edit-page-btn,
+  .login-label,
+  .login-btn,
+  .click-here-link,
+  .no-account-link,
+  .forgot-pw,
+  .register-label,
+  .register-btn,
+  .have-account-txt,
+  .login-here-link {
+    font-size: var(--font-size-nav-and-buttons-Mobile);
+  }
+
+  .h2-Blog-Feed,
+  .grid-post-header,
+  .h2-Edit-Page {
+    font-size: var(--font-size-Blog-Post-Headers-Mobile);
+  }
+
+  h1 {
+    font-size: var(--font-size-H1-Mobile);
+  }
+
+  .right-side-footer a,
+  .right-side-footer p {
+    font-size: var(--font-size-footer-Links-Mobile);
+  }
+
+  .h2-home,
+  .h4-home,
+  .Destinations-SH,
+  .destination,
+  .h3-edit {
+    font-size: var(--font-size-H2-Mobile);
+  }
+
+  .Public-Blog-Post-Body {
+    font-size: var(--font-size-Body-Mobile);
+  }
+
+  .H5-home {
+    font-size: var(--font-size-Blog-Post-Sub-Headers-Mobile);
+  }
+
+  /*HEADER*/
   header {
     display: grid;
     grid-template-columns: 2fr 1fr 2fr;
