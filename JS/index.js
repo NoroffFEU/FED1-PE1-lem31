@@ -49,25 +49,39 @@ buttonFive.addEventListener('click', () => {
   
 });
 
-// Import required elements
+
+
+//**Constants for Nav and Hamburger menu icon */
+
 const navHamburger = document.querySelector('.Hamburger-menu');
 const nav = document.querySelector('.navigation');
 
-navHamburger.addEventListener('click', () => {
+//**Event Listener for Nav Hamburger Icon */
+
+navHamburger.addEventListener('click', (displayNavDropdown) );
+
+//**Function to display and close dropdown navigation menu */
+
+function displayNavDropdown(){
+
   if (nav.style.display === 'none' || nav.style.display === '') {
     nav.style.display = 'block';
   } else {
     nav.style.display = 'none';
-  }
-});
+  };
+}
  
+function navDesktopDisplay() {
 window.addEventListener('resize', () => {
   if (window.innerWidth > 700) {
     nav.style.display = 'flex';
   } else {
     nav.style.display = 'none';
   }
-});
+});}
 
 
+
+
+navDesktopDisplay()
 displayNavDropdown();
