@@ -752,17 +752,26 @@ footer {
   .navigation {
     display: none;
     list-style: none;
+    position: absolute;
+    margin-top: 3rem;
   }
 
   nav a {
     text-wrap: nowrap;
   }
 
+  .nav-wrapper {
+    margin-top: -3rem;
+  }
+
   .Hamburger-menu {
     display: block;
+    position: relative;
     width: 50px;
     background: none;
     border: none;
+    position: absolute;
+    z-index: 12;
   }
 
   .nav-dropdown-box {
