@@ -778,4 +778,16 @@ footer {
     display: flex;
     flex-direction: column;
   }
+
+  .header-logo {
+    grid-area: Two;
+  }
+
+  .search-bar {
+    display: none;
+  }
+
+  .Search-icon {
+    grid-area: Three;
+  }
 }
