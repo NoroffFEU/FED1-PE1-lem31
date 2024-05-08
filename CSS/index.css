@@ -305,12 +305,8 @@ nav a:active {
   position: absolute;
   bottom: 16%;
   width: 80rem;
-  height: 8rem;
+  height: 6rem;
   opacity: 0.8;
-}
-
-.h2-Blog-Feed {
-  text-align: center;
 }
 
 .grid-post-header:hover,
@@ -333,6 +329,7 @@ nav a:active {
   position: absolute;
   bottom: 18%;
   width: 30vw;
+  text-align: center;
 }
 
 .mountain-img-container {
