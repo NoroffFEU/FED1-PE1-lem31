@@ -763,7 +763,7 @@ footer {
 
 /*MEDIA QUERIES*/
 
-@media (max-width: 800px) {
+@media (max-width: 600px) {
   /*GLOBAL STYLES*/
 
   nav a,
@@ -926,5 +926,14 @@ footer {
 
   .h2-Blog-Feed {
     width: 50vw;
+  }
+
+  .grid-post-header {
+    width: 90vw;
+    height: 14vh;
+  }
+
+  .text-background-grid {
+    width: 90%;
   }
 }
