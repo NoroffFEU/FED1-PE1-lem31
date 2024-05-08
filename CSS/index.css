@@ -6,7 +6,7 @@
   --tertiary-color: #27aae1;
   --font-family-1: Playfair Display, serif;
   --font-family-2: Georgia, "Times New Roman", Times, serif;
-  --font-size-H2-H3-Desktop: 40px;
+  --font-size-H2-Desktop: 40px;
   --font-size-Blog-Post-Headers-Desktop: 20px;
   --font-size-Blog-Post-Sub-Headers-Desktop: 18px;
   --font-size-Body-Desktop: 18px;
@@ -69,9 +69,10 @@ h1,
   background-color: var(--primary-color);
 }
 
-.right-side-footer a,
-.right-side-footer p {
-  font-size: var(--font-size-footer-Links-Desktop);
+.BP-header-container,
+.header-container,
+.edit-page-btn {
+  background-color: var(--primary-color);
 }
 
 h1,
@@ -144,24 +145,26 @@ h1 {
   font-size: var(--font-size-H1-Desktop);
 }
 
+.right-side-footer a,
+.right-side-footer p {
+  font-size: var(--font-size-footer-Links-Desktop);
+}
+
 .h2-home,
 .h4-home,
 .Destinations-SH,
 .destination,
-.H5-home,
 .h3-edit {
-  font-size: var(--font-size-H2-H3-Desktop);
-}
-
-.BP-header-container,
-.header-container,
-.edit-page-btn {
-  background-color: var(--primary-color);
+  font-size: var(--font-size-H2-Desktop);
 }
 
 .Public-Blog-Post-Body {
   font-size: var(--font-size-Body-Desktop);
   font-family: var(--font-family-2);
+}
+
+.H5-home {
+  font-size: var(--font-size-Blog-Post-Sub-Headers-Desktop);
 }
 
 /*HEADER*/
@@ -392,10 +395,9 @@ nav a:active {
 }
 
 .grid-post-header {
-  width: 10%;
-  height: 3rem;
+  height: 3.5rem;
   position: absolute;
-  width: 30vw;
+  width: 28vw;
   text-align: center;
 }
 #grid-post-header-9,
@@ -425,16 +427,16 @@ nav a:active {
 }
 
 #email {
-  width: 720px;
-  height: 66px;
+  width: 500px;
+  height: 36px;
 }
 
 .Subscribe-btn {
-  height: 70px;
-  width: 200px;
+  height: 20px;
+  width: 120px;
   border: 8px var(--tertiary-color) solid;
-  padding: 30px 10px 40px 10px;
-  margin-top: -0.5rem;
+  padding: 10px 10px 30px 10px;
+  margin-top: -0.4rem;
   margin-left: -1rem;
   background-color: var(--primary-color);
 }
