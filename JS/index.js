@@ -107,7 +107,7 @@ function displayNavDropdown(){
  
 function navDesktopDisplay() {
 
-  if (window.innerWidth > 700) {
+  if (window.innerWidth > 800) {
     nav.style.display = 'flex';
   } else {
     nav.style.display = 'none';
@@ -128,7 +128,7 @@ function showSearchBar() {
 
 function displaySearchBarDesktop() {
 
-    if (window.innerWidth > 700) {
+    if (window.innerWidth > 800) {
       searchBar.style.display = 'flex';
     } else {
       searchBar.style.display = 'none';}}

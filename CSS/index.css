@@ -190,12 +190,6 @@ header {
   align-items: center;
 }
 
-.h2-container {
-  display: flex;
-  width: 100%;
-  justify-content: center;
-}
-
 .Hamburger-menu {
   display: none;
 }
@@ -222,6 +216,7 @@ nav {
   grid-area: Two;
   display: flex;
   flex-wrap: nowrap;
+  list-style: none;
 }
 
 nav a {
@@ -229,6 +224,7 @@ nav a {
   font-weight: bold;
   margin-left: 12px;
   text-decoration: none;
+  text-wrap: nowrap;
   gap: 12px;
 }
 
@@ -258,6 +254,17 @@ nav a:active {
 }
 
 /*MAIN*/
+
+.h2-container,
+.Destinations-SH-box {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.Destinations-SH-box {
+  height: 15rem;
+}
 
 .Video-banner {
   display: flex;
@@ -375,11 +382,6 @@ nav a:active {
 
 .destination {
   margin-left: 2.5rem;
-}
-
-.Destinations-SH {
-  display: flex;
-  justify-content: center;
 }
 
 .h4-home {
@@ -748,7 +750,7 @@ footer {
 
 /*MEDIA QUERIES*/
 
-@media (max-width: 700px) {
+@media (max-width: 800px) {
   header {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
