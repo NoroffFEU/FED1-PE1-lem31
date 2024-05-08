@@ -749,7 +749,7 @@ footer {
 /*MEDIA QUERIES*/
 
 @media (max-width: 700px) {
-  nav {
+  .navigation {
     display: none;
     list-style: none;
   }

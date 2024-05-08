@@ -49,39 +49,25 @@ buttonFive.addEventListener('click', () => {
   
 });
 
-buttonSix.addEventListener('click', () => {
-  
-  slideOne.style.display = 'none';
-  slideTwo.style.display = 'flex';
-  slideThree.style.display = 'none';
-  
-});
-
-
-
-//**HAMBURGER MENU */
-
-
-
+// Import required elements
 const navHamburger = document.querySelector('.Hamburger-menu');
 const nav = document.querySelector('.navigation');
 
-window.addEventListener('resize', displayNavDropdown);
-navHamburger.addEventListener('click', displayNavDropdown);
-
-function displayNavDropdown() {
-  if (window.innerWidth <= 700 && navHamburger.clicked && nav.style.display === 'none') {
+navHamburger.addEventListener('click', () => {
+  if (nav.style.display === 'none' || nav.style.display === '') {
     nav.style.display = 'block';
-  } else if (nav.style.display === 'block') {
+  } else {
     nav.style.display = 'none';
   }
-}
-
-
-
-   
-
-
+});
+ 
+window.addEventListener('resize', () => {
+  if (window.innerWidth > 700) {
+    nav.style.display = 'flex';
+  } else {
+    nav.style.display = 'none';
+  }
+});
 
 
 displayNavDropdown();
