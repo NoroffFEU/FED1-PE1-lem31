@@ -753,11 +753,11 @@ footer {
 @media (max-width: 800px) {
   header {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 2fr 1fr 2fr;
     grid-template-rows: 1fr;
     grid-template-areas: "One Two Three";
-    align-items: center;
   }
+
   .navigation {
     display: none;
     list-style: none;
@@ -781,6 +781,7 @@ footer {
     border: none;
     position: absolute;
     z-index: 12;
+    grid-area: One;
   }
 
   .nav-dropdown-box {
@@ -790,6 +791,8 @@ footer {
 
   .header-logo {
     grid-area: Two;
+    justify-self: center;
+    margin-left: 3rem;
   }
 
   .search-bar {
