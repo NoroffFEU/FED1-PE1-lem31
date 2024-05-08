@@ -895,12 +895,36 @@ footer {
   }
 
   .h4-home {
-    margin-top: -8rem;
+    margin-top: -5rem;
+    height: auto;
   }
 
   .Twelve-img-grid-container {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(12, 1fr);
+    margin-top: -7rem;
+  }
+
+  .Slide img {
+    width: 70%;
+    height: 65%;
+    align-items: center;
+    align-self: center;
+  }
+
+  .carousel-button {
+    width: 100px;
+    border: none;
+    background: none;
+    z-index: 12;
+  }
+
+  .h2-container {
+    height: 5rem;
+  }
+
+  .h2-Blog-Feed {
+    width: 50vw;
   }
 }
