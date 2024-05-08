@@ -19,8 +19,21 @@ body,
 html,
 main {
   margin: 0;
+  padding: 0;
   overflow-x: hidden;
 }
+
+/* body {
+  border: 5px solid red;
+}
+
+html {
+  border: 5px solid green;
+}
+
+main {
+  border: 5px solid blue;
+} */
 
 nav a,
 h1,
@@ -395,15 +408,10 @@ nav a:active {
 }
 
 .grid-post-header {
-  height: 3.5rem;
+  height: 18%;
   position: absolute;
   width: 28vw;
   text-align: center;
-}
-#grid-post-header-9,
-#grid-post-header-10,
-#grid-post-header-12 {
-  height: 3.8rem;
 }
 
 .text-background-grid {
@@ -411,8 +419,8 @@ nav a:active {
   background-color: var(--primary-color);
   opacity: 0.8;
   position: absolute;
-  width: 35%;
-  height: 6rem;
+  width: 30%;
+  height: 25%;
 }
 
 .H5-home {
