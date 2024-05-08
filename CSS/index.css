@@ -866,8 +866,8 @@ footer {
 
   .search-bar {
     display: none;
-    width: 200px;
-    margin-left: -10rem;
+    width: 120px;
+    margin-left: -4.8rem;
     margin-top: -2rem;
     position: absolute;
   }
@@ -892,5 +892,15 @@ footer {
     position: relative;
     display: flex;
     flex-direction: column;
+  }
+
+  .h4-home {
+    margin-top: -8rem;
+  }
+
+  .Twelve-img-grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(12, 1fr);
   }
 }
