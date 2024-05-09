@@ -895,6 +895,13 @@ footer {
     flex-direction: column;
   }
 
+  .h1-home {
+    top: 46%;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+  }
+
   .h4-home {
     margin-top: -5rem;
     height: auto;
