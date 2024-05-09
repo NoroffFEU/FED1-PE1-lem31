@@ -950,6 +950,11 @@ footer {
     width: 28rem;
     height: 4rem;
   }
+
+  #email {
+    width: 200px;
+    height: 36px;
+  }
 }
 
 @media (min-width: 601px) and (max-width: 800px) {
@@ -1123,5 +1128,10 @@ footer {
   .BP-header-container {
     width: 40rem;
     height: 6rem;
+  }
+
+  #email {
+    width: 400px;
+    height: 36px;
   }
 }
