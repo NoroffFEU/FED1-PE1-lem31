@@ -935,7 +935,7 @@ footer {
   }
 
   .h2-Blog-Feed {
-    width: 50vw;
+    width: 60vw;
   }
 
   .grid-post-header {
@@ -945,6 +945,10 @@ footer {
 
   .text-background-grid {
     width: 90%;
+  }
+  .BP-header-container {
+    width: 28rem;
+    height: 4rem;
   }
 }
 
@@ -1114,5 +1118,10 @@ footer {
 
   .h2-Blog-Feed {
     width: 50vw;
+  }
+
+  .BP-header-container {
+    width: 40rem;
+    height: 6rem;
   }
 }
