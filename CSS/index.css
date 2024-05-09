@@ -428,7 +428,7 @@ nav a:active {
 }
 
 .grid-post-header {
-  height: 18%;
+  height: 8%;
   position: absolute;
   width: 28vw;
   text-align: center;
@@ -440,7 +440,7 @@ nav a:active {
   opacity: 0.8;
   position: absolute;
   width: 30%;
-  height: 25%;
+  height: 15%;
 }
 
 .H5-home {
@@ -964,6 +964,16 @@ footer {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .grid-post-header {
+    height: 10%;
+    width: 80vw;
+  }
+
+  .text-background-grid {
+    width: 90%;
+    height: 15%;
+  }
 }
 
 @media (min-width: 601px) and (max-width: 800px) {
@@ -1149,5 +1159,34 @@ footer {
   #email {
     width: 400px;
     height: 36px;
+  }
+
+  .grid-post-header {
+    height: 13%;
+    width: 40vw;
+  }
+
+  .text-background-grid {
+    width: 50%;
+    height: 18%;
+  }
+}
+
+@media (min-width: 801px) and (max-width: 979px) {
+  .Twelve-img-grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    margin-top: -7rem;
+  }
+
+  .grid-post-header {
+    height: 8%;
+    width: 40vw;
+  }
+
+  .text-background-grid {
+    width: 50%;
+    height: 15%;
   }
 }
