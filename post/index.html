@@ -31,24 +31,30 @@
         src="../Images/Snow-V-CaysLogo.png"
         alt="Snow-V-Cays' blue snowflake logo"
       />
-      <nav>
-        <a href="/index.html">Home</a>
-        <a href="">About</a>
-        <a href="">Contact</a>
-        <a href="">Admin Login</a>
-        <a href="">Admin Register</a>
-      </nav>
 
-      <img
-        class="Hamburger-menu"
-        src="../Images/HamburgerMenu.png"
-        alt="Hamburger Menu Icon"
-      />
+      <div class="nav-wrapper">
+        <button class="Hamburger-menu">
+          <img
+            class="Hamburger-menu"
+            src="../Images/HamburgerMenu.png"
+            alt="Hamburger Menu Icon"
+          />
+        </button>
+
+        <div class="nav-dropdown-box">
+          <nav class="navigation">
+            <li><a href="">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Contact</a></li>
+            <li><a href="./account/login.html">Admin Login</a></li>
+            <li><a href="./account/register.html">Admin Register</a></li>
+          </nav>
+        </div>
+      </div>
 
       <form action="" method="get"></form>
 
       <div class="Search-bar">
-        <input class="search-bar" type="text" placeholder="Search..." />
         <button class="Search-Btn">
           <img
             class="Search-icon"
@@ -56,6 +62,7 @@
             alt="Blue Search Icon"
           />
         </button>
+        <input class="search-bar" type="text" placeholder="Search..." />
       </div>
     </header>
     <main>
