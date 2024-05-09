@@ -1107,6 +1107,13 @@ footer {
     position: absolute;
   } */
 
+  .Twelve-img-grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    margin-top: -7rem;
+  }
+
   .h4-home {
     margin-top: -5rem;
     height: auto;
