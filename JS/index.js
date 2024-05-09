@@ -88,6 +88,14 @@ buttonFive.addEventListener('click', () => {
   
 });
 
+buttonSix.addEventListener('click', () => {
+    
+    slideOne.style.display = 'none';
+    slideTwo.style.display = 'flex';
+    slideThree.style.display = 'none';
+    
+  });
+
 
 
 //**FUNCTIONS */
