@@ -1110,13 +1110,6 @@ footer {
 
   /*MAIN*/
 
-  /* .h1-home {
-    top: 46%;
-    left: 50%;
-    transform: translateX(-50%);
-    position: absolute;
-  } */
-
   .Twelve-img-grid-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
