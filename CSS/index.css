@@ -898,10 +898,7 @@ footer {
   /*MAIN*/
 
   .h1-home {
-    top: 46%;
-    left: 50%;
-    transform: translateX(-50%);
-    position: absolute;
+    top: 38%;
   }
 
   .h4-home {
@@ -1117,6 +1114,10 @@ footer {
     margin-top: -7rem;
   }
 
+  .h1-home {
+    top: 46%;
+  }
+
   .h4-home {
     margin-top: -5rem;
     height: auto;
@@ -1185,5 +1186,9 @@ footer {
   .text-background-grid {
     width: 50%;
     height: 15%;
+  }
+
+  .h1-home {
+    top: 46%;
   }
 }
