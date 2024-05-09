@@ -1163,6 +1163,10 @@ footer {
     width: 50%;
     height: 18%;
   }
+
+  .SM-Icon {
+    width: 40px;
+  }
 }
 
 @media (min-width: 801px) and (max-width: 979px) {
