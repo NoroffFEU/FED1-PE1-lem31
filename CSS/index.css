@@ -654,8 +654,9 @@ footer {
 }
 
 .h2-Edit-Page {
-  width: 30vw;
-  height: 38vh;
+  width: 30%;
+  height: 11rem;
+  margin-top: -12rem;
   z-index: 12;
   position: absolute;
   text-align: center;
@@ -1223,6 +1224,8 @@ footer {
     width: 40px;
   }
 
+  /*CREATE POST PAGE and EDIT POST PAGE*/
+
   .header-container {
     width: 35rem;
   }
@@ -1249,6 +1252,10 @@ footer {
   }
 
   .edit-page-btn {
+    width: 40%;
+  }
+
+  .h2-Edit-Page {
     width: 40%;
   }
 }
@@ -1291,5 +1298,10 @@ footer {
 
   .Logout-link {
     margin: 0;
+  }
+
+  .h2-Edit-Page {
+    width: 30%;
+    height: 12rem;
   }
 }
