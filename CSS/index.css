@@ -998,10 +998,6 @@ footer {
   .blog-post img {
     width: 100%;
   }
-
-  .Two-links-box {
-    display: none;
-  }
 }
 
 @media (min-width: 601px) and (max-width: 800px) {
@@ -1207,6 +1203,7 @@ footer {
   .Two-links-box {
     display: flex;
     flex-direction: column;
+    justify-content: left;
   }
 
   .post-link,
@@ -1248,6 +1245,7 @@ footer {
   .Two-links-box {
     display: flex;
     flex-direction: column;
+    justify-content: left;
   }
 
   .post-link,
