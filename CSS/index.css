@@ -669,6 +669,7 @@ footer {
   height: 4rem;
   border: 3px var(--tertiary-color) solid;
   margin-top: -1.2rem;
+  margin-bottom: 2rem;
 }
 
 .edit-page-btn:hover,
@@ -993,6 +994,14 @@ footer {
   .blog-posts-wrapper {
     grid-template-columns: 50%;
   }
+
+  .blog-post img {
+    width: 100%;
+  }
+
+  .Two-links-box {
+    display: none;
+  }
 }
 
 @media (min-width: 601px) and (max-width: 800px) {
@@ -1094,7 +1103,6 @@ footer {
   .header-logo {
     grid-area: Two;
     justify-self: center;
-    margin-left: 3rem;
   }
 
   .search-bar {
@@ -1185,11 +1193,25 @@ footer {
   }
 
   .header-container {
-    width: 20rem;
+    width: 30rem;
   }
 
   .blog-posts-wrapper {
     grid-template-columns: 50%;
+  }
+
+  .blog-post img {
+    width: 90%;
+  }
+
+  .Two-links-box {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .post-link,
+  .Logout-link {
+    text-align: left;
   }
 }
 
@@ -1221,5 +1243,15 @@ footer {
   }
   .header-container {
     width: 30rem;
+  }
+
+  .Two-links-box {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .post-link,
+  .Logout-link {
+    text-align: left;
   }
 }
