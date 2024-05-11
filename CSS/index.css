@@ -517,7 +517,7 @@ footer {
   text-align: center;
 }
 
-/*CREATE POST PAGE and Edit Post Page*/
+/*CREATE POST PAGE and EDIT POST PAGE*/
 
 .Three-header-box,
 .Three-header-box-2 {
@@ -570,8 +570,7 @@ footer {
   filter: drop-shadow(2px 5px 1px #27aae1);
 }
 
-#create-post-form,
-.popup-form {
+#create-post-form {
   display: flex;
   flex-direction: column;
   width: 50%;
@@ -602,6 +601,15 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.popup-form-wrapper {
+  position: fixed;
+  top: 0.2rem;
+  z-index: 12;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
 }
 
 .blog-posts-wrapper {
@@ -676,14 +684,15 @@ footer {
 }
 
 .popup-form {
+  display: flex;
+  flex-direction: column;
   position: fixed;
-  top: 1rem;
-  left: 25rem;
+  width: 100%;
+  height: 80%;
   z-index: 12;
   background-color: var(--primary-color);
-  padding-bottom: 5rem;
   border: 8px var(--tertiary-color) solid;
-  display: none;
+  padding-bottom: 3rem;
 }
 
 .button-wrapper-edit {
