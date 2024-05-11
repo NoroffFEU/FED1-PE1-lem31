@@ -221,7 +221,7 @@ header {
   grid-area: Two;
 }
 
-nav {
+nav ul {
   grid-area: Two;
   display: flex;
   flex-wrap: nowrap;
