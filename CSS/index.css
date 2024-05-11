@@ -581,15 +581,20 @@ footer {
 .create-post-input,
 .edit-input {
   padding: 1rem;
+  width: 80%;
 }
 
 .input-label-create {
   margin-top: 1rem;
 }
 
-#body,
+/* #body,
 .body-edit {
   padding: 10rem;
+} */
+
+#body {
+  height: 20rem;
 }
 
 .Create-Post-form-wrapper,
