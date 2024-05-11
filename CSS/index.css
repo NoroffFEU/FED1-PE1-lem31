@@ -868,6 +868,11 @@ footer {
     text-wrap: nowrap;
   }
 
+  nav ul {
+    margin-left: -2rem;
+    z-index: 12;
+  }
+
   .nav-wrapper {
     margin-top: -3rem;
   }
@@ -1114,6 +1119,11 @@ footer {
 
   .nav-wrapper {
     margin-top: -3rem;
+  }
+
+  nav ul {
+    margin-left: -2rem;
+    z-index: 12;
   }
 
   .Hamburger-menu {
