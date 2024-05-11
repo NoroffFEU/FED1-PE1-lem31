@@ -987,7 +987,7 @@ footer {
   }
 
   .header-container {
-    width: 25rem;
+    width: 70%;
   }
 
   .blog-posts-wrapper {
@@ -1016,6 +1016,15 @@ footer {
 
   .h2-Edit-Page {
     width: 60vw;
+  }
+
+  .btn-wrapper {
+    justify-content: space-between;
+  }
+
+  .edit-page-btn {
+    width: 45%;
+    height: 3rem;
   }
 }
 
@@ -1226,6 +1235,14 @@ footer {
   }
   .Logout-link {
     margin: 0;
+  }
+
+  .btn-wrapper {
+    justify-content: space-between;
+  }
+
+  .edit-page-btn {
+    width: 40%;
   }
 }
 
