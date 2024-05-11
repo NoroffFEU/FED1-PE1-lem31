@@ -513,6 +513,10 @@ footer {
   width: 80%;
 }
 
+.h1-public-blog-post {
+  text-align: center;
+}
+
 /*CREATE POST PAGE and Edit Post Page*/
 
 .Three-header-box,
@@ -713,12 +717,13 @@ footer {
   display: flex;
   flex-direction: column;
   margin-bottom: 0;
+  width: 50%;
 }
 
 .login-input,
 .register-input {
   padding: 1rem;
-  width: 500px;
+  width: 100%;
 }
 
 .login-btn,
