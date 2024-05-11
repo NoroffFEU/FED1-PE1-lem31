@@ -641,7 +641,7 @@ footer {
 .header-container {
   display: flex;
   position: absolute;
-  width: 50rem;
+  width: 40rem;
   height: 10rem;
   opacity: 0.8;
   z-index: 11;
@@ -649,7 +649,7 @@ footer {
 
 .h2-Edit-Page {
   width: 30vw;
-  height: 20%;
+  height: 30vh;
   z-index: 12;
   position: absolute;
   text-align: center;
@@ -985,6 +985,14 @@ footer {
     width: 90%;
     height: 15%;
   }
+
+  .header-container {
+    width: 20rem;
+  }
+
+  .blog-posts-wrapper {
+    grid-template-columns: 50%;
+  }
 }
 
 @media (min-width: 601px) and (max-width: 800px) {
@@ -1175,6 +1183,14 @@ footer {
   .SM-Icon {
     width: 40px;
   }
+
+  .header-container {
+    width: 20rem;
+  }
+
+  .blog-posts-wrapper {
+    grid-template-columns: 50%;
+  }
 }
 
 @media (min-width: 801px) and (max-width: 979px) {
@@ -1202,5 +1218,8 @@ footer {
   .BP-header-container {
     width: 60rem;
     height: 6rem;
+  }
+  .header-container {
+    width: 30rem;
   }
 }
