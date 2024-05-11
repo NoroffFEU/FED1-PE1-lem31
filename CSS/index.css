@@ -335,7 +335,7 @@ nav a:active {
 }
 
 .Slide img {
-  width: 38%;
+  width: 70%;
   height: 65%;
   align-items: center;
   align-self: center;
@@ -913,13 +913,6 @@ footer {
     margin-top: -7rem;
   }
 
-  .Slide img {
-    width: 70%;
-    height: 65%;
-    align-items: center;
-    align-self: center;
-  }
-
   .carousel-button {
     width: 100px;
     border: none;
@@ -1123,13 +1116,6 @@ footer {
     height: auto;
   }
 
-  .Slide img {
-    width: 70%;
-    height: 65%;
-    align-items: center;
-    align-self: center;
-  }
-
   .carousel-button {
     width: 100px;
     border: none;
@@ -1190,5 +1176,12 @@ footer {
 
   .h1-home {
     top: 46%;
+  }
+
+  .carousel-button {
+    width: 100px;
+    border: none;
+    background: none;
+    z-index: 12;
   }
 }
