@@ -1178,10 +1178,8 @@ footer {
     top: 46%;
   }
 
-  .carousel-button {
-    width: 100px;
-    border: none;
-    background: none;
-    z-index: 12;
+  .BP-header-container {
+    width: 60rem;
+    height: 6rem;
   }
 }
