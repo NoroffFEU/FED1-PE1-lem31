@@ -640,7 +640,7 @@ footer {
 .header-container {
   display: flex;
   position: absolute;
-  width: 45rem;
+  width: 40rem;
   height: 13rem;
   opacity: 0.8;
   z-index: 11;
@@ -995,7 +995,7 @@ footer {
   }
 
   .blog-post img {
-    width: 100%;
+    width: 65vw;
   }
 
   .Three-header-box-2,
@@ -1012,6 +1012,10 @@ footer {
 
   .Two-links-box {
     margin-bottom: 1rem;
+  }
+
+  .h2-Edit-Page {
+    width: 60vw;
   }
 }
 
@@ -1204,7 +1208,7 @@ footer {
   }
 
   .header-container {
-    width: 30rem;
+    width: 35rem;
   }
 
   .blog-posts-wrapper {
@@ -1212,7 +1216,7 @@ footer {
   }
 
   .blog-post img {
-    width: 90%;
+    width: 70vw;
   }
 
   .Two-links-box {
