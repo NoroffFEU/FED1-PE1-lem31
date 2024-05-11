@@ -524,7 +524,6 @@ footer {
   display: grid;
   grid-template-columns: 0% 80% 20%;
   align-items: center;
-  justify-content: center;
   grid-template-areas: "One Two Three";
   width: 100vw;
 }
@@ -998,6 +997,14 @@ footer {
   .blog-post img {
     width: 100%;
   }
+
+  .Three-header-box-2,
+  .Three-header-box,
+  .Two-links-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 @media (min-width: 601px) and (max-width: 800px) {
@@ -1203,12 +1210,7 @@ footer {
   .Two-links-box {
     display: flex;
     flex-direction: column;
-    justify-content: left;
-  }
-
-  .post-link,
-  .Logout-link {
-    text-align: left;
+    align-items: center;
   }
 }
 
@@ -1245,7 +1247,7 @@ footer {
   .Two-links-box {
     display: flex;
     flex-direction: column;
-    justify-content: left;
+    align-items: start;
   }
 
   .post-link,
