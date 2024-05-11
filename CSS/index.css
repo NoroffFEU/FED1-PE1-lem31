@@ -572,14 +572,16 @@ footer {
 #create-post-form {
   display: flex;
   flex-direction: column;
-  width: 50%;
-  justify-content: center;
+  width: 80%;
 }
 
-.create-post-input,
 .edit-input {
   padding: 1rem;
   width: 80%;
+}
+
+.create-post-input {
+  padding: 1rem;
 }
 
 .input-label-create {
@@ -595,11 +597,16 @@ footer {
   height: 20rem;
 }
 
-.Create-Post-form-wrapper,
 .popup-form-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.Create-Post-form-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
 }
 
 .popup-form-wrapper {
