@@ -610,6 +610,7 @@ footer {
   width: 100%;
   height: 100%;
   justify-content: center;
+  display: none;
 }
 
 .blog-posts-wrapper {
@@ -617,6 +618,7 @@ footer {
   grid-template-columns: 50% 50%;
   width: 100%;
   justify-content: center;
+  align-items: center;
   margin: 0;
   padding: 0;
 }
@@ -631,7 +633,7 @@ footer {
 
 .blog-post img {
   width: 60%;
-  height: 80%;
+  height: auto;
   margin: 0;
   padding: 0;
 }
@@ -640,16 +642,16 @@ footer {
   display: flex;
   position: absolute;
   width: 50rem;
-  height: 14rem;
+  height: 10rem;
   opacity: 0.8;
   z-index: 11;
 }
 
 .h2-Edit-Page {
-  width: 450px;
-  height: 70px;
+  width: 30vw;
+  height: 20%;
   z-index: 12;
-  margin-top: -6rem;
+  position: absolute;
   text-align: center;
 }
 
