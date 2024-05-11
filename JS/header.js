@@ -50,9 +50,11 @@ function navDesktopDisplay() {
 
   if (window.innerWidth > 800) {
     nav.style.display = 'flex';
-  } else {
-    nav.style.display = 'none';
-  }}
+  }
+else{
+  nav.style.display = 'none';
+};
+}
 
 
 //**Function to display search bar on mobile screen */
@@ -76,5 +78,3 @@ function displaySearchBarDesktop() {
 
 //**ALL FUNCTIONS */
 
-navDesktopDisplay()
-displayNavDropdown();
