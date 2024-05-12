@@ -82,16 +82,47 @@
             required
           />
 
-          <label class="register-label" id="username-label" for="username"
-            >Username</label
+          <label class="register-label" id="email-label" for="email"
+            >Email</label
           >
           <input
             class="register-input"
             type="text"
-            id="username"
-            name="username"
-            placeholder="Please enter your username"
+            id="email-register"
+            name="email"
+            placeholder="Please enter your email"
             required
+          />
+
+          <label class="register-label" id="bio-label" for="bio">Bio</label>
+          <input
+            class="register-input"
+            type="text"
+            id="bio"
+            name="bio"
+            placeholder="Please enter your bio here"
+          />
+
+          <label class="register-label" id="avatar-label" alt="" for="avatar"
+            >Avatar</label
+          >
+          <input
+            class="register-input"
+            type="url"
+            id="avatar"
+            name="avatar"
+            placeholder="Please enter the Url for your avatar"
+          />
+
+          <label class="register-label" id="banner-label" alt="" for="banner"
+            >Banner</label
+          >
+          <input
+            class="register-input"
+            type="url"
+            id="banner"
+            name="banner"
+            placeholder="Please enter the Url for your banner"
           />
 
           <label class="register-label" id="pw-label-register" for="password"
@@ -100,26 +131,12 @@
           <input
             class="register-input"
             type="password"
-            id="password"
+            id="password-register"
             name="password"
             placeholder="Please enter your password"
             required
           />
 
-          <label
-            class="register-label"
-            id="repeat-pw-label"
-            for="re-enter-password"
-            >Repeat Password</label
-          >
-          <input
-            class="register-input"
-            type="password"
-            id="re-enter-password"
-            name="re-enter-password"
-            placeholder="Please re-enter your password"
-            required
-          />
           <div class="register-btn-box">
             <button class="register-btn" type="submit">Register Now</button>
           </div>
@@ -129,6 +146,24 @@
           </div>
         </form>
       </div>
+
+      <!-- 
+      {
+  "name": "aJFEoMXm6He1qqw7VqYz",
+  "email": "user@example.com",
+  "bio": "string",
+  "avatar": {
+    "url": "string",
+    "alt": ""
+  },
+  "banner": {
+    "url": "string",
+    "alt": ""
+  },
+  "venueManager": true,
+  "password": "stringst"
+}
+      -->
     </main>
     <footer>
       <div class="SM-icons-container">

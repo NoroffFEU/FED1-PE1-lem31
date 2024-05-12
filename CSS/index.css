@@ -784,10 +784,12 @@ footer {
 
 #pw-label,
 .forgot-pw-link,
-#username-label,
-#pw-label-register,
-#repeat-pw-label {
+#username-label {
   margin-top: 1rem;
+}
+
+#bio {
+  padding: 5rem 0rem 5rem 2rem;
 }
 
 /*MEDIA QUERIES*/
