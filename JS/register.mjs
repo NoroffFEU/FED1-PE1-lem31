@@ -3,6 +3,10 @@ import { regUser } from "./API/regUser.mjs";
 /* Constants */
 const regForm = document.getElementById('reg-form');
 
+
+
+
+
 /* EVENT LISTENERS */
 regForm.addEventListener('submit', registerUser);
 

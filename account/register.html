@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="../CSS/index.css" />
     <script defer src="../JS/header.js"></script>
     <script type="module" defer src="../JS/register.mjs"></script>
+    <script type="module" defer src="../JS/API/regUser.mjs"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -135,29 +136,15 @@
             placeholder="Please enter the Url for your banner"
           />
 
-          <label class="register-label" id="venue-Manager" for="venue-Manager"
+          <label class="register-label" id="venue-Manager" for="venueManager"
             >I am the Venue Manager</label
           >
           <input
             class="register-input"
             type="radio"
             id="venue-Manager"
-            name="venue-Manager"
+            name="venueManager"
             value="true"
-          />
-
-          <label
-            class="register-label"
-            id="venue-Manager-false"
-            for="venue-Manager"
-            >I am not the Venue Manager</label
-          >
-          <input
-            class="register-input"
-            type="radio"
-            id="venue-Manager-false"
-            name="venue-Manager"
-            value="false"
           />
 
           <label class="register-label" id="pw-label-register" for="password"
