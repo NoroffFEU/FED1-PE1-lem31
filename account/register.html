@@ -15,6 +15,8 @@
     />
     <link rel="stylesheet" href="../CSS/index.css" />
     <script defer src="../JS/header.js"></script>
+    <script defer src="../JS/regUser.mjs"></script>
+    <script defer src="../JS/register.mjs"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -71,7 +73,12 @@
         <h1>Register</h1>
       </div>
       <div class="register-form-wrapper">
-        <form class="register-form" id="reg-form" method="post" action="">
+        <form
+          class="register-form"
+          id="reg-form"
+          method="post"
+          action="/auth/register"
+        >
           <label class="register-label" for="name">Name</label>
           <input
             class="register-input"
