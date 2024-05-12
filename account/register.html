@@ -78,6 +78,8 @@
             type="text"
             id="name"
             name="name"
+            pattern="^[\w]+$"
+            title="Name can only contain lower or uppercase letters, numbers, and underscores. E.G. Jon_123."
             placeholder="Please enter your Name"
             required
           />
@@ -90,6 +92,8 @@
             type="text"
             id="email-register"
             name="email"
+            pattern="^[\w\-.]+@(stud\.)?noroff\.no$"
+            title="Please enter a valid Noroff email address only."
             placeholder="Please enter your email"
             required
           />
@@ -133,6 +137,7 @@
             type="password"
             id="password-register"
             name="password"
+            min-length="8"
             placeholder="Please enter your password"
             required
           />
