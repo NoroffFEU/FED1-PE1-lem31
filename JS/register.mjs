@@ -1,31 +1,20 @@
 import { regUser } from "./API/regUser.mjs";
 
-
-
 /* Constants */
+const regForm = document.getElementById('reg-form');
 
-const registerForm= document.getElementById('reg-form');
+/* EVENT LISTENERS */
+regForm.addEventListener('submit', registerUser);
 
-const regForm= event.target;
+/* FUNCTIONS */
+function registerUser(e) {
+  e.preventDefault();
 
-const regFormInputs= new FormData(regForm);
+  const regForm = e.target;
+  const regFormInputs = new FormData(regForm);
+  const userProfile = Object.fromEntries(regFormInputs.entries());
 
-const userProfile= Object.fromEntries(regFormInputs.entries());
-
-const a = regForm.getAttribute('action');
-
-const m= regForm.getAttribute('method');
-
-
-/*EVENT LISTENERS*/
-
-registerForm.addEventListener('submit', registerUser(event));
-
-/*FUNCTIONS*/
-
-function registerUser(event){
-  e.preventDefault()
+  regUser(userProfile);
 }
 
 
-regUser(userProfile, a, m);
