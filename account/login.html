@@ -15,6 +15,7 @@
     />
     <link rel="stylesheet" href="../CSS/index.css" />
     <script defer src="../JS/header.js"></script>
+    <script type="module" defer src="../JS/Login.mjs"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -70,16 +71,15 @@
       <div class="h1-login">
         <h1>Login</h1>
       </div>
-
       <div class="login-form-wrapper">
-        <form class="login-form" action="">
-          <label class="login-label" for="username">Username</label>
+        <form class="login-form" action="/auth/login" method="post">
+          <label class="login-label" for="email">Email</label>
           <input
             class="login-input"
             type="text"
             id="username"
-            name="username"
-            placeholder="Please enter your username"
+            name="email"
+            placeholder="Please enter your email"
             required
           />
 

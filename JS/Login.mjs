@@ -5,45 +5,43 @@ const loginForm = document.getElementById('login-form');
 
 /* EVENT LISTENERS */
 
-loginForm.addEventListener('submit', formSubmit);
+loginForm.addEventListener('submit', loginFormSubmit);
 
 /* FUNCTIONS */
 
+async function loginFormSubmit(event) {
+  event.preventDefault();
+  const loginFormData = new FormData(loginForm);
+  const formDataObject = Object.fromEntries(loginFormData);
+  const API_URL = API_LOGIN_URL;
+  try {
+    const response = await fetch(API_URL, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formDataObject),
+    });
 
-async function formSubmit (event) {
+    const data = await response.json();
+    localStorage.setItem('token', data.accessToken);
+    console.log('User Logged in', data);
+  } catch (error) {
+    console.error('Error:', error);
+  }
+}
+
+const token = localStorage.getItem('token');
+
+const path = location.pathname;
+
+if(path==='/auth/login'){
+  loginFormSubmit();
+}else if(path==='/auth/register'){
+  formSubmit();
+}
 
 
-
-    event.preventDefault(); 
-
-    const loginFormData = new FormData(loginForm);
-    const username = loginFormData.get('name'); 
-    const password = loginFormData.get('password'); 
-    const API_URL = API_LOGIN_URL;
-
-    try {
-      const response = await fetch(API_URL, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ username, password })
-      });
-
-      if (response.ok) {
-        const data = await response.json();
-        const token = data.access_token; 
-
-        localStorage.setItem('access_token', token);
-
-        window.location.href = '/index.html'; 
-      } else {
-        console.error('Login failed');
-      }
-    } catch (error) {
-      console.error('An error occurred', error);
-    }
-  };
 
  
 

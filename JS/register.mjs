@@ -14,30 +14,22 @@ async function formSubmit(event) {
   const regFormData = new FormData(regForm);
   const formDataObject = Object.fromEntries(regFormData);
   const API_URL = API_REG_URL;
-  const response = await fetch(API_URL, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(formDataObject),
-  });
-  const data = await response.json();
-  console.log('User registered', data);
-}
-    try {
-      const response = await fetch(API_URL, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formDataObject),
-      });
+  try {
+    const response = await fetch(API_URL, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formDataObject),
+    });
 
-      const data = await response.json();
-      console.log('User registered', data);
-    } catch (error) {
-      console.error('Error:', error);
-    }
+    const data = await response.json();
+    console.log('User registered', data);
+  } catch (error) {
+    console.error('Error:', error);
+  }
+}
+
 
 
 
