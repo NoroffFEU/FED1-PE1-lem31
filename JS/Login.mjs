@@ -21,15 +21,14 @@ async function loginFormSubmit(event) {
       body: JSON.stringify(Object.fromEntries(new FormData(loginForm))),
     });
 
-    const userData = await response.json();
-   
+    const userData = await response.json(loginForm);
+     
     const info = userData.data;
 
-    const user = info.email && info.password;
 
     localStorage.setItem('accessToken', info.accessToken);
-    localStorage.setItem('userData', JSON.stringify(user));
-    console.log('User Logged in', info.accessToken, user);
+    localStorage.setItem('userInfo', JSON.stringify(userData.data));
+    console.log('User Logged in', info.accessToken, userData.data);
 
     if (response.status === 200) {
       // window.location.href = '/post/edit.html';
@@ -49,6 +48,6 @@ async function loginFormSubmit(event) {
 
 console.log (localStorage.getItem('accessToken'));
 
-console.log (localStorage.getItem('user'));
+console.log (localStorage.getItem('userInfo'));
 
 
