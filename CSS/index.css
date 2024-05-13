@@ -737,7 +737,7 @@ footer {
 }
 
 .register-form,
-.login-form {
+#login-form {
   display: flex;
   flex-direction: column;
   margin-bottom: 0;
@@ -751,8 +751,7 @@ footer {
 
 .login-input {
   padding: 1rem;
-  width: 50%;
-  text-align: left;
+  width: 100%;
 }
 
 .login-btn,
