@@ -28,7 +28,7 @@ async function loginFormSubmit(event) {
     console.log('User Logged in', data);
 
    
-    window.location.href = './index.html';
+    window.location.href = '/post/edit.html';
   } catch (error) {
     console.error('Error:', error);
   }
