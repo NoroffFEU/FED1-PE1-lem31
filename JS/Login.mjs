@@ -22,41 +22,23 @@ async function loginFormSubmit(event) {
     });
 
     const data = await response.json();
-    localStorage.setItem('token', data.accessToken);
+    localStorage.setItem('accessToken', data.accessToken);
     localStorage.setItem('user', JSON.stringify(data.user));
     console.log('User Logged in', data, data.user);
 
-  
-
-   if (response.status === 200) {
+    if (response.status === 200) {
       window.location.href = '/post/edit.html';
       alert('You have successfully logged in!');
-    }
-
-    else {
+    } else {
       alert('Invalid username or password');
     }
-
-  
   } catch (error) {
     console.error('Error:', error);
   }
 }
 
 
-
-// const path = location.pathname;
-
-// if (path === '/auth/login') {
-//   loginFormSubmit();
-// } else if (path === '/auth/register') {
-//   formSubmit();
-// }
-
-
-
- 
-
+console.log (localStorage.getItem('accessToken'));
 
 
 

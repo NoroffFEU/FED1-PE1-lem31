@@ -5,11 +5,11 @@ const regForm = document.getElementById('reg-form');
 
 /* EVENT LISTENERS */
 
-regForm.addEventListener('submit', formSubmit);
+regForm.addEventListener('submit', regFormSubmit);
 
 /* FUNCTIONS */
 
-async function formSubmit(event) {
+async function regFormSubmit(event) {
   event.preventDefault();
   const regFormData = new FormData(regForm);
   const formDataObject = Object.fromEntries(regFormData);
@@ -37,7 +37,7 @@ async function formSubmit(event) {
 
 
 
-/* FUNCTION CALLS */
+
 
 
 
