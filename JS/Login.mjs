@@ -8,10 +8,10 @@ const loginForm = document.getElementById('login-form');
 loginForm.addEventListener('submit', loginFormSubmit);
 
 /* FUNCTIONS */
-
 async function loginFormSubmit(event) {
   event.preventDefault();
   const API_URL = API_LOGIN_URL;
+  
   try {
     const response = await fetch(API_URL, {
       method: 'POST',
@@ -21,10 +21,15 @@ async function loginFormSubmit(event) {
       body: JSON.stringify(Object.fromEntries(new FormData(loginForm))),
     });
 
-    const data = await response.json();
-    localStorage.setItem('accessToken', data.accessToken);
-    localStorage.setItem('user', JSON.stringify(data.user));
-    console.log('User Logged in', data, data.user);
+    const userData = await response.json();
+   
+    const info = userData.data;
+
+    const user = info.email && info.password;
+
+    localStorage.setItem('accessToken', info.accessToken);
+    localStorage.setItem('userData', JSON.stringify(user));
+    console.log('User Logged in', info.accessToken, user);
 
     if (response.status === 200) {
       // window.location.href = '/post/edit.html';
@@ -38,7 +43,12 @@ async function loginFormSubmit(event) {
 }
 
 
+
+
+
+
 console.log (localStorage.getItem('accessToken'));
 
+console.log (localStorage.getItem('user'));
 
 
