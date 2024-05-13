@@ -25,6 +25,9 @@ async function formSubmit(event) {
 
     const data = await response.json();
     console.log('User registered', data);
+
+  
+ 
   } catch (error) {
     console.error('Error:', error);
   }

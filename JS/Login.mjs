@@ -26,6 +26,9 @@ async function loginFormSubmit(event) {
     const data = await response.json();
     localStorage.setItem('token', data.accessToken);
     console.log('User Logged in', data);
+
+   
+    window.location.href = './index.html';
   } catch (error) {
     console.error('Error:', error);
   }
