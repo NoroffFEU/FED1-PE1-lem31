@@ -11,8 +11,6 @@ loginForm.addEventListener('submit', loginFormSubmit);
 
 async function loginFormSubmit(event) {
   event.preventDefault();
-  const loginFormData = new FormData(loginForm);
-  const formDataObject = Object.fromEntries(loginFormData);
   const API_URL = API_LOGIN_URL;
   try {
     const response = await fetch(API_URL, {
@@ -20,29 +18,40 @@ async function loginFormSubmit(event) {
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify(formDataObject),
+      body: JSON.stringify(Object.fromEntries(new FormData(loginForm))),
     });
 
     const data = await response.json();
     localStorage.setItem('token', data.accessToken);
-    console.log('User Logged in', data);
+    localStorage.setItem('user', JSON.stringify(data.user));
+    console.log('User Logged in', data, data.user);
 
-   
-    window.location.href = '/post/edit.html';
+  
+
+   if (response.status === 200) {
+      window.location.href = '/post/edit.html';
+      alert('You have successfully logged in!');
+    }
+
+    else {
+      alert('Invalid username or password');
+    }
+
+  
   } catch (error) {
     console.error('Error:', error);
   }
 }
 
-const token = localStorage.getItem('token');
 
-const path = location.pathname;
 
-if(path==='/auth/login'){
-  loginFormSubmit();
-}else if(path==='/auth/register'){
-  formSubmit();
-}
+// const path = location.pathname;
+
+// if (path === '/auth/login') {
+//   loginFormSubmit();
+// } else if (path === '/auth/register') {
+//   formSubmit();
+// }
 
 
 
