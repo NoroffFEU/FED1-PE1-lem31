@@ -549,6 +549,11 @@ footer {
   text-wrap: nowrap;
 }
 
+#logout-btn {
+  background: none;
+  border: none;
+}
+
 .Logout-link {
   margin-left: 2rem;
 }
