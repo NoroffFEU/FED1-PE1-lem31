@@ -15,7 +15,7 @@
     />
     <link rel="stylesheet" href="../CSS/index.css" />
     <script defer src="../JS/header.js"></script>
-
+    <script type="module" src="../JS/create.mjs"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -79,7 +79,19 @@
       </div>
 
       <div class="Create-Post-form-wrapper">
-        <form id="create-post-form" action="create_blog_post.php" method="post">
+
+
+        <form id="create-post-form" action="/blog/posts" method="post">
+          <label class="input-label-create" for="name">Name</label>
+          <input
+            class="create-post-input"
+            type="text"
+            id="name"
+            name="title"
+            placeholder="Please enter the title of your blog post"
+            required
+          />
+        <form id="create-post-form" action="/blog/posts" method="post">
           <label class="input-label-create" for="title">Title</label>
           <input
             class="create-post-input"
@@ -90,13 +102,12 @@
             required
           />
 
-          <label class="input-label-create" for="body">Text</label>
+          <label class="input-label-create" for="body">Body</label>
           <textarea
             class="create-post-input"
             id="body"
             name="body"
             placeholder="Please enter your blog post body text"
-            required
           ></textarea>
 
           <label class="input-label-create" for="author">Author</label>
@@ -106,7 +117,6 @@
             id="author"
             name="author"
             placeholder="Please enter the name of the author for this blog post"
-            required
           />
           <label class="input-label-create" for="published"
             >Date Published</label
@@ -117,7 +127,6 @@
             id="published"
             name="published"
             placeholder="Please enter the date this blog post was published"
-            required
           />
 
           <label class="input-label-create" for="tags">Tags</label>
@@ -127,13 +136,12 @@
             id="tags"
             name="tags"
             placeholder="Please enter the tags for your blog post"
-            required
           />
 
           <label class="input-label-create" for="media">Media</label>
           <input
             class="create-post-input"
-            type="text"
+            type="url"
             id="media"
             name="media"
             placeholder="Please enter the image URL for your blog post"

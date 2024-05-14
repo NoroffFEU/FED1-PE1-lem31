@@ -2,11 +2,16 @@
 
 
 //EVENT LISTENERS
+
+//Event listener for the logout button
 document.getElementById('logout-btn').addEventListener('click', logout);
 
 
 
 // FUNCTIONS
+
+
+//Function for logging out
 function logout() {
 
   const accessToken = localStorage.getItem('accessToken');
@@ -21,7 +26,6 @@ function logout() {
     localStorage.removeItem('accessToken');
     window.location.href = '/account/login.html';
    alert('You have successfully logged out!');
-
    
   }
 
@@ -31,8 +35,11 @@ function logout() {
 
   console.log('User logged out', accessToken);
 
-
-
 }
 
+
+
  
+
+//FUNCTION CALLS
+
