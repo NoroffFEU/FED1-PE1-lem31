@@ -10,16 +10,18 @@ createPostForm.addEventListener('submit', createFormSubmit);
 async function createFormSubmit(event) {
   event.preventDefault();
   const API_URL = CREATE_POST_API_URL;
-
+  
 
   
   try {
     const formData = new FormData(createPostForm);
-   const postData= {
+   const blogPostObject= {
     title: formData.get('title'),
   body: formData.get('body'),
   media: {
     url: formData.get('media')
+
+   
   }
    }
     
@@ -35,7 +37,7 @@ async function createFormSubmit(event) {
        
         Authorization: `Bearer ${accessToken}`,
       },
-      body: JSON.stringify(postData),
+      body: JSON.stringify(blogPostObject),
 
     });
 
