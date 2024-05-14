@@ -8,3 +8,5 @@ export const API_LOGIN_URL = LOGIN_API_URL;
 
 
 export const CREATE_POST_API_URL = "https://v2.api.noroff.dev/blog/posts/Test007";
+
+
