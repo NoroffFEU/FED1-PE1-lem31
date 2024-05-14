@@ -11,22 +11,32 @@ async function createFormSubmit(event) {
   event.preventDefault();
   const API_URL = CREATE_POST_API_URL;
 
-  const accessToken = localStorage.getItem('accessToken');
+
   
   try {
     const formData = new FormData(createPostForm);
-   
+   const postData= {
+    title: formData.get('title'),
+  body: formData.get('body'),
+  media: {
+    url: formData.get('media')
+  }
+   }
     
-  
+    const accessToken = localStorage.getItem('accessToken');
+
+    console.log(accessToken);
 
     const response = await fetch(API_URL, {
+     
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
+       
         Authorization: `Bearer ${accessToken}`,
       },
-      body: JSON.stringify(formData)
- 
+      body: JSON.stringify(postData),
+
     });
 
     const userData = await response.json();
