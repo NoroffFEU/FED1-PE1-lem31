@@ -20,8 +20,6 @@ async function createFormSubmit(event) {
   body: formData.get('body'),
   media: {
     url: formData.get('media')
-
-   
   }
    }
     
@@ -54,3 +52,18 @@ async function createFormSubmit(event) {
     console.error('Error:', error);
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
