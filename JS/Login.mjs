@@ -11,6 +11,8 @@ loginForm.addEventListener('submit', loginFormSubmit);
 async function loginFormSubmit(event) {
   event.preventDefault();
   const API_URL = API_LOGIN_URL;
+  const loginFormData= new FormData(loginForm);
+  const formDataObject = Object.fromEntries(loginFormData);
   
   try {
     const response = await fetch(API_URL, {
@@ -18,7 +20,7 @@ async function loginFormSubmit(event) {
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify(Object.fromEntries(new FormData(loginForm))),
+      body: JSON.stringify(formDataObject),
     });
 
     const userData = await response.json(loginForm);
