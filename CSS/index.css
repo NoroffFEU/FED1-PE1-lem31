@@ -539,23 +539,22 @@ footer {
 .Two-links-box {
   display: flex;
   grid-area: Three;
-  justify-content: center;
-  width: 100px;
+  justify-content: space-between;
 }
 
 .post-link,
 .Logout-link {
   text-decoration: none;
   text-wrap: nowrap;
+  margin-left: 0;
+  padding: 0;
 }
 
 #logout-btn {
   background: none;
   border: none;
-}
-
-.Logout-link {
-  margin-left: 2rem;
+  padding: 0;
+  margin-left: 0;
 }
 
 .post-link:hover {
