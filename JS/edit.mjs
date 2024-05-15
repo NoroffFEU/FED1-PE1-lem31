@@ -1,5 +1,5 @@
 
-const logoutLink= document.getElementById('logout-link');
+const logoutLink= document.getElementById('logout-link-edit');
 
 //EVENT LISTENERS
 
