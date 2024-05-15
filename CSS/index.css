@@ -539,7 +539,7 @@ footer {
 .Two-links-box {
   display: flex;
   grid-area: Three;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
 .post-link,
@@ -550,11 +550,14 @@ footer {
   padding: 0;
 }
 
-#logout-btn {
-  background: none;
-  border: none;
-  padding: 0;
-  margin-left: 0;
+.post-link {
+  border: 2px solid black;
+  position: static;
+}
+
+.Logout-link {
+  border: 2px solid black;
+  position: static;
 }
 
 .post-link:hover {

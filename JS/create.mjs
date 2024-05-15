@@ -3,11 +3,12 @@ import { logout } from "./edit.mjs";
 
 /* CONSTANTS */
 const createPostForm = document.getElementById('create-post-form'); 
+const logoutLink= document.getElementById('logout-link');
 
 /* EVENT LISTENERS */
 createPostForm.addEventListener('submit', createFormSubmit);
 
-document.getElementById('logout-btn').addEventListener('click', logout);
+logoutLink.addEventListener('click', logout);
 
 /* FUNCTIONS */
 async function createFormSubmit(event) {

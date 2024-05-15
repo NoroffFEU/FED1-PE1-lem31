@@ -1,10 +1,10 @@
 
-
+const logoutLink= document.getElementById('logout-link');
 
 //EVENT LISTENERS
 
 //Event listener for the logout button
-document.getElementById('logout-btn').addEventListener('click', logout);
+logoutLink.addEventListener('click', logout);
 
 
 
