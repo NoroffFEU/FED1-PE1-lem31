@@ -1,4 +1,5 @@
 import { CREATE_POST_API_URL } from "./GlobalConst.mjs";
+import { logout } from "./edit.mjs";
 
 /* CONSTANTS */
 const createPostForm = document.getElementById('create-post-form'); 
@@ -6,13 +7,14 @@ const createPostForm = document.getElementById('create-post-form');
 /* EVENT LISTENERS */
 createPostForm.addEventListener('submit', createFormSubmit);
 
+document.getElementById('logout-btn').addEventListener('click', logout);
+
 /* FUNCTIONS */
 async function createFormSubmit(event) {
   event.preventDefault();
   const API_URL = CREATE_POST_API_URL;
   
 
-  
   try {
     const formData = new FormData(createPostForm);
    const blogPostObject= {
@@ -55,14 +57,8 @@ async function createFormSubmit(event) {
 
 
 
-
-
-
-
-
-
-
-
+//Function Calls
+logout();
 
 
 

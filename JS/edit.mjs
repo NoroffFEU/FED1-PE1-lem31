@@ -12,7 +12,7 @@ document.getElementById('logout-btn').addEventListener('click', logout);
 
 
 //Function for logging out
-function logout() {
+export function logout() {
 
   const accessToken = localStorage.getItem('accessToken');
 
