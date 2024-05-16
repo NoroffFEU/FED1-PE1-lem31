@@ -3,6 +3,15 @@ import { API_FETCH_POSTS_URL} from "./GlobalConst.mjs";
 
 const logoutLink= document.getElementById('logout-link-edit');
 
+const blogPostBox = document.createElement("div");
+const image = document.createElement("img");
+const headerContainer = document.createElement("div");
+const header = document.createElement("h2");
+const buttonWrapper = document.createElement("div");
+const editButton = document.createElement("button");
+const deleteButton = document.createElement("button");
+const blogPostsWrapper = document.querySelector('.blog-posts-wrapper');
+
 //EVENT LISTENERS
 
 //Event listener for the logout button
@@ -98,6 +107,7 @@ function displayBlogPosts(blogPosts) {
       header.classList.add('h2-Edit-Page');
       buttonWrapper.classList.add('btn-wrapper');
       editButton.classList.add('edit-page-btn');
+      editButton.id = 'edit-btn';
       deleteButton.classList.add('edit-page-btn');
   
       image.src = post.media.url;
@@ -116,6 +126,15 @@ function displayBlogPosts(blogPosts) {
     });
   }
 
+  editButton.addEventListener('click', displayForm);
+
+  function displayForm() {
+    const editForm = document.querySelector('.popup-form-wrapper');
+    editForm.style.display = 'flex';
+  }
+
+
+
 
 
 //Function for displaying the blog posts
@@ -124,3 +143,4 @@ function displayBlogPosts(blogPosts) {
 //FUNCTION CALLS
 
 fetchBlogPosts();
+
