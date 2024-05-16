@@ -229,10 +229,6 @@ function closeEditForm() {
   editForm.style.display = 'none';
 }
 
-
-
-
-
 //Function for submitting the edit form
 async function editFormSubmit(event) {
   event.preventDefault();
@@ -246,13 +242,14 @@ async function editFormSubmit(event) {
     const blogPostObject = {
       title: formData.get('title'),
       body: formData.get('body'),
-      tags: formData.get('tags'),
-      media: formData.get('media'),
+      tags: formData.get('tags') ? formData.get('tags').split(',').map(tag => tag.trim()) : [], 
+      media: formData.get('media'), 
+      
     };
 
     const accessToken = localStorage.getItem('accessToken');
 
-    const response = await fetch(API_PUT_POST + `${id}`, {
+    const response = await fetch(`https://v2.api.noroff.dev/blog/posts/Leanne002/` + id, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
@@ -262,6 +259,7 @@ async function editFormSubmit(event) {
     });
 
     const userData = await response.json();
+    console.log(userData);
 
     if (response.status === 200) {
       alert('You have successfully saved this post!');

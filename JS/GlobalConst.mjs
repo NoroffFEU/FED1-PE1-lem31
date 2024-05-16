@@ -11,4 +11,4 @@ export const CREATE_POST_API_URL = "https://v2.api.noroff.dev/blog/posts/Leanne0
 
 export const API_FETCH_POSTS_URL = "https://v2.api.noroff.dev/blog/posts/Leanne002";
 
-export const API_PUT_POST_URL = "https://v2.api.noroff.dev/blog/posts/Leanne002/";
+export const API_PUT_POST_URL = "https://v2.api.noroff.dev/blog/posts/Leanne002";
