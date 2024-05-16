@@ -3,14 +3,7 @@ import { API_FETCH_POSTS_URL} from "./GlobalConst.mjs";
 
 const logoutLink= document.getElementById('logout-link-edit');
 
-const blogPostBox = document.createElement("div");
-const image = document.createElement("img");
-const headerContainer = document.createElement("div");
-const header = document.createElement("h2");
-const buttonWrapper = document.createElement("div");
-const editButton = document.createElement("button");
-const deleteButton = document.createElement("button");
-const blogPostsWrapper = document.querySelector('.blog-posts-wrapper');
+
 
 //EVENT LISTENERS
 
@@ -123,21 +116,26 @@ function displayBlogPosts(blogPosts) {
       buttonWrapper.appendChild(editButton);
       buttonWrapper.appendChild(deleteButton);
       blogPostsWrapper.appendChild(blogPostBox);
+
+      editButton.addEventListener('click', displayForm);
     });
   }
 
-  editButton.addEventListener('click', displayForm);
+
 
   function displayForm() {
     const editForm = document.querySelector('.popup-form-wrapper');
     editForm.style.display = 'flex';
   }
 
+const cancelBtn= document.querySelector('.cancel-btn');
 
+cancelBtn.addEventListener('click', closeForm);
 
-
-
-//Function for displaying the blog posts
+function closeForm() {
+  const editForm = document.querySelector('.popup-form-wrapper');
+  editForm.style.display = 'none';
+}
 
 
 //FUNCTION CALLS
