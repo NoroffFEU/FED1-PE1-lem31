@@ -84,52 +84,50 @@ async function fetchBlogPosts() {
 }
 
 function displayBlogPosts(blogPosts) {
+  const blogPostsWrapper = document.querySelector('.blog-posts-wrapper');
 
- 
-    const blogPostsWrapper = document.querySelector('.blog-posts-wrapper');
+  blogPosts.forEach(post => {
+    const blogPostBox = document.createElement("div");
+    const image = document.createElement("img");
+    const headerContainer = document.createElement("div");
+    const header = document.createElement("h2");
+    const buttonWrapper = document.createElement("div");
+    const editButton = document.createElement("button");
+    const deleteButton = document.createElement("button");
+
+    blogPostBox.classList.add('blog-post');
+    headerContainer.classList.add('header-container');
+    header.classList.add('h2-Edit-Page');
+    buttonWrapper.classList.add('btn-wrapper');
+    editButton.classList.add('edit-page-edit-btn');
+    deleteButton.classList.add('edit-page-delete-btn');
+
+    image.src = post.media.url;
+    header.textContent = post.title;
+    editButton.textContent = 'Edit';
+    deleteButton.textContent = 'Delete';
+
+    blogPostBox.appendChild(image);
+    blogPostBox.appendChild(headerContainer);
+    blogPostBox.appendChild(header);
+    blogPostBox.appendChild(buttonWrapper);
+    buttonWrapper.appendChild(editButton);
+    buttonWrapper.appendChild(deleteButton);
+    blogPostsWrapper.appendChild(blogPostBox);
+
+  });}
+
+
+
   
-  
-    blogPosts.forEach(post => {
 
-     
-      const blogPostBox = document.createElement("div");
-      const image = document.createElement("img");
-      const headerContainer = document.createElement("div");
-      const header = document.createElement("h2");
-      const buttonWrapper = document.createElement("div");
-      const editButton = document.createElement("button");
-      const deleteButton = document.createElement("button");
-  
-      blogPostBox.classList.add('blog-post');
-      headerContainer.classList.add('header-container');
-      header.classList.add('h2-Edit-Page');
-      buttonWrapper.classList.add('btn-wrapper');
-      editButton.classList.add('edit-page-btn');
-      editButton.id = 'edit-btn';
-      deleteButton.classList.add('edit-page-btn');
-  
-      image.src = post.media.url;
-      header.textContent = post.title;
-      editButton.textContent = 'Edit';
-      deleteButton.textContent = 'Delete';
-  
-  
-      blogPostBox.appendChild(image);
-      blogPostBox.appendChild(headerContainer);
-      blogPostBox.appendChild(header);
-      blogPostBox.appendChild(buttonWrapper);
-      buttonWrapper.appendChild(editButton);
-      buttonWrapper.appendChild(deleteButton);
-      blogPostsWrapper.appendChild(blogPostBox);
+const editButtons = document.querySelectorAll('.edit-page-edit-btn');
 
-      editButton.addEventListener('click', displayForm);
-     
-    });
-  }
-
-
-
-
+editButtons.forEach((editButton, index) => {
+  editButton.addEventListener('click', () => {
+    displayForm(index);
+  });
+});
 
 
 //Create an Edit form for each blog post when clicking on the edit button
@@ -137,7 +135,11 @@ function displayBlogPosts(blogPosts) {
 
   function displayForm() {
    
+   
 
+     
+
+  
     
       const editFormWrapper = document.querySelector('.popup-form-wrapper');
       const editForm = document.createElement('form');
@@ -191,19 +193,26 @@ function displayBlogPosts(blogPosts) {
       buttonsWrapper.appendChild(saveButton);
       buttonsWrapper.appendChild(cancelButton);
       editHeaderContainer.appendChild(editHeader);
+
+     
     
   }
-
-const cancelBtn= document.querySelector('.cancel-btn');
-
-cancelBtn.addEventListener('click', closeEditForm);
+// // Remove the event listener for the editButton
+// // editButton.addEventListener('click', displayForm);
 
 
+ 
 
-function closeEditForm() {
-  const editForm = document.querySelector('.popup-form-wrapper');
-  editForm.style.display = 'none';
-}
+// // const cancelBtn= document.querySelector('.cancel-btn');
+
+// // cancelBtn.addEventListener('click', closeEditForm);
+
+
+
+// // function closeEditForm() {
+// //   const editForm = document.querySelector('.popup-form-wrapper');
+// //   editForm.style.display = 'none';
+// // }
 
 //FUNCTION CALLS
 

@@ -66,7 +66,8 @@ h1,
 .h3-edit,
 .save-btn,
 .cancel-btn,
-.edit-page-btn,
+.edit-page-edit-btn,
+.edit-page-delete-btn,
 .login-label,
 .login-btn,
 .click-here-link,
@@ -93,7 +94,8 @@ h1,
 
 .BP-header-container,
 .header-container,
-.edit-page-btn {
+.edit-page-edit-btn,
+.edit-page-delete-btn {
   background-color: var(--primary-color);
 }
 
@@ -126,7 +128,8 @@ nav a,
 .edit-label,
 .save-btn,
 .cancel-btn,
-.edit-page-btn,
+.edit-page-edit-btn,
+.edit-page-delete-btn,
 .login-label,
 .login-btn,
 .register-label,
@@ -144,7 +147,8 @@ nav a,
 .edit-label,
 .save-btn,
 .cancel-btn,
-.edit-page-btn,
+.edit-page-edit-btn,
+.edit-page-delete-btn,
 .login-label,
 .login-btn,
 .click-here-link,
@@ -621,7 +625,7 @@ footer {
   width: 100%;
   height: 100%;
   justify-content: center;
-  display: none;
+  /* display: none; */
 }
 
 .blog-posts-wrapper {
@@ -676,7 +680,8 @@ footer {
   width: 100%;
 }
 
-.edit-page-btn {
+.edit-page-edit-btn,
+.edit-page-delete-btn {
   width: 20%;
   height: 4rem;
   border: 3px var(--tertiary-color) solid;
@@ -684,14 +689,16 @@ footer {
   margin-bottom: 2rem;
 }
 
-.edit-page-btn:hover,
+.edit-page-edit-btn:hover,
+.edit-page-delete-btn:hover,
 .Save-button:hover,
 .save-btn:hover,
 .cancel-btn:hover {
   border: 4px var(--tertiary-color) solid;
 }
 
-.edit-page-btn:active,
+.edit-page-edit-btn:active,
+.edit-page-delete-btn:active,
 .Save-button:active,
 .save-btn:active,
 .cancel-btn:active {
@@ -816,7 +823,8 @@ footer {
   .edit-label,
   .save-btn,
   .cancel-btn,
-  .edit-page-btn,
+  .edit-page-edit-btn,
+  .edit-page-delete-btn,
   .login-label,
   .login-btn,
   .click-here-link,
@@ -1047,7 +1055,8 @@ footer {
     justify-content: space-between;
   }
 
-  .edit-page-btn {
+  .edit-page-edit-btn,
+  .edit-page-delete-btn {
     width: 45%;
     height: 3rem;
   }
@@ -1065,7 +1074,8 @@ footer {
   .edit-label,
   .save-btn,
   .cancel-btn,
-  .edit-page-btn,
+  .edit-page-edit-btn,
+  .edit-page-delete-btn,
   .login-label,
   .login-btn,
   .click-here-link,
@@ -1273,7 +1283,8 @@ footer {
     justify-content: space-between;
   }
 
-  .edit-page-btn {
+  .edit-page-edit-btn,
+  .edit-page-delete-btn {
     width: 40%;
   }
 
