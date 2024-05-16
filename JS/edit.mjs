@@ -65,7 +65,7 @@ async function fetchBlogPosts() {
 
     const posts = await response.json();
 
-    localStorage.setItem('blogPosts', JSON.stringify(posts));
+    // localStorage.setItem('blogPosts', JSON.stringify(posts));
 
     console.log(posts);
 
@@ -80,7 +80,7 @@ async function fetchBlogPosts() {
 
 function displayBlogPosts(blogPosts) {
 
-  
+ 
     const blogPostsWrapper = document.querySelector('.blog-posts-wrapper');
   
   
@@ -108,6 +108,7 @@ function displayBlogPosts(blogPosts) {
   
       blogPostBox.appendChild(image);
       blogPostBox.appendChild(headerContainer);
+      blogPostBox.appendChild(header);
       blogPostBox.appendChild(buttonWrapper);
       buttonWrapper.appendChild(editButton);
       buttonWrapper.appendChild(deleteButton);
@@ -121,5 +122,5 @@ function displayBlogPosts(blogPosts) {
 
 
 //FUNCTION CALLS
-fetchBlogPosts();
 
+fetchBlogPosts();
