@@ -73,6 +73,8 @@ async function fetchBlogPosts() {
 
     const blogPosts = posts.data;
 
+    localStorage.setItem('blogPosts', JSON.stringify(blogPosts));
+
     displayBlogPosts(blogPosts);
 
   } catch (error) {
@@ -123,19 +125,78 @@ function displayBlogPosts(blogPosts) {
 
 
 
+
+
+
+//Create an Edit form for each blog post when clicking on the edit button
+//Fill the form with the post data
+
   function displayForm() {
-    const editForm = document.querySelector('.popup-form-wrapper');
-    editForm.style.display = 'flex';
+  
+
+    localStorage.getItemItem('blogPosts');
+
+    blogPosts.forEach(post => {
+
+const editFormWrapper= document.querySelector('.popup-form-wrapper');
+const editForm=document.createElement('form');
+const editHeaderContainer= document.createElement('div');
+const editHeader= document.createElement('h3');
+const postImage= document.createElement('img');
+const mediaLabel= document.createElement('label');
+const mediaInput= document.createElement('input');
+const postTitleLabel= document.createElement('label');
+const postTitleInput= document.createElement('input');
+const bodyLabel= document.createElement('label');
+const bodyInput= document.createElement('textarea');
+const tagsLabel= document.createElement('label');
+const tagsInput= document.createElement('input');
+const buttonsWrapper= document.createElement('div');
+const saveButton= document.createElement('button');
+const cancelButton= document.createElement('button');
+    
+      
+     
+  
+      editFormWrapper.classList.add('popup-form-wrapper');
+   editForm.classList.add('popup-form');
+   editHeaderContainer.classList.add('h3-edit-box');
+   editHeader.classList.add('h3-edit');
+   mediaLabel.classList.add('edit-label');
+   postTitleLabel.classList.add('edit-label');
+   bodyLabel.classList.add('edit-label');
+    tagsLabel.classList.add('edit-label');
+
+  
+
+      image.src = post.media.url;
+      header.textContent = post.title;
+      editButton.textContent = 'Edit';
+      deleteButton.textContent = 'Delete';
+  
+  
+      blogPostBox.appendChild(image);
+   
+
+     
+    });
+
+
   }
 
 const cancelBtn= document.querySelector('.cancel-btn');
 
-cancelBtn.addEventListener('click', closeForm);
+cancelBtn.addEventListener('click', closeEditForm);
 
-function closeForm() {
+function closeEditForm() {
   const editForm = document.querySelector('.popup-form-wrapper');
   editForm.style.display = 'none';
 }
+
+
+
+
+
 
 
 //FUNCTION CALLS
