@@ -83,10 +83,6 @@ async function fetchBlogPosts() {
   }
 }
 
-// const cancelBtn= document.querySelector('.cancel-btn');
-// cancelBtn.addEventListener('click', closeEditForm);
-
-
 //FUNCTION CALLS
 fetchBlogPosts();
 
