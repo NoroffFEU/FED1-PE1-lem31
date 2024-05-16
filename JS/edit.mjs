@@ -83,10 +83,17 @@ async function fetchBlogPosts() {
   }
 }
 
+// const cancelBtn= document.querySelector('.cancel-btn');
+// cancelBtn.addEventListener('click', closeEditForm);
+
+
+//FUNCTION CALLS
+fetchBlogPosts();
+
 function displayBlogPosts(blogPosts) {
   const blogPostsWrapper = document.querySelector('.blog-posts-wrapper');
 
-  blogPosts.forEach(post => {
+  blogPosts.forEach((post, index) => {
     const blogPostBox = document.createElement("div");
     const image = document.createElement("img");
     const headerContainer = document.createElement("div");
@@ -115,105 +122,105 @@ function displayBlogPosts(blogPosts) {
     buttonWrapper.appendChild(deleteButton);
     blogPostsWrapper.appendChild(blogPostBox);
 
-  });}
-
-
-
-  
-
-const editButtons = document.querySelectorAll('.edit-page-edit-btn');
-
-editButtons.forEach((editButton, index) => {
-  editButton.addEventListener('click', () => {
-    displayForm(index);
+    editButton.addEventListener('click', () => {
+      displayForm(post);
+    });
   });
-});
-
+}
 
 //Create an Edit form for each blog post when clicking on the edit button
 //Fill the form with the post data
+function displayForm(post) {
+  const editFormWrapper = document.querySelector('.popup-form-wrapper');
+  const editForm = document.createElement('form');
+  const editHeaderContainer = document.createElement('div');
+  const editHeader = document.createElement('h3');
+  const postImage = document.createElement('img');
+  const postImageContainer = document.createElement('div');
+  const mediaLabel = document.createElement('label');
+  const mediaInput = document.createElement('input');
+  const postTitleLabel = document.createElement('label');
+  const postTitleInput = document.createElement('input');
+  const bodyLabel = document.createElement('label');
+  const bodyInput = document.createElement('textarea');
+  const tagsLabel = document.createElement('label');
+  const tagsInput = document.createElement('input');
+  const buttonsWrapper = document.createElement('div');
+  const saveButton = document.createElement('button');
+  const cancelButton = document.createElement('button');
 
-  function displayForm() {
-   
-   
+  editFormWrapper.classList.add('popup-form-wrapper');
+  editForm.classList.add('popup-form');
+  editHeaderContainer.classList.add('h3-edit-box');
+  editHeader.classList.add('h3-edit');
+  mediaLabel.classList.add('edit-label');
+  mediaInput.classList.add('edit-input');
+  postTitleLabel.classList.add('edit-label');
+  postTitleInput.classList.add('edit-input');
+  bodyLabel.classList.add('edit-label');
+  bodyInput.classList.add('edit-input');
+  tagsLabel.classList.add('edit-label');
+  tagsInput.classList.add('edit-input');
+  buttonsWrapper.classList.add('button-wrapper-edit');
+  saveButton.classList.add('save-btn');
+  cancelButton.classList.add('cancel-btn');
+  postImageContainer.classList.add('post-image-container');
+  postImage.classList.add('post-image');
 
-     
+  mediaLabel.setAttribute('for', 'media');
+  mediaInput.setAttribute('type', 'text');
+  postTitleLabel.setAttribute('for', 'title');
+  postTitleInput.setAttribute('type', 'text');
+  bodyLabel.setAttribute('for', 'body');
+  bodyInput.setAttribute('type', 'text');
+  tagsLabel.setAttribute('for', 'tags');
+  tagsInput.setAttribute('type', 'text');
 
   
-    
-      const editFormWrapper = document.querySelector('.popup-form-wrapper');
-      const editForm = document.createElement('form');
-      const editHeaderContainer = document.createElement('div');
-      const editHeader = document.createElement('h3');
-      const postImage = document.createElement('img');
-      const mediaLabel = document.createElement('label');
-      const mediaInput = document.createElement('input');
-      const postTitleLabel = document.createElement('label');
-      const postTitleInput = document.createElement('input');
-      const bodyLabel = document.createElement('label');
-      const bodyInput = document.createElement('textarea');
-      const tagsLabel = document.createElement('label');
-      const tagsInput = document.createElement('input');
-      const buttonsWrapper = document.createElement('div');
-      const saveButton = document.createElement('button');
-      const cancelButton = document.createElement('button');
+  postImage.src = post.media.url;
+  postTitleInput.textContent = post.title;
+  mediaLabel.textContent = 'Media';
+  mediaInput.value = post.media.url;
+  postTitleLabel.textContent = 'Title';
+  postTitleInput.value = post.title;
+  bodyLabel.textContent = 'Body';
+  tagsLabel.textContent = 'Tags';
+  tagsInput.value = post.tags;
+  bodyInput.value = post.body;
+  saveButton.textContent = 'Save';
+  cancelButton.textContent = 'Cancel';
 
-      editFormWrapper.classList.add('popup-form-wrapper');
-      editForm.classList.add('popup-form');
-      editHeaderContainer.classList.add('h3-edit-box');
-      editHeader.classList.add('h3-edit');
-      mediaLabel.classList.add('edit-label');
-      postTitleLabel.classList.add('edit-label');
-      bodyLabel.classList.add('edit-label');
-      tagsLabel.classList.add('edit-label');
+  editFormWrapper.appendChild(editForm);
+  editForm.appendChild(editHeaderContainer);
+  editForm.appendChild(postImageContainer);
+  postImageContainer.appendChild(postImage);
+  editForm.appendChild(mediaLabel);
+  editForm.appendChild(mediaInput);
+  editForm.appendChild(postTitleLabel);
+  editForm.appendChild(postTitleInput);
+  editForm.appendChild(bodyLabel);
+  editForm.appendChild(bodyInput);
+  editForm.appendChild(tagsLabel);
+  editForm.appendChild(tagsInput);
+  editForm.appendChild(buttonsWrapper);
+  buttonsWrapper.appendChild(saveButton);
+  buttonsWrapper.appendChild(cancelButton);
+  editHeaderContainer.appendChild(editHeader);
 
-      postImage.src = post.media.url;
-      editHeader.textContent = post.title;
-      mediaLabel.textContent = 'Media';
-      mediaInput.value = post.media.url;
-      postTitleLabel.textContent = 'Title';
-      postTitleInput.value = post.title;
-      bodyLabel.textContent = 'Body';
-      bodyInput.value = post.body;
-      saveButton.textContent = 'Save';
-      cancelButton.textContent = 'Cancel';
+  editFormWrapper.style.display = 'flex';
+  editFormWrapper.style.flexDirection = 'column';
+  editFormWrapper.style.alignItems = 'center';
 
-      editFormWrapper.appendChild(editForm);
-      editForm.appendChild(editHeaderContainer);
-      editForm.appendChild(postImage);
-      editForm.appendChild(mediaLabel);
-      editForm.appendChild(mediaInput);
-      editForm.appendChild(postTitleLabel);
-      editForm.appendChild(postTitleInput);
-      editForm.appendChild(bodyLabel);
-      editForm.appendChild(bodyInput);
-      editForm.appendChild(tagsLabel);
-      editForm.appendChild(tagsInput);
-      editForm.appendChild(buttonsWrapper);
-      buttonsWrapper.appendChild(saveButton);
-      buttonsWrapper.appendChild(cancelButton);
-      editHeaderContainer.appendChild(editHeader);
+  cancelButton.addEventListener('click', closeEditForm);
+}
 
-     
-    
-  }
-// // Remove the event listener for the editButton
-// // editButton.addEventListener('click', displayForm);
+function closeEditForm() {
+  const editForm = document.querySelector('.popup-form-wrapper');
+  editForm.style.display = 'none';
+}
 
 
  
-
-// // const cancelBtn= document.querySelector('.cancel-btn');
-
-// // cancelBtn.addEventListener('click', closeEditForm);
-
-
-
-// // function closeEditForm() {
-// //   const editForm = document.querySelector('.popup-form-wrapper');
-// //   editForm.style.display = 'none';
-// // }
-
 //FUNCTION CALLS
 
 fetchBlogPosts();
