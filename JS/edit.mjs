@@ -253,7 +253,7 @@ async function editFormSubmit(event) {
 
     const accessToken = localStorage.getItem('accessToken');
 
-    const response = await fetch(`https://v2.api.noroff.dev${id}`, {
+    const response = await fetch(`https://v2.api.noroff.dev` + id, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
