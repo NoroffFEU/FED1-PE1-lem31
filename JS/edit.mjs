@@ -76,6 +76,7 @@ async function fetchBlogPosts() {
     localStorage.setItem('blogPosts', JSON.stringify(blogPosts));
 
     displayBlogPosts(blogPosts);
+  
 
   } catch (error) {
     console.error('Error:', error);
@@ -131,7 +132,7 @@ function displayBlogPosts(blogPosts) {
 //Create an Edit form for each blog post when clicking on the edit button
 //Fill the form with the post data
 
-  function displayForm() {
+  function displayForm(blogPosts) {
   
 
 
@@ -169,13 +170,13 @@ const cancelButton= document.createElement('button');
 
   
 
-      image.src = post.media.url;
-      header.textContent = post.title;
-      editButton.textContent = 'Edit';
-      deleteButton.textContent = 'Delete';
+      postImage.src = post.media.url;
+      editHeader.textContent = post.title;
+      saveButton.textContent = 'Save';
+     cancelButton.textContent = 'Cancel';
   
   
-      blogPostBox.appendChild(image);
+      // blogPostBox.appendChild(image);
    
 
      
