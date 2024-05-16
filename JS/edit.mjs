@@ -132,7 +132,7 @@ function displayBlogPosts(blogPosts) {
 //Create an Edit form for each blog post when clicking on the edit button
 //Fill the form with the post data
 
-  function displayForm(blogPosts) {
+  function displayForm() {
   
 
 
@@ -176,8 +176,22 @@ const cancelButton= document.createElement('button');
      cancelButton.textContent = 'Cancel';
   
   
-      // blogPostBox.appendChild(image);
-   
+      editFormWrapper.appendChild(editForm);
+   editForm.appendChild(editHeaderContainer);
+   editForm.appendChild(postImage);
+    editForm.appendChild(mediaLabel);
+    editForm.appendChild(mediaInput);
+    editForm.appendChild(postTitleLabel);
+    editForm.appendChild(postTitleInput);
+    editForm.appendChild(bodyLabel);
+    editForm.appendChild(bodyInput);
+    editForm.appendChild(tagsLabel);
+    editForm.appendChild(tagsInput);
+    editForm.appendChild(buttonsWrapper);
+    buttonsWrapper.appendChild(saveButton);
+    buttonsWrapper.appendChild(cancelButton);
+   editHeaderContainer.appendChild(editHeader);
+
 
      
     });
