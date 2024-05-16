@@ -1,14 +1,19 @@
 import { API_FETCH_POSTS_URL} from "./GlobalConst.mjs";
+import { API_PUT_POST_URL } from "./GlobalConst.mjs";
 
 
 const logoutLink= document.getElementById('logout-link-edit');
 
 
 
+const API_PUT_POST = API_PUT_POST_URL;
+
 //EVENT LISTENERS
 
 //Event listener for the logout button
 logoutLink.addEventListener('click', logout);
+
+
 
 
 
@@ -170,6 +175,8 @@ function displayForm(post) {
   bodyInput.setAttribute('type', 'text');
   tagsLabel.setAttribute('for', 'tags');
   tagsInput.setAttribute('type', 'text');
+  editForm.action = '/blog/posts/Leanne002/${id}';
+  editForm.method = 'PUT';
 
   
   postImage.src = post.media.url;
@@ -207,7 +214,15 @@ function displayForm(post) {
   editFormWrapper.style.alignItems = 'center';
 
   cancelButton.addEventListener('click', closeEditForm);
+
+  editForm.addEventListener('submit', editFormSubmit);
+
+  const id = post.id;
+  editForm.setAttribute('id', id);
+  console.log(id);
 }
+
+
 
 function closeEditForm() {
   const editForm = document.querySelector('.popup-form-wrapper');
@@ -215,7 +230,48 @@ function closeEditForm() {
 }
 
 
- 
+
+
+
+//Function for submitting the edit form
+async function editFormSubmit(event) {
+  event.preventDefault();
+
+  const editPostForm = document.querySelector('.popup-form');
+
+  const id = editPostForm.getAttribute('id');
+
+  try {
+    const formData = new FormData(editPostForm);
+    const blogPostObject = {
+      title: formData.get('title'),
+      body: formData.get('body'),
+      tags: formData.get('tags'),
+      media: formData.get('media'),
+    };
+
+    const accessToken = localStorage.getItem('accessToken');
+
+    const response = await fetch(API_PUT_POST + `${id}`, {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${accessToken}`,
+      },
+      body: JSON.stringify(blogPostObject),
+    });
+
+    const userData = await response.json();
+
+    if (response.status === 200) {
+      alert('You have successfully saved this post!');
+    } else {
+      alert('Something went wrong, please try again.');
+    }
+  } catch (error) {
+    console.error('Error:', error);
+  }
+}
 //FUNCTION CALLS
 
 fetchBlogPosts();
