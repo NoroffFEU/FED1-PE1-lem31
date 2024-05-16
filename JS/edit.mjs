@@ -134,7 +134,7 @@ function displayBlogPosts(blogPosts) {
   function displayForm() {
   
 
-    localStorage.getItemItem('blogPosts');
+
 
     blogPosts.forEach(post => {
 
@@ -158,7 +158,7 @@ const cancelButton= document.createElement('button');
       
      
   
-      editFormWrapper.classList.add('popup-form-wrapper');
+    editFormWrapper.classList.add('popup-form-wrapper');
    editForm.classList.add('popup-form');
    editHeaderContainer.classList.add('h3-edit-box');
    editHeader.classList.add('h3-edit');
