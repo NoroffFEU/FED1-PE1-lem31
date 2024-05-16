@@ -217,9 +217,12 @@ function displayForm(post) {
 
   editForm.addEventListener('submit', editFormSubmit);
 
-  const id = post.id;
-  editForm.setAttribute('id', id);
-  console.log(id);
+  // const id = post.id;
+  // editForm.setAttribute('id', id);
+  // editForm.
+  // console.log(id);
+
+  editForm.action = `/blog/posts/Leanne002/${post.id}`;
 }
 
 
@@ -235,9 +238,10 @@ async function editFormSubmit(event) {
 
   const editPostForm = document.querySelector('.popup-form');
 
-  const id = editPostForm.getAttribute('id');
+  const id = editPostForm.getAttribute('action');
 
   try {
+    const editPostForm = document.querySelector('.popup-form');
     const formData = new FormData(editPostForm);
     const blogPostObject = {
       title: formData.get('title'),
@@ -249,7 +253,7 @@ async function editFormSubmit(event) {
 
     const accessToken = localStorage.getItem('accessToken');
 
-    const response = await fetch(`https://v2.api.noroff.dev/blog/posts/Leanne002/` + id, {
+    const response = await fetch(`https://v2.api.noroff.dev${id}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
