@@ -128,8 +128,7 @@ function displayBlogPosts(blogPosts) {
   });
 }
 
-//Create an Edit form for each blog post when clicking on the edit button
-//Fill the form with the post data
+//Function for displaying the edit form
 function displayForm(post) {
   const editFormWrapper = document.querySelector('.popup-form-wrapper');
   const editForm = document.createElement('form');
