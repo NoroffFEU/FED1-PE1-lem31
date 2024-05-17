@@ -129,6 +129,7 @@ function displayBlogPosts(blogPosts) {
   });
 }
 
+
 //Function for displaying the edit form
 function displayForm(post) {
   const editFormWrapper = document.querySelector('.popup-form-wrapper');
@@ -155,12 +156,16 @@ function displayForm(post) {
   editHeader.classList.add('h3-edit');
   mediaLabel.classList.add('edit-label');
   mediaInput.classList.add('edit-input');
+  mediaInput.id = 'edit-media';
   postTitleLabel.classList.add('edit-label');
   postTitleInput.classList.add('edit-input');
+  postTitleInput.id = 'edit-title';
   bodyLabel.classList.add('edit-label');
   bodyInput.classList.add('edit-input');
+  bodyInput.id = 'edit-body';  
   tagsLabel.classList.add('edit-label');
   tagsInput.classList.add('edit-input');
+  tagsInput.id = 'edit-tags';
   buttonsWrapper.classList.add('button-wrapper-edit');
   saveButton.classList.add('save-btn');
   cancelButton.classList.add('cancel-btn');
@@ -175,16 +180,15 @@ function displayForm(post) {
   bodyInput.setAttribute('type', 'text');
   tagsLabel.setAttribute('for', 'tags');
   tagsInput.setAttribute('type', 'text');
-  editForm.action = '/blog/posts/Leanne002/${id}';
+  editForm.action = `/blog/posts/Leanne002/${post.id}`;
   editForm.method = 'PUT';
 
   
   postImage.src = post.media.url;
-  postTitleInput.textContent = post.title;
+  postTitleInput.value = post.title;
   mediaLabel.textContent = 'Media';
   mediaInput.value = post.media.url;
   postTitleLabel.textContent = 'Title';
-  postTitleInput.value = post.title;
   bodyLabel.textContent = 'Body';
   tagsLabel.textContent = 'Tags';
   tagsInput.value = post.tags;
@@ -217,43 +221,31 @@ function displayForm(post) {
 
   editForm.addEventListener('submit', editFormSubmit);
 
-  // const id = post.id;
-  // editForm.setAttribute('id', id);
-  // editForm.
-  // console.log(id);
-
-  editForm.action = `/blog/posts/Leanne002/${post.id}`;
-}
-
-
-
-function closeEditForm() {
-  const editForm = document.querySelector('.popup-form-wrapper');
-  editForm.style.display = 'none';
+  console.log(post.id);
+ localStorage.setItem('id', post.id);
 }
 
 //Function for submitting the edit form
 async function editFormSubmit(event) {
   event.preventDefault();
 
-  const editPostForm = document.querySelector('.popup-form');
 
-  const id = editPostForm.getAttribute('action');
+
+ const id= localStorage.getItem('id');
+
+  const API_URL = `${API_PUT_POST}/${id}`;
 
   try {
-    const editPostForm = document.querySelector('.popup-form');
-    const formData = new FormData(editPostForm);
     const blogPostObject = {
-      title: formData.get('title'),
-      body: formData.get('body'),
-      tags: formData.get('tags') ? formData.get('tags').split(',').map(tag => tag.trim()) : [], 
-      media: formData.get('media'), 
-      
+      title: document.getElementById('edit-title').value,
+      body: document.getElementById('edit-body').value,
+      tags: document.getElementById('edit-tags') ? document.getElementById('edit-tags').value.split(',').map(tag => tag.trim()) : [],
+      media: document.getElementById('edit-media').value,
     };
 
     const accessToken = localStorage.getItem('accessToken');
 
-    const response = await fetch(`https://v2.api.noroff.dev` + id, {
+    const response = await fetch(API_URL, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
@@ -262,19 +254,22 @@ async function editFormSubmit(event) {
       body: JSON.stringify(blogPostObject),
     });
 
-    const userData = await response.json();
-    console.log(userData);
-
     if (response.status === 200) {
+      const userData = await response.json();
+      console.log(userData);
       alert('You have successfully saved this post!');
     } else {
       alert('Something went wrong, please try again.');
     }
   } catch (error) {
     console.error('Error:', error);
+    alert('Something went wrong, please try again.');
   }
 }
-//FUNCTION CALLS
 
-fetchBlogPosts();
+//Function for closing the edit form
+function closeEditForm() {
+  const editForm = document.querySelector('.popup-form-wrapper');
+  editForm.style.display = 'none';
+}
 
