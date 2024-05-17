@@ -88,8 +88,7 @@ async function fetchBlogPosts() {
   }
 }
 
-//FUNCTION CALLS
-fetchBlogPosts();
+
 
 function displayBlogPosts(blogPosts) {
   const blogPostsWrapper = document.querySelector('.blog-posts-wrapper');
@@ -173,7 +172,7 @@ function displayForm(post) {
   postImage.classList.add('post-image');
 
   mediaLabel.setAttribute('for', 'media');
-  mediaInput.setAttribute('type', 'text');
+  mediaInput.setAttribute('type', 'url');
   postTitleLabel.setAttribute('for', 'title');
   postTitleInput.setAttribute('type', 'text');
   bodyLabel.setAttribute('for', 'body');
@@ -217,6 +216,8 @@ function displayForm(post) {
   editFormWrapper.style.flexDirection = 'column';
   editFormWrapper.style.alignItems = 'center';
 
+  editForm.action= `/blog/posts`;
+
   cancelButton.addEventListener('click', closeEditForm);
 
   editForm.addEventListener('submit', editFormSubmit);
@@ -232,27 +233,36 @@ async function editFormSubmit(event) {
 
 
  const id= localStorage.getItem('id');
+ const idString= id.toString();
 
-  const API_URL = `${API_PUT_POST}/${id}`;
+  const API_URL = `${API_PUT_POST}/${idString}`;
 
   try {
     const blogPostObject = {
       title: document.getElementById('edit-title').value,
       body: document.getElementById('edit-body').value,
       tags: document.getElementById('edit-tags') ? document.getElementById('edit-tags').value.split(',').map(tag => tag.trim()) : [],
-      media: document.getElementById('edit-media').value,
+      media: {
+        url: document.getElementById('edit-media').value , 
+        type: 'image', 
+
+      },
     };
 
     const accessToken = localStorage.getItem('accessToken');
 
+  
     const response = await fetch(API_URL, {
+     
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
         Authorization: `Bearer ${accessToken}`,
+        
       },
       body: JSON.stringify(blogPostObject),
     });
+  
 
     if (response.status === 200) {
       const userData = await response.json();
@@ -265,6 +275,14 @@ async function editFormSubmit(event) {
     console.error('Error:', error);
     alert('Something went wrong, please try again.');
   }
+
+
+
+  console.log('API_URL:', API_URL);
+
+  console.log('ID:', id);
+
+
 }
 
 //Function for closing the edit form
@@ -273,3 +291,5 @@ function closeEditForm() {
   editForm.style.display = 'none';
 }
 
+//FUNCTION CALLS
+fetchBlogPosts();
