@@ -22,7 +22,7 @@ logoutLink.addEventListener('click', logout);
 
 
 
-//Function for logging out
+//FUNCTION FOR LOGGING OUT
 export function logout() {
 
   const accessToken = localStorage.getItem('accessToken');
@@ -50,7 +50,7 @@ export function logout() {
 
 
 
-//Function for Fetching Blog posts
+//FUNCTION FOR FETCHING THE BLOG POSTS
 async function fetchBlogPosts() {
  
   try {
@@ -88,7 +88,7 @@ async function fetchBlogPosts() {
   }
 }
 
-
+//FUNCTION FOR DISPLAYING BLOG POSTS
 
 function displayBlogPosts(blogPosts) {
   const blogPostsWrapper = document.querySelector('.blog-posts-wrapper');
@@ -129,7 +129,7 @@ function displayBlogPosts(blogPosts) {
 }
 
 
-//Function for displaying the edit form
+//FUNCTION FOR DISPLAYING THE EDIT FORM
 function displayForm(post) {
   const editFormWrapper = document.querySelector('.popup-form-wrapper');
   const editForm = document.createElement('form');
@@ -288,11 +288,16 @@ async function editFormSubmit(event) {
 
 }
 
-//Function for closing the edit form
+//FUNCTION FOR CLOSING THE EDIT FORM
 function closeEditForm() {
   const editForm = document.querySelector('.popup-form-wrapper');
   editForm.style.display = 'none';
 }
+
+
+//FUNCTION FOR DELETING A BLOG POST
+
+// async function deletePost(postId) {
 
 //FUNCTION CALLS
 fetchBlogPosts();
