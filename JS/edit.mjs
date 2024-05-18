@@ -194,6 +194,8 @@ function displayForm(post) {
   bodyInput.value = post.body;
   saveButton.textContent = 'Save';
   cancelButton.textContent = 'Cancel';
+  saveButton.type = 'submit';
+  cancelButton.type = 'button';
 
   editFormWrapper.appendChild(editForm);
   editForm.appendChild(editHeaderContainer);
@@ -268,6 +270,7 @@ async function editFormSubmit(event) {
       const userData = await response.json();
       console.log(userData);
       alert('You have successfully saved this post!');
+      window.location.reload();
     } else {
       alert('Something went wrong, please try again.');
     }
