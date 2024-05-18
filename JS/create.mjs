@@ -26,7 +26,7 @@ async function createFormSubmit(event) {
   }
    }
     
-    const accessToken = localStorage.getItem('accessToken');
+    const accessToken = sessionStorage.getItem('accessToken');
 
     console.log(accessToken);
 
@@ -59,7 +59,7 @@ async function createFormSubmit(event) {
 
 function logout() {
 
-  const accessToken = localStorage.getItem('accessToken');
+  const accessToken = sessionStorage.getItem('accessToken');
 
 
  
@@ -68,7 +68,7 @@ function logout() {
     return;
     
   } else if(accessToken !== null) {
-    localStorage.removeItem('accessToken');
+    sessionStorage.removeItem('accessToken');
     window.location.href = '/account/login.html';
    alert('You have successfully logged out!');
    

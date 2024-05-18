@@ -25,7 +25,7 @@ logoutLink.addEventListener('click', logout);
 //FUNCTION FOR LOGGING OUT
 export function logout() {
 
-  const accessToken = localStorage.getItem('accessToken');
+  const accessToken = sessionStorage.getItem('accessToken');
 
 
  
@@ -34,7 +34,7 @@ export function logout() {
     return;
     
   } else if(accessToken !== null) {
-    localStorage.removeItem('accessToken');
+   sessionStorage.removeItem('accessToken');
     window.location.href = '/account/login.html';
    alert('You have successfully logged out!');
    
@@ -56,7 +56,7 @@ async function fetchBlogPosts() {
   try {
     const API_URL = API_FETCH_POSTS_URL;
 
-    const accessToken = localStorage.getItem('accessToken');
+    const accessToken = sessionStorage.getItem('accessToken');
 
     const response = await fetch(API_URL, {
       headers: {
@@ -252,7 +252,7 @@ async function editFormSubmit(event) {
       },
     };
 
-    const accessToken = localStorage.getItem('accessToken');
+    const accessToken = sessionStorage.getItem('accessToken');
 
   
     const response = await fetch(API_URL, {

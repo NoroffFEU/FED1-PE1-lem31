@@ -28,8 +28,8 @@ async function loginFormSubmit(event) {
     const info = userData.data;
 
 
-    localStorage.setItem('accessToken', info.accessToken);
-    localStorage.setItem('userInfo', JSON.stringify(userData.data));
+   sessionStorage.setItem('accessToken', info.accessToken);
+   sessionStorage.setItem('userInfo', JSON.stringify(userData.data));
     console.log('User Logged in', info.accessToken, userData.data);
 
     if (response.status === 200) {
@@ -48,8 +48,8 @@ async function loginFormSubmit(event) {
 
 
 
-console.log (localStorage.getItem('accessToken'));
+console.log (sessionStorage.getItem('accessToken'));
 
-console.log (localStorage.getItem('userInfo'));
+console.log (sessionStorage.getItem('userInfo'));
 
 
