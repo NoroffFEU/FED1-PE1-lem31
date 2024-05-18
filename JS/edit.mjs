@@ -196,6 +196,7 @@ function displayForm(post) {
   cancelButton.textContent = 'Cancel';
   saveButton.type = 'submit';
   cancelButton.type = 'button';
+  editHeader.textContent = 'Edit Post';
 
   editFormWrapper.appendChild(editForm);
   editForm.appendChild(editHeaderContainer);
