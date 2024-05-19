@@ -74,8 +74,6 @@ async function fetchBlogPosts() {
 
     const posts = await response.json();
 
-    // localStorage.setItem('blogPosts', JSON.stringify(posts));
-
     console.log(posts);
 
     const blogPosts = posts.data;
@@ -236,7 +234,7 @@ function displayForm(post) {
   console.log('Post ID:', post.id);}
 
 
-//Function for submitting the edit form
+//FUNCTION FOR SUBMITTING THE EDIT FORM
 async function editFormSubmit(event) {
   event.preventDefault();
 
@@ -305,6 +303,9 @@ function closeEditForm() {
 
 //FUNCTIONS FOR DELETING A BLOG POST
 
+
+//FUNCTION TO GO INSIDE THE DELETE BUTTON EVENT LISTENER
+
 function deleteButtonFunction(event) {
 
   const deleteButton = event.target;
@@ -312,6 +313,9 @@ function deleteButtonFunction(event) {
  const idString= id.toString();
   const postId = idString;
   deletePost(postId);}
+
+
+//FUNCTION TO DELETE THE POST, WHICH GOES INSIDE THE DELETE BUTTON FUNCTION
 
 async function deletePost(postId) {
   const API_URL = `${API_PUT_POST}/${postId}`;
