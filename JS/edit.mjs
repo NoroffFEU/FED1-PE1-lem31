@@ -1,16 +1,16 @@
 import { API_FETCH_POSTS_URL} from "./GlobalConst.mjs";
-import { API_PUT_POST_URL } from "./GlobalConst.mjs";
+
 
 
 const logoutLink= document.getElementById('logout-link-edit');
 
 
 
-const API_PUT_POST = API_PUT_POST_URL;
+const API_PUT_POST = API_FETCH_POSTS_URL;
 
 //EVENT LISTENERS
 
-//Event listener for the logout button
+//EVENT LISTENER FOR THE LOGOUT LINK
 logoutLink.addEventListener('click', logout);
 
 
@@ -20,7 +20,6 @@ logoutLink.addEventListener('click', logout);
 
 
 // FUNCTIONS
-
 
 
 
@@ -122,9 +121,14 @@ function displayBlogPosts(blogPosts) {
     buttonWrapper.appendChild(deleteButton);
     blogPostsWrapper.appendChild(blogPostBox);
 
+
+    //EVENT LISTENER FOR THE EDIT BUTTON
+
     editButton.addEventListener('click', () => {
       displayForm(post);
     });
+
+    //EVENT LISTENER FOR THE DELETE BUTTON
 
     deleteButton.addEventListener('click', deleteButtonFunction);
   });

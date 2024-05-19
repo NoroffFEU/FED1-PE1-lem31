@@ -1,4 +1,5 @@
-import { CREATE_POST_API_URL } from "./GlobalConst.mjs";
+import { API_FETCH_POSTS_URL } from "./GlobalConst.mjs";
+
 
 
 /* CONSTANTS */
@@ -13,7 +14,7 @@ logoutLink.addEventListener('click', logout);
 /* FUNCTIONS */
 async function createFormSubmit(event) {
   event.preventDefault();
-  const API_URL = CREATE_POST_API_URL;
+  const API_URL = API_FETCH_POSTS_URL;
   
 
   try {
