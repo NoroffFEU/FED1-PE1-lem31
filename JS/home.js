@@ -185,19 +185,20 @@ gridHeader12.innerHTML = last12Posts[11].title;}
 //FUNCTION TO DISPLAY INDIVIDUAL BLOG POSTS ON PUBLIC PAGE
 
 
+const header = document.querySelector('.header');
 
-const header= document.querySelector('.header');
-header.forEach((item) => { 
-  item.addEventListener('click', () => {
-    window.location.href = '/post/index.html';
-    localStorage.setItem('blogPostImage', JSON.stringify(last12Posts.media.url));
-  });
+
+header.addEventListener('click', (event) => {
+  const image = event.target.parentNode.querySelector('img');
+  const imageUrl = image.getAttribute('src');
+  localStorage.setItem('blogPostImage', JSON.stringify(imageUrl));
+  window.location.href = '/post/index.html';
 });
 
-function displayIndividualPosts() {
+// function displayIndividualPosts() {
 
   
-}
+// }
 
 
 //**CALL FUNCTIONS */
