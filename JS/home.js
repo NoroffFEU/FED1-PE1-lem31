@@ -184,8 +184,7 @@ gridHeader12.innerHTML = last12Posts[11].title;}
 
 //FUNCTION TO DISPLAY INDIVIDUAL BLOG POSTS ON PUBLIC PAGE
 
-// const header = document.querySelector('.post-header');
-// header.setAttribute('data-id', allBlogPosts[id]);
+
 
 
 
@@ -197,4 +196,3 @@ gridHeader12.innerHTML = last12Posts[11].title;}
 
 displayCarouselPosts();
 displayGridPosts();
-displayIndividualPosts();
