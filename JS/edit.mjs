@@ -17,6 +17,8 @@ logoutLink.addEventListener('click', logout);
 
 
 
+
+
 // FUNCTIONS
 
 
@@ -113,7 +115,7 @@ function displayBlogPosts(blogPosts) {
     header.textContent = post.title;
     editButton.textContent = 'Edit';
     deleteButton.textContent = 'Delete';
-
+    deleteButton.dataset.postId = post.id;
     blogPostBox.appendChild(image);
     blogPostBox.appendChild(headerContainer);
     blogPostBox.appendChild(header);
@@ -125,6 +127,8 @@ function displayBlogPosts(blogPosts) {
     editButton.addEventListener('click', () => {
       displayForm(post);
     });
+
+    deleteButton.addEventListener('click', deleteButtonFunction);
   });
 }
 
@@ -227,7 +231,10 @@ function displayForm(post) {
 
   console.log(post.id);
  localStorage.setItem('id', post.id);
-}
+
+
+  console.log('Post ID:', post.id);}
+
 
 //Function for submitting the edit form
 async function editFormSubmit(event) {
@@ -296,9 +303,40 @@ function closeEditForm() {
 }
 
 
-//FUNCTION FOR DELETING A BLOG POST
+//FUNCTIONS FOR DELETING A BLOG POST
 
-// async function deletePost(postId) {
+function deleteButtonFunction(event) {
+
+  const deleteButton = event.target;
+  const id= deleteButton.dataset.postId;
+ const idString= id.toString();
+  const postId = idString;
+  deletePost(postId);}
+
+async function deletePost(postId) {
+  const API_URL = `${API_PUT_POST}/${postId}`;
+
+  try {
+    const accessToken = sessionStorage.getItem('accessToken');
+
+    const response = await fetch(API_URL, {
+      method: 'DELETE',
+      headers: {
+        Authorization: `Bearer ${accessToken}`,
+      },
+    });
+
+    if (response.status === 204) {
+      alert('You have successfully deleted this post!');
+      window.location.reload();
+    } else {
+      alert('Something went wrong, please try again.');
+    }
+  } catch (error) {
+    console.error('Error:', error);
+    alert('Something went wrong, please try again.');
+  }
+}
 
 //FUNCTION CALLS
 fetchBlogPosts();
