@@ -184,24 +184,17 @@ gridHeader12.innerHTML = last12Posts[11].title;}
 
 //FUNCTION TO DISPLAY INDIVIDUAL BLOG POSTS ON PUBLIC PAGE
 
+// const header = document.querySelector('.post-header');
+// header.setAttribute('data-id', allBlogPosts[id]);
 
-const header = document.querySelector('.header');
 
 
-header.addEventListener('click', (event) => {
-  const image = event.target.parentNode.querySelector('img');
-  const imageUrl = image.getAttribute('src');
-  localStorage.setItem('blogPostImage', JSON.stringify(imageUrl));
-  window.location.href = '/post/index.html';
-});
 
-// function displayIndividualPosts() {
 
-  
-// }
 
 
 //**CALL FUNCTIONS */
 
 displayCarouselPosts();
 displayGridPosts();
+displayIndividualPosts();
