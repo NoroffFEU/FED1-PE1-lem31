@@ -116,7 +116,7 @@ carouselHeader3.innerHTML = last12Posts[11].title;
 
 function handleHeaderClick(index) {
   localStorage.setItem('clickedBlogPost', JSON.stringify(last12Posts[index]));
-  window.location.href = '/post/index.html';
+  window.location.href = './post/index.html';
 }
 
 carouselHeader1.addEventListener('click', () => handleHeaderClick(9));
