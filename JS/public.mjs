@@ -15,7 +15,6 @@ async function fetchClickedPost() {
   createPostHtml(clickedPost);
   const postId = clickedPost.id;
   console.log(clickedPost);
-
   history.pushState(JSON, "", `?postId=${postId}`);
 }
 
