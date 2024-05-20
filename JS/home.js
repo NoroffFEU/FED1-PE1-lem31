@@ -24,8 +24,6 @@ const blogPosts= localStorage.getItem('blogPosts');
 
 const allBlogPosts = JSON.parse(blogPosts);
 
-const last3Posts = JSON.parse(blogPosts).slice(-3);
-
 const last12Posts = JSON.parse(blogPosts).slice(-12);
 
 console.log(last12Posts);
@@ -106,17 +104,30 @@ const carouselImage2= document.getElementById('carousel-image-2');
 
 const carouselImage3= document.getElementById('carousel-image-3');
 
-carouselImage1.src = last3Posts[0].media.url;
-carouselImage2.src = last3Posts[1].media.url;
-carouselImage3.src = last3Posts[2].media.url;
+carouselImage1.src = last12Posts[9].media.url;
+carouselImage2.src = last12Posts[10].media.url;
+carouselImage3.src = last12Posts[11].media.url;
 
 const carouselHeader1= document.getElementById('carousel-header-1');
 const carouselHeader2= document.getElementById('carousel-header-2');
 const carouselHeader3= document.getElementById('carousel-header-3');
 
-carouselHeader1.innerHTML = last3Posts[0].title;
-carouselHeader2.innerHTML = last3Posts[1].title;
-carouselHeader3.innerHTML = last3Posts[2].title;
+
+
+carouselHeader1.innerHTML = last12Posts[9].title;
+carouselHeader2.innerHTML = last12Posts[10].title;
+carouselHeader3.innerHTML = last12Posts[11].title;
+
+
+function handleCarouselHeaderClick(index) {
+  localStorage.setItem('clickedBlogPost', JSON.stringify(last12Posts[index]));
+  window.location.href = '/post/index.html';
+}
+
+carouselHeader1.addEventListener('click', () => handleCarouselHeaderClick(9));
+carouselHeader2.addEventListener('click', () => handleCarouselHeaderClick(10));
+carouselHeader3.addEventListener('click', () => handleCarouselHeaderClick(11));
+
 
 }
 
@@ -168,6 +179,8 @@ const gridHeader10 = document.getElementById('grid-post-header-10');
 const gridHeader11 = document.getElementById('grid-post-header-11');
 const gridHeader12 = document.getElementById('grid-post-header-12');
 
+
+
 gridHeader1.innerHTML = last12Posts[0].title;
 gridHeader2.innerHTML = last12Posts[1].title;
 gridHeader3.innerHTML = last12Posts[2].title;
@@ -187,6 +200,13 @@ gridHeader12.innerHTML = last12Posts[11].title;}
 
 
 
+// EVENT LISTENER FOR BLOG POST HEADER
+
+
+
+
+
+//FUNCTION TO DISPLAY INDIVIDUAL BLOG POSTS ON PUBLIC PAGE
 
 
 
