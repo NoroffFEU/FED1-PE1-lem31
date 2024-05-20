@@ -24,7 +24,7 @@ const blogPosts= localStorage.getItem('blogPosts');
 
 const allBlogPosts = JSON.parse(blogPosts);
 
-const last12Posts = JSON.parse(blogPosts).slice(-12);
+const last12Posts = allBlogPosts.slice(-12);
 
 console.log(last12Posts);
 
