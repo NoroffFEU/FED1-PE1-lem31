@@ -1,7 +1,7 @@
-const blogPost = JSON.parse(localStorage.getItem('All-Blog-Posts'));
 
 
-const image = document.querySelector('.Public-Blog-Post-Img');
+
+
 
 // image.src = blogPost.media.url;
 
@@ -14,6 +14,7 @@ async function fetchClickedPost() {
   const clickedPost = JSON.parse(localStorage.getItem('clickedBlogPost'));
   createPostHtml(clickedPost);
   const postId = clickedPost.id;
+  console.log(clickedPost);
 
   history.pushState(JSON, "", `?postId=${postId}`);
 }
@@ -24,12 +25,12 @@ function createPostHtml(clickedPost) {
   title.innerHTML = clickedPost.title;
   const image = document.querySelector('.Public-Blog-Post-Img');
   image.src = clickedPost.media.url;
-  const body = document.querySelector('.Public-Blog-Post-Body');
-  body.innerHTML = clickedPost.body;
+  const body = document.querySelector('.public-post-body');
+  body.textContent = clickedPost.body;
   console.log(clickedPost.body);
   const author = document.querySelector('.Author');
   console.log(clickedPost.author.name);
-  author.innerHTML = clickedPost.author;
+  author.innerHTML = clickedPost.author.name;
   const publishedDate = document.querySelector('.Published-date');
   publishedDate.innerHTML = clickedPost.created;
 }

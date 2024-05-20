@@ -78,7 +78,8 @@ h1,
 .register-label,
 .register-btn,
 .have-account-txt,
-.login-here-link {
+.login-here-link,
+.public-post-body {
   color: var(--secondary-color);
 }
 
