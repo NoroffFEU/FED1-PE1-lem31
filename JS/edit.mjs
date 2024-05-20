@@ -80,6 +80,8 @@ async function fetchBlogPosts() {
     localStorage.setItem('blogPosts', JSON.stringify(blogPosts));
 
     displayBlogPosts(blogPosts);
+
+    console.log('Blog Posts:', blogPosts);
   
 
   } catch (error) {

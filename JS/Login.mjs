@@ -33,7 +33,7 @@ async function loginFormSubmit(event) {
     console.log('User Logged in', info.accessToken, userData.data);
 
     if (response.status === 200) {
-      window.location.href = '/post/edit.html';
+      window.location.href = '../post/edit.html';
       alert('You have successfully logged in!');
     } else {
       alert('Invalid username or password');
