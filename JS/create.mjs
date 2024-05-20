@@ -60,6 +60,7 @@ async function createFormSubmit(event) {
 
 function logout() {
 
+ 
   const accessToken = sessionStorage.getItem('accessToken');
 
 
