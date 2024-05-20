@@ -21,9 +21,6 @@ const slideThree = document.querySelector('#slide-3');
 
 
 
-
-
-
 const blogPosts = JSON.parse(localStorage.getItem('blogPosts'));
 const last12Posts = blogPosts.slice(-12);
 console.log(last12Posts);
