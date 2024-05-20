@@ -20,11 +20,11 @@ const slideThree = document.querySelector('#slide-3');
 //CONSTANTS FOR HOME PAGE CAROUSEL AND 12 IMAGE GRID
 
 
-const blogPosts= localStorage.getItem('blogPosts');
+const blogPosts= JSON.parse(localStorage.getItem('blogPosts'));
 
-const allBlogPosts = JSON.parse(blogPosts);
 
-const last12Posts = allBlogPosts.slice(-12);
+
+const last12Posts = blogPosts.slice(-12);
 
 console.log(last12Posts);
 
