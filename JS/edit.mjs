@@ -36,7 +36,7 @@ export function logout() {
     
   } else if(accessToken !== null) {
    sessionStorage.removeItem('accessToken');
-    window.location.href = '.../account/login.html';
+    window.location.href = '../account/login.html';
    alert('You have successfully logged out!');
    
   }
