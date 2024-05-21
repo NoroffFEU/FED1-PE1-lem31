@@ -606,7 +606,6 @@ footer {
 
 .edit-input {
   padding: 1rem;
-  width: 0%;
 }
 
 .create-post-input {
@@ -632,7 +631,7 @@ footer {
   top: 0.2rem;
   z-index: 12;
   width: 100vw;
-  height: 100%;
+  height: 100vh;
   justify-content: center;
 }
 
@@ -733,6 +732,7 @@ footer {
   width: 100%;
   height: 100%;
   z-index: 12;
+
   background-color: var(--primary-color);
   border: 8px var(--tertiary-color) solid;
   padding-bottom: 3rem;
@@ -747,7 +747,8 @@ footer {
 }
 
 .post-image {
-  width: 20rem;
+  width: 80%;
+  height: 60%;
 }
 
 .button-wrapper-edit {
@@ -1128,6 +1129,10 @@ footer {
     top: 35%;
     width: 55%;
   }
+
+  .button-wrapper-edit {
+    gap: 10px;
+  }
 }
 
 @media (min-width: 601px) and (max-width: 800px) {
@@ -1378,6 +1383,10 @@ footer {
     width: 36rem;
     height: 50rem;
   }
+
+  .button-wrapper-edit {
+    gap: 30px;
+  }
 }
 
 @media (min-width: 801px) and (max-width: 979px) {
@@ -1423,5 +1432,9 @@ footer {
   .h2-Edit-Page {
     width: 30%;
     height: 12rem;
+  }
+
+  .button-wrapper-edit {
+    gap: 50px;
   }
 }
