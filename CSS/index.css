@@ -790,6 +790,7 @@ footer {
 .register-input {
   padding: 1rem;
   width: 100%;
+  border: 2px var(--tertiary-color) solid;
 }
 
 .login-input {
@@ -837,7 +838,7 @@ footer {
 }
 
 #bio {
-  padding: 5rem 0rem 5rem 2rem;
+  padding-bottom: 10rem;
 }
 
 /*MEDIA QUERIES*/
