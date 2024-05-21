@@ -563,6 +563,7 @@ footer {
   display: flex;
   grid-area: Three;
   justify-content: space-evenly;
+  margin-left: -2rem;
 }
 
 .post-link,
