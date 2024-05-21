@@ -644,6 +644,13 @@ footer {
   justify-content: center;
 }
 
+.blog-posts-wrapper-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
 .blog-posts-wrapper {
   display: grid;
   grid-template-columns: 50% 50%;
@@ -672,7 +679,7 @@ footer {
 .header-container {
   display: flex;
   position: absolute;
-  width: 40rem;
+  width: 30rem;
   height: 13rem;
   opacity: 0.8;
   z-index: 11;
@@ -1402,7 +1409,7 @@ footer {
     height: 6rem;
   }
   .header-container {
-    width: 30rem;
+    width: 20rem;
   }
 
   .Two-links-box {
