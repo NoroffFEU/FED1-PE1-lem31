@@ -282,7 +282,8 @@ nav a:active {
 }
 
 .Destinations-SH-box {
-  height: 15rem;
+  height: 14rem;
+  margin-top: -9rem;
 }
 
 .Video-banner {
@@ -868,6 +869,11 @@ footer {
     font-size: var(--font-size-H2-Mobile);
   }
 
+  .Destinations-SH-box {
+    height: 17rem;
+    margin-top: -3rem;
+  }
+
   .Public-Blog-Post-Body,
   .Author,
   .Published-date {
@@ -1129,6 +1135,11 @@ footer {
   .destination,
   .h3-edit {
     font-size: var(--font-size-H2-Mobile);
+  }
+
+  .Destinations-SH-box {
+    height: 12rem;
+    margin-top: -6rem;
   }
 
   .Public-Blog-Post-Body,
