@@ -123,6 +123,10 @@ carouselHeader1.addEventListener('click', () => handleHeaderClick(9));
 carouselHeader2.addEventListener('click', () => handleHeaderClick(10));
 carouselHeader3.addEventListener('click', () => handleHeaderClick(11));
 
+carouselImage1.addEventListener('click', () => handleHeaderClick(9));
+carouselImage2.addEventListener('click', () => handleHeaderClick(10));
+carouselImage3.addEventListener('click', () => handleHeaderClick(11));
+
 
 }
 
