@@ -338,12 +338,12 @@ nav a:active {
   justify-content: center;
   align-items: center;
   position: relative;
+  margin-top: -8rem;
 }
 
 .Slide img {
   width: 80%;
   height: 55%;
-
   align-items: center;
   align-self: center;
 }
@@ -971,6 +971,10 @@ footer {
     text-wrap: wrap;
   }
 
+  .Slide {
+    margin-top: -4rem;
+  }
+
   .h4-home {
     margin-top: -5rem;
     height: auto;
@@ -991,7 +995,7 @@ footer {
   }
 
   .h2-container {
-    height: 5rem;
+    height: 3rem;
   }
 
   .carousel-header {
@@ -1237,6 +1241,10 @@ footer {
     height: auto;
   }
 
+  .Slide {
+    margin-top: -4rem;
+  }
+
   .carousel-button {
     width: 100px;
     border: none;
@@ -1245,7 +1253,7 @@ footer {
   }
 
   .h2-container {
-    height: 5rem;
+    height: 2rem;
   }
 
   .carousel-header {
