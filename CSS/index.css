@@ -604,13 +604,10 @@ footer {
   width: 80%;
 }
 
-.edit-input {
-  padding: 1rem;
-  border: 2px var(--tertiary-color) solid;
-}
-
+.edit-input,
 .create-post-input {
   padding: 1rem;
+  border: 2px var(--tertiary-color) solid;
 }
 
 .input-label-create {
