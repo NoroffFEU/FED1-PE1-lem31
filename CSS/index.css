@@ -890,15 +890,18 @@ footer {
     list-style: none;
     position: absolute;
     margin-top: 3rem;
-    background-color: rgba(255, 255, 255, 0.4);
+    border: 2px solid var(--tertiary-color);
+    background-color: rgba(255, 255, 255, 10);
+    width: 4rem;
+    margin-left: 0.5rem;
   }
 
   nav a {
     text-wrap: nowrap;
+    margin-left: -2rem;
   }
 
   nav ul {
-    margin-left: -2rem;
     z-index: 12;
   }
 
@@ -1146,11 +1149,14 @@ footer {
     list-style: none;
     position: absolute;
     margin-top: 3rem;
-    background-color: rgba(255, 255, 255, 0.4);
+    border: 2px solid var(--tertiary-color);
+    background-color: rgba(255, 255, 255, 10);
+    margin-left: 0.5rem;
   }
 
   nav a {
     text-wrap: nowrap;
+    margin-left: -2rem;
   }
 
   .nav-wrapper {
@@ -1158,7 +1164,6 @@ footer {
   }
 
   nav ul {
-    margin-left: -2rem;
     z-index: 12;
   }
 
