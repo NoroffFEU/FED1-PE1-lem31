@@ -521,11 +521,10 @@ footer {
 }
 
 .Public-Blog-Post-Img {
-  width: 100%;
-  height: 50%;
+  width: 80%;
 }
 
-.Public-Blog-Post-Body {
+.public-post-body {
   width: 80%;
 }
 
@@ -609,12 +608,10 @@ footer {
   margin-top: 1rem;
 }
 
-/* #body,
 .body-edit {
   padding: 10rem;
-} */
-
-#body {
+}
+*/ #body {
   height: 20rem;
 }
 
