@@ -349,6 +349,10 @@ nav a:active {
   align-self: center;
 }
 
+.Slide img:hover {
+  cursor: pointer;
+}
+
 .BP-header-container {
   display: flex;
   position: absolute;
@@ -431,6 +435,10 @@ nav a:active {
   height: 70%;
   margin: 0;
   padding: 0;
+}
+
+.blog-post-container img:hover {
+  cursor: pointer;
 }
 
 .grid-header {
@@ -1009,6 +1017,10 @@ footer {
     height: 9vh;
   }
 
+  .destination {
+    margin-left: 1.5rem;
+  }
+
   .grid-header {
     width: 90vw;
     height: 14vh;
@@ -1269,7 +1281,7 @@ footer {
 
   .carousel-header {
     width: 50vw;
-    height: 12vh;
+    height: 8vh;
   }
 
   .BP-header-container {
