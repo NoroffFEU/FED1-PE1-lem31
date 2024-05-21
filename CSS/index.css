@@ -748,7 +748,7 @@ footer {
 
 .post-image {
   width: 80%;
-  height: 60%;
+  height: auto;
 }
 
 .button-wrapper-edit {
