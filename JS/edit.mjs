@@ -208,6 +208,7 @@ function displayForm(post) {
   editHeader.textContent = 'Edit Post';
 
   editFormWrapper.appendChild(editForm);
+  editFormWrapper.appendChild(buttonsWrapper);
   editForm.appendChild(editHeaderContainer);
   editForm.appendChild(postImageContainer);
   postImageContainer.appendChild(postImage);
