@@ -369,9 +369,7 @@ nav a:active {
   cursor: pointer;
 }
 
-#carousel-header-1,
-#carousel-header-2,
-#carousel-header-3 {
+.carousel-header {
   display: flex;
   position: absolute;
   bottom: 18%;
@@ -433,7 +431,7 @@ nav a:active {
   padding: 0;
 }
 
-.post-header {
+.grid-header {
   height: 8%;
   position: absolute;
   width: 28vw;
@@ -989,14 +987,12 @@ footer {
     height: 5rem;
   }
 
-  #carousel-header-1,
-  #carousel-header-2,
-  #carousel-header-3 {
+  .carousel-header {
     width: 60vw;
     height: 13vh;
   }
 
-  .post-header {
+  .grid-header {
     width: 90vw;
     height: 14vh;
   }
@@ -1023,7 +1019,7 @@ footer {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .post-header {
+  .grid-header {
     height: 10%;
     width: 80vw;
   }
@@ -1243,9 +1239,7 @@ footer {
     height: 5rem;
   }
 
-  #carousel-header-1,
-  #carousel-header-2,
-  #carousel-header-3 {
+  .carousel-header {
     width: 50vw;
   }
 
@@ -1259,7 +1253,7 @@ footer {
     height: 36px;
   }
 
-  .post-header {
+  .grid-header {
     height: 13%;
     width: 40vw;
   }
@@ -1318,7 +1312,7 @@ footer {
     margin-top: -7rem;
   }
 
-  .post-header {
+  .grid-header {
     height: 8%;
     width: 40vw;
   }
