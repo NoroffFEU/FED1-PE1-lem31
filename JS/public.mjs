@@ -29,9 +29,9 @@ function createPostHtml(clickedPost) {
   console.log(clickedPost.body);
   const author = document.querySelector('.Author');
   console.log(clickedPost.author.name);
-  author.innerHTML = clickedPost.author.name;
+  author.innerHTML = "Author:" + clickedPost.author.name;
   const publishedDate = document.querySelector('.Published-date');
-  publishedDate.innerHTML = clickedPost.created;
+  publishedDate.innerHTML = "Published:" + clickedPost.created;
 }
 
 fetchClickedPost();
