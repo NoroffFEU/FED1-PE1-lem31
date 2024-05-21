@@ -206,8 +206,23 @@ gridHeader8.addEventListener('click', () => handleHeaderClick(7));
 gridHeader9.addEventListener('click', () => handleHeaderClick(8));
 gridHeader10.addEventListener('click', () => handleHeaderClick(9));
 gridHeader11.addEventListener('click', () => handleHeaderClick(10));
+gridHeader12.addEventListener('click', () => handleHeaderClick(11));
+
+gridImage1.addEventListener('click', () => handleHeaderClick(0));
+gridImage2.addEventListener('click', () => handleHeaderClick(1));
+gridImage3.addEventListener('click', () => handleHeaderClick(2));
+gridImage4.addEventListener('click', () => handleHeaderClick(3));
+gridImage5.addEventListener('click', () => handleHeaderClick(4));
+gridImage6.addEventListener('click', () => handleHeaderClick(5));
+gridImage7.addEventListener('click', () => handleHeaderClick(6));
+gridImage8.addEventListener('click', () => handleHeaderClick(7));
+gridImage9.addEventListener('click', () => handleHeaderClick(8));
+gridImage10.addEventListener('click', () => handleHeaderClick(9));
+gridImage11.addEventListener('click', () => handleHeaderClick(10));
+gridImage12.addEventListener('click', () => handleHeaderClick(11));
 
 }
+
 
 
 //FUNCTION TO DISPLAY INDIVIDUAL BLOG POSTS ON PUBLIC PAGE
