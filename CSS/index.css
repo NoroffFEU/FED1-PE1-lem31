@@ -616,10 +616,10 @@ footer {
   margin-top: 1rem;
 }
 
-.body-edit {
-  padding: 10rem;
+#edit-body {
+  padding-bottom: 10rem;
 }
-*/ #body {
+#body {
   height: 20rem;
 }
 
