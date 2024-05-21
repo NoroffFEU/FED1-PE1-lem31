@@ -71,9 +71,9 @@ function logout() {
     
   } else if(accessToken !== null) {
     sessionStorage.removeItem('accessToken');
-    window.location.href = '../account/login.html';
-   alert('You have successfully logged out!');
    
+   alert('You have successfully logged out!');
+   window.location.href = '../account/login.html';
   }
 
   else {
