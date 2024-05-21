@@ -517,9 +517,18 @@ footer {
   flex-direction: column;
   align-items: center;
 }
+.Blog-post-img-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  height: 60%;
+}
 
 .Public-Blog-Post-Img {
-  width: 80%;
+  max-width: fit-content;
+  width: 100%;
+  height: 100%;
 }
 
 .public-post-body {
@@ -528,6 +537,7 @@ footer {
 
 .h1-public-blog-post {
   text-align: center;
+  width: 80%;
 }
 
 /*CREATE POST PAGE and EDIT POST PAGE*/
