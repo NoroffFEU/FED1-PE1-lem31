@@ -79,7 +79,9 @@ h1,
 .register-btn,
 .have-account-txt,
 .login-here-link,
-.public-post-body {
+.public-post-body,
+.Author,
+.Published-date {
   color: var(--secondary-color);
 }
 
@@ -190,7 +192,9 @@ h1 {
   font-size: var(--font-size-H2-Desktop);
 }
 
-.Public-Blog-Post-Body {
+.Public-Blog-Post-Body,
+.Author,
+.Published-date {
   font-size: var(--font-size-Body-Desktop);
   font-family: var(--font-family-2);
 }
@@ -881,7 +885,9 @@ footer {
     font-size: var(--font-size-H2-Mobile);
   }
 
-  .Public-Blog-Post-Body {
+  .Public-Blog-Post-Body,
+  .Author,
+  .Published-date {
     font-size: var(--font-size-Body-Mobile);
   }
 
@@ -1136,7 +1142,9 @@ footer {
     font-size: var(--font-size-H2-Mobile);
   }
 
-  .Public-Blog-Post-Body {
+  .Public-Blog-Post-Body,
+  .Author,
+  .Published-date {
     font-size: var(--font-size-Body-Mobile);
   }
 
