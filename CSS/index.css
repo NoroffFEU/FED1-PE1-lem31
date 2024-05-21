@@ -278,7 +278,7 @@ nav a:active {
 }
 
 .h2-container {
-  height: 8rem;
+  height: 4rem;
 }
 
 .Destinations-SH-box {
@@ -372,7 +372,7 @@ nav a:active {
 .carousel-header {
   display: flex;
   position: absolute;
-  bottom: 18%;
+  bottom: 25%;
   width: 36vw;
   text-align: center;
 }
@@ -995,7 +995,7 @@ footer {
 
   .carousel-header {
     width: 60vw;
-    height: 13vh;
+    height: 8vh;
   }
 
   .grid-header {
@@ -1008,7 +1008,7 @@ footer {
   }
   .BP-header-container {
     width: 28rem;
-    height: 4rem;
+    height: 5rem;
   }
 
   .Subscribe-email {
@@ -1249,6 +1249,7 @@ footer {
 
   .carousel-header {
     width: 50vw;
+    height: 12vh;
   }
 
   .BP-header-container {
