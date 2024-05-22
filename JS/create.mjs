@@ -73,6 +73,7 @@ function logout() {
     sessionStorage.removeItem('accessToken');
    
    alert('You have successfully logged out!');
+   
    window.location.href = '../account/login.html';
   }
 
