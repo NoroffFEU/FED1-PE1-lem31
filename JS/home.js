@@ -48,9 +48,11 @@ buttonOne.addEventListener('click', () => {
   slideOne.style.display = 'none';
   slideTwo.style.display = 'flex';
 
-image2.style.borderRadius = '50%';
-image2.style.transition = 'border-radius 0.5s, transform 0.5s';
-image2.style.transform = 'scale(1)';
+setTimeout(() => {
+  image2.style.borderRadius = '50%';
+  image2.style.transition = 'border-radius 0.6s, transform 0.6s';
+  image2.style.transform = 'scale(1)';
+}, 10);
  
 });
 
@@ -59,11 +61,7 @@ buttonTwo.addEventListener('click', () => {
   slideOne.style.display = 'none';
   slideTwo.style.display = 'none';
   slideThree.style.display = 'flex';
-image3.style.borderRadius = '50%';
-image3.style.transition = 'border-radius 0.5s, transform 0.5s';
-image3.style.transform = 'scale(1)';
-
-
+image3.style.borderRadius = '0';
 
   
 });
@@ -74,9 +72,11 @@ buttonThree.addEventListener('click', () => {
   slideTwo.style.display = 'none';
   slideThree.style.display = 'flex';
 
-image3.style.borderRadius = '50%';
-image3.style.transition = 'border-radius 0.5s, transform 0.5s';
-image3.style.transform = 'scale(1)';
+  setTimeout(() => {
+    image3.style.borderRadius = '50%';
+    image3.style.transition = 'border-radius 0.6s, transform 0.6s';
+    image3.style.transform = 'scale(1)';
+  }, 10);
   
 });
 
@@ -86,9 +86,8 @@ buttonFour.addEventListener('click', () => {
   slideTwo.style.display = 'none';
   slideThree.style.display = 'none';
 
-image1.style.borderRadius = '50%';
-image1.style.transition = 'border-radius 0.5s, transform 0.5s';
-image1.style.transform = 'scale(1)';
+image1.style.borderRadius = '0';
+
   
 });
 
@@ -98,9 +97,11 @@ buttonFive.addEventListener('click', () => {
   slideOne.style.display = 'flex';
   slideTwo.style.display = 'none';
   slideThree.style.display = 'none';
-  image1.style.borderRadius = '50%';
-image1.style.transition = 'border-radius 0.5s, transform 0.5s';
-image1.style.transform = 'scale(1)';
+  setTimeout(() => {
+    image1.style.borderRadius = '50%';
+    image1.style.transition = 'border-radius 0.6s, transform 0.6s';
+    image1.style.transform = 'scale(1)';
+  }, 10);
   
 });
 
@@ -109,9 +110,8 @@ buttonSix.addEventListener('click', () => {
     slideOne.style.display = 'none';
     slideTwo.style.display = 'flex';
     slideThree.style.display = 'none';
-//     image2.style.borderRadius = '50%';
-// image2.style.transition = 'border-radius 0.5s, transform 0.5s';
-// image2.style.transform = 'scale(1)';
+    image2.style.borderRadius = '0';
+
     
   });
 

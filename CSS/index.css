@@ -522,20 +522,20 @@ footer {
   flex-direction: column;
   align-items: center;
   width: 50rem;
-  height: 60rem;
+  height: auto;
 }
 
 .Public-Blog-Post-Img {
   width: 100%;
-  height: 50%;
+  height: auto;
 }
 
 .public-post-body {
   width: 80%;
-  height: 80%;
+  height: auto;
 }
 
-.h1-public-blog-post {
+.h1-blog-post {
   text-align: center;
   width: 80%;
 }
@@ -1116,7 +1116,7 @@ footer {
 
   .Blog-post-img-box {
     width: 20rem;
-    height: 30rem;
+    height: auto;
   }
 
   /* PUBLIC POST PAGE */
@@ -1379,7 +1379,7 @@ footer {
   /* Public Blog Post page */
   .Blog-post-img-box {
     width: 36rem;
-    height: 50rem;
+    height: auto;
   }
 
   .button-wrapper-edit {
