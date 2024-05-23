@@ -2,6 +2,9 @@ import { API_FETCH_POSTS_URL} from "./GlobalConst.mjs";
 
 
 
+
+
+
 const logoutLink= document.getElementById('logout-link-edit');
 
 
@@ -56,6 +59,8 @@ async function fetchBlogPosts() {
     const API_URL = API_FETCH_POSTS_URL;
 
     const accessToken = sessionStorage.getItem('accessToken');
+
+
 
     const response = await fetch(API_URL, {
       headers: {
@@ -255,7 +260,7 @@ async function editFormSubmit(event) {
     const blogPostObject = {
       title: document.getElementById('edit-title').value,
       body: document.getElementById('edit-body').value,
-      tags: document.getElementById('edit-tags') ? document.getElementById('edit-tags').value.split(',').map(tag => tag.trim()) : [],
+      tags: document.getElementById('edit-tags').value,
       media: {
         url: document.getElementById('edit-media').value , 
         type: 'image', 

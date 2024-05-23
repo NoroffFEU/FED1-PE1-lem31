@@ -3,7 +3,7 @@
 
 
 
-// image.src = blogPost.media.url;
+
 
 //FUNCTIONS
 
@@ -15,7 +15,13 @@ async function fetchClickedPost() {
   createPostHtml(clickedPost);
   const postId = clickedPost.id;
   console.log(clickedPost);
-  history.pushState(JSON, "", `?postId=${postId}`);
+
+  const url = new URL(window.location.href);
+  history.pushState({}, "", `${postId}`);
+  url.searchParams.set('postId', `${postId}`); 
+  //Looked to this website for help inserting the post ID into the URL : https://developer.mozilla.org/en-US/docs/Web/API/History/pushState
+
+
 }
 
 //FUNCTION TO CREATE HTML FOR CLICKED POST

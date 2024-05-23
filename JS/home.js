@@ -40,6 +40,7 @@ buttonOne.addEventListener('click', () => {
  
   slideOne.style.display = 'none';
   slideTwo.style.display = 'flex';
+
 });
 
 buttonTwo.addEventListener('click', () => {
