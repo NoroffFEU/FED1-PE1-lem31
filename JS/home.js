@@ -15,6 +15,9 @@ const slideTwo = document.querySelector('#slide-2');
 const buttonFive = document.querySelector('#right-arrow-3');
 const buttonSix = document.querySelector('#left-arrow-3');
 const slideThree = document.querySelector('#slide-3');
+const image1= document.querySelector('#carousel-image-1');
+const image2= document.querySelector('#carousel-image-2');
+const image3= document.querySelector('#carousel-image-3');
 
 
 //CONSTANTS FOR HOME PAGE CAROUSEL AND 12 IMAGE GRID
@@ -24,6 +27,11 @@ const slideThree = document.querySelector('#slide-3');
 const blogPosts = JSON.parse(localStorage.getItem('blogPosts'));
 const last12Posts = blogPosts.slice(-12);
 console.log(last12Posts);
+
+
+//CONSTANT FOR IMAGE ROTATION CAROUSEL
+
+
 
 
 
@@ -37,10 +45,13 @@ console.log(last12Posts);
 //**EVENT LISTENERS FOR THE CAROUSEL ON HOME PAGE */
 
 buttonOne.addEventListener('click', () => {
- 
   slideOne.style.display = 'none';
   slideTwo.style.display = 'flex';
 
+image2.style.borderRadius = '50%';
+image2.style.transition = 'border-radius 0.5s, transform 0.5s';
+image2.style.transform = 'scale(1)';
+ 
 });
 
 buttonTwo.addEventListener('click', () => {
@@ -48,6 +59,12 @@ buttonTwo.addEventListener('click', () => {
   slideOne.style.display = 'none';
   slideTwo.style.display = 'none';
   slideThree.style.display = 'flex';
+image3.style.borderRadius = '50%';
+image3.style.transition = 'border-radius 0.5s, transform 0.5s';
+image3.style.transform = 'scale(1)';
+
+
+
   
 });
 
@@ -56,6 +73,10 @@ buttonThree.addEventListener('click', () => {
   slideOne.style.display = 'none';
   slideTwo.style.display = 'none';
   slideThree.style.display = 'flex';
+
+image3.style.borderRadius = '50%';
+image3.style.transition = 'border-radius 0.5s, transform 0.5s';
+image3.style.transform = 'scale(1)';
   
 });
 
@@ -64,6 +85,10 @@ buttonFour.addEventListener('click', () => {
   slideOne.style.display = 'flex';
   slideTwo.style.display = 'none';
   slideThree.style.display = 'none';
+
+image1.style.borderRadius = '50%';
+image1.style.transition = 'border-radius 0.5s, transform 0.5s';
+image1.style.transform = 'scale(1)';
   
 });
 
@@ -73,6 +98,9 @@ buttonFive.addEventListener('click', () => {
   slideOne.style.display = 'flex';
   slideTwo.style.display = 'none';
   slideThree.style.display = 'none';
+  image1.style.borderRadius = '50%';
+image1.style.transition = 'border-radius 0.5s, transform 0.5s';
+image1.style.transform = 'scale(1)';
   
 });
 
@@ -81,6 +109,9 @@ buttonSix.addEventListener('click', () => {
     slideOne.style.display = 'none';
     slideTwo.style.display = 'flex';
     slideThree.style.display = 'none';
+//     image2.style.borderRadius = '50%';
+// image2.style.transition = 'border-radius 0.5s, transform 0.5s';
+// image2.style.transform = 'scale(1)';
     
   });
 
