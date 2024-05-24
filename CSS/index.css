@@ -313,7 +313,6 @@ nav a:active {
   position: relative;
   margin: auto;
   overflow-x: hidden;
-  /* margin-top: -5rem; */
 }
 
 .carousel-button {
@@ -538,6 +537,10 @@ footer {
 .h1-blog-post {
   text-align: center;
   width: 80%;
+}
+
+#continent {
+  padding-bottom: 10rem;
 }
 
 /*CREATE POST PAGE and EDIT POST PAGE*/
@@ -994,7 +997,7 @@ footer {
 
   .h1-home {
     top: 35%;
-    width: 60%;
+    width: 78%;
     height: 12%;
     text-wrap: wrap;
   }
