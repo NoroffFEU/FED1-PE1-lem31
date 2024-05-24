@@ -260,12 +260,12 @@ async function editFormSubmit(event) {
     const blogPostObject = {
       title: document.getElementById('edit-title').value,
       body: document.getElementById('edit-body').value,
-      tags: document.getElementById('edit-tags').value,
+      tags: document.getElementById('edit-tags').value['tags'],
       media: {
-        url: document.getElementById('edit-media').value , 
-        type: 'image', 
-
+      url: document.getElementById('edit-media').value , 
+      type: 'image', 
       },
+      id: localStorage.getItem('id')
     };
 
     const accessToken = sessionStorage.getItem('accessToken');
@@ -295,9 +295,6 @@ async function editFormSubmit(event) {
     console.error('Error:', error);
     alert('Something went wrong, please try again.');
   }
-
-
-
 
 
 
