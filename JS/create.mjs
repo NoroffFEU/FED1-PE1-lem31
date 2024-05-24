@@ -29,7 +29,7 @@ async function createFormSubmit(event) {
     
     const accessToken = sessionStorage.getItem('accessToken');
 
-    console.log(accessToken);
+  
 
     const response = await fetch(API_URL, {
      
@@ -45,7 +45,7 @@ async function createFormSubmit(event) {
 
     const userData = await response.json();
 
-    console.log(userData);
+   
 
     if (response.status === 201) {
       alert('You have successfully created a post!');
@@ -80,7 +80,7 @@ function logout() {
     alert('An error has occurred. Please try again.');
   }
 
-  console.log('User logged out', accessToken);
+
 
 }
 

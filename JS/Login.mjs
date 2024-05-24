@@ -30,7 +30,7 @@ async function loginFormSubmit(event) {
 
    sessionStorage.setItem('accessToken', info.accessToken);
    sessionStorage.setItem('userInfo', JSON.stringify(userData.data));
-    console.log('User Logged in', info.accessToken, userData.data);
+   
 
     if (response.status === 200) {
       window.location.href = '../post/edit.html';
@@ -47,9 +47,5 @@ async function loginFormSubmit(event) {
 
 
 
-
-console.log (sessionStorage.getItem('accessToken'));
-
-console.log (sessionStorage.getItem('userInfo'));
 
 

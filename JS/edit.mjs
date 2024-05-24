@@ -46,7 +46,7 @@ export function logout() {
     alert('An error has occurred. Please try again.');
   }
 
-  console.log('User logged out', accessToken);
+ 
 
 }
 
@@ -76,7 +76,7 @@ async function fetchBlogPosts() {
 
     const posts = await response.json();
 
-    console.log(posts);
+   
 
     const blogPosts = posts.data;
 
@@ -84,7 +84,7 @@ async function fetchBlogPosts() {
 
     displayBlogPosts(blogPosts);
 
-    console.log('Blog Posts:', blogPosts);
+ 
   
 
   } catch (error) {
@@ -238,11 +238,11 @@ function displayForm(post) {
 
   editForm.addEventListener('submit', editFormSubmit);
 
-  console.log(post.id);
+
  localStorage.setItem('id', post.id);
 
 
-  console.log('Post ID:', post.id);}
+  }
 
 
 //FUNCTION FOR SUBMITTING THE EDIT FORM
@@ -285,7 +285,7 @@ async function editFormSubmit(event) {
 
     if (response.status === 200) {
       const userData = await response.json();
-      console.log(userData);
+   
       alert('You have successfully saved this post!');
       window.location.reload();
     } else {
@@ -298,9 +298,7 @@ async function editFormSubmit(event) {
 
 
 
-  console.log('API_URL:', API_URL);
 
-  console.log('ID:', id);
 
 
 }

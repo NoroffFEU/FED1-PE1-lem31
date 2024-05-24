@@ -14,7 +14,7 @@ async function fetchClickedPost() {
   const clickedPost = JSON.parse(localStorage.getItem('clickedBlogPost'));
   createPostHtml(clickedPost);
   const postId = clickedPost.id;
-  console.log(clickedPost);
+
 
   const url = new URL(window.location.href);
   history.pushState({}, "", `${postId}`);
@@ -32,9 +32,9 @@ function createPostHtml(clickedPost) {
   image.src = clickedPost.media.url;
   const body = document.querySelector('.public-post-body');
   body.textContent = clickedPost.body;
-  console.log(clickedPost.body);
+
   const author = document.querySelector('.Author');
-  console.log(clickedPost.author.name);
+
   author.innerHTML = "Author:" + clickedPost.author.name;
   const publishedDate = document.querySelector('.Published-date');
   publishedDate.innerHTML = "Published:" + clickedPost.created;
