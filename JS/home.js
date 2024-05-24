@@ -196,7 +196,7 @@ function createPostHtml(post) {
 
   postContainer.classList.add('blog-post-container');
   textBackground.classList.add('text-background-grid');
-  postHeader.classList.add('post-header');
+  postHeader.classList.add('grid-header');
 
   gridImage.src = post.media.url;
   postHeader.innerHTML = post.title;
@@ -250,7 +250,6 @@ last12Posts.forEach(post => { createPostHtml(post) });
 
 
 
-//**CALL FUNCTIONS */
 
 
 

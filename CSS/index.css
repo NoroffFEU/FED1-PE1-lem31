@@ -51,6 +51,7 @@ h1,
 .Destinations-SH,
 .destination,
 .post-header,
+.grid-header,
 .H5-home,
 .Subscribe-btn,
 .right-side-footer a,
@@ -105,7 +106,7 @@ h1,
 .h2-home,
 .Destinations-SH,
 .post-header,
-.H5-home,
+.grid-header .H5-home,
 .post-link,
 .Logout-link,
 .h2-Edit-Page,
@@ -163,6 +164,7 @@ nav a,
 }
 
 .post-header,
+.grid-header,
 .h2-Edit-Page {
   font-size: var(--font-size-Blog-Post-Headers-Desktop);
 }
@@ -361,13 +363,15 @@ nav a:active {
   opacity: 0.8;
 }
 
-.post-header:hover {
+.post-header:hover,
+.grid-header:hover {
   text-decoration: underline;
   text-decoration-color: var(--secondary-color);
   cursor: pointer;
 }
 
-.post-header:active {
+.post-header:active,
+.grid-header:active {
   text-decoration: underline;
   text-decoration-color: var(--secondary-color);
   text-decoration-thickness: 5px;
@@ -873,6 +877,7 @@ footer {
   }
 
   .post-header,
+  .grid-header,
   .h2-Edit-Page {
     font-size: var(--font-size-Blog-Post-Headers-Mobile);
   }
@@ -1164,6 +1169,7 @@ footer {
   }
 
   .post-header,
+  .grid-header,
   .h2-Edit-Page {
     font-size: var(--font-size-Blog-Post-Headers-Mobile);
   }
