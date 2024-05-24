@@ -250,14 +250,7 @@ last12Posts.forEach(post => { createPostHtml(post) });
 
 
 
-
-
-
-
-
-
-
 //**CALL FUNCTIONS */
 
 displayCarouselPosts();
-// displayGridPosts();
+
