@@ -180,9 +180,7 @@ carouselImage3.addEventListener('click', () => handleHeaderClick(11));
 
 
 
-
-
-
+ 
 function createPostHtml(post) {
   const gridContainer=document.getElementById('grid-container');
   const postContainer = document.createElement('div');
@@ -216,7 +214,40 @@ function createPostHtml(post) {
   return postContainer;
 }
 
+
+
+
+function filterPosts(option) {
+  const filteredPosts = blogPosts.filter(post => post.tags.includes(option));
+  const gridContainer = document.getElementById('grid-container');
+  
+  gridContainer.innerHTML = '';
+  filteredPosts.forEach(post => {
+    createPostHtml(post);
+  });
+}
+
+const selectElement = document.getElementById('continent');
+selectElement.addEventListener('change', (event) => {
+  const selectedOption = event.target.value;
+  filterPosts(selectedOption);
+
+  if (selectedOption === 'All') {
+    const gridContainer = document.getElementById('grid-container');
+    gridContainer.innerHTML = '';
+    last12Posts.forEach(post => {
+      createPostHtml(post);
+    });
+  } 
+
+});
+
+
+
 last12Posts.forEach(post => { createPostHtml(post) });
+
+
+
 
 
 //**CALL FUNCTIONS */

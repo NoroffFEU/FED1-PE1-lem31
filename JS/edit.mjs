@@ -156,6 +156,7 @@ function displayForm(post) {
   const bodyInput = document.createElement('textarea');
   const tagsLabel = document.createElement('label');
   const tagsInput = document.createElement('input');
+ 
   const buttonsWrapper = document.createElement('div');
   const saveButton = document.createElement('button');
   const cancelButton = document.createElement('button');
@@ -176,6 +177,8 @@ function displayForm(post) {
   tagsLabel.classList.add('edit-label');
   tagsInput.classList.add('edit-input');
   tagsInput.id = 'edit-tags';
+
+
   buttonsWrapper.classList.add('button-wrapper-edit');
   saveButton.classList.add('save-btn');
   cancelButton.classList.add('cancel-btn');
@@ -215,6 +218,7 @@ function displayForm(post) {
   editForm.appendChild(editHeaderContainer);
   editForm.appendChild(postImageContainer);
   postImageContainer.appendChild(postImage);
+
   editForm.appendChild(mediaLabel);
   editForm.appendChild(mediaInput);
   editForm.appendChild(postTitleLabel);
@@ -260,10 +264,10 @@ async function editFormSubmit(event) {
     const blogPostObject = {
       title: document.getElementById('edit-title').value,
       body: document.getElementById('edit-body').value,
-      tags: document.getElementById('edit-tags').value['tags'],
+      tags: document.getElementById('edit-tags').value.split(','),
       media: {
-      url: document.getElementById('edit-media').value , 
-      type: 'image', 
+        url: document.getElementById('edit-media').value,
+        type: 'image',
       },
       id: localStorage.getItem('id')
     };
