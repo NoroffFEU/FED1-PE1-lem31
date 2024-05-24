@@ -52,6 +52,11 @@ setTimeout(() => {
   image2.style.borderRadius = '50%';
   image2.style.transition = 'border-radius 0.6s, transform 0.6s';
   image2.style.transform = 'scale(1)';
+  if (window.innerWidth < 600) {
+    image2.style.transform = 'scale(1.2)';
+  } else {
+    image2.style.transform = 'scale(1)';
+  }
 }, 10);
  
 });
@@ -76,6 +81,11 @@ buttonThree.addEventListener('click', () => {
     image3.style.borderRadius = '50%';
     image3.style.transition = 'border-radius 0.6s, transform 0.6s';
     image3.style.transform = 'scale(1)';
+    if (window.innerWidth < 600) {
+      image3.style.transform = 'scale(1.2)';
+    } else {
+      image3.style.transform = 'scale(1)';
+    }
   }, 10);
   
 });
@@ -100,7 +110,11 @@ buttonFive.addEventListener('click', () => {
   setTimeout(() => {
     image1.style.borderRadius = '50%';
     image1.style.transition = 'border-radius 0.6s, transform 0.6s';
-    image1.style.transform = 'scale(1)';
+    if (window.innerWidth < 600) {
+      image1.style.transform = 'scale(1.2)';
+    } else {
+      image1.style.transform = 'scale(1)';
+    }
   }, 10);
   
 });

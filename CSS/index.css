@@ -1000,7 +1000,7 @@ footer {
   }
 
   .Slide {
-    margin-top: -4rem;
+    margin-top: -2rem;
   }
 
   .h4-home {
@@ -1027,8 +1027,8 @@ footer {
   }
 
   .carousel-header {
-    width: 60vw;
-    height: 9vh;
+    width: 50vw;
+    height: 10vh;
   }
 
   .destination {
@@ -1044,8 +1044,9 @@ footer {
     width: 90%;
   }
   .BP-header-container {
-    width: 28rem;
-    height: 5rem;
+    width: 34rem;
+    height: 6rem;
+    bottom: 16%;
   }
 
   .Subscribe-email {
@@ -1313,12 +1314,13 @@ footer {
 
   .carousel-header {
     width: 50vw;
-    height: 8vh;
+    height: 6vh;
   }
 
   .BP-header-container {
-    width: 40rem;
+    width: 45rem;
     height: 6rem;
+    bottom: 17%;
   }
 
   .Subscribe-email {
