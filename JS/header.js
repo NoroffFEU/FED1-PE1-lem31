@@ -28,7 +28,7 @@ window.addEventListener('resize', (navDesktopDisplay) );
 
 //**Event Listener for Search Bar Desktop */
 
-window.addEventListener('resize', (displaySearchBarDesktop) );
+// window.addEventListener('resize', (displaySearchBarDesktop) );
 
 
 //**FUNCTIONS */
