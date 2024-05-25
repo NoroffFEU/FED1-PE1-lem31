@@ -24,7 +24,7 @@ window.addEventListener('resize', (navDesktopDisplay) );
 
 //**Event Listener for Search Button */
 
-searchBtn.addEventListener('click', (showSearchBar) );
+// searchBtn.addEventListener('click', (showSearchBar) );
 
 //**Event Listener for Search Bar Desktop */
 
@@ -59,22 +59,22 @@ else{
 
 //**Function to display search bar on mobile screen */
 
-function showSearchBar() {
-  if (searchBar.style.display === 'none') {
-    searchBar.style.display = 'flex';
-  } else {
-    searchBar.style.display = 'none';
-  }
-}
+// function showSearchBar() {
+//   if (searchBar.style.display === 'none') {
+//     searchBar.style.display = 'flex';
+//   } else {
+//     searchBar.style.display = 'none';
+//   }
+// }
 
 //**Function to display Search Bar at Desktop screen size */
 
-function displaySearchBarDesktop() {
+// function displaySearchBarDesktop() {
 
-    if (window.innerWidth > 800) {
-      searchBar.style.display = 'flex';
-    } else {
-      searchBar.style.display = 'none';}}
+//     if (window.innerWidth > 800) {
+//       searchBar.style.display = 'flex';
+//     } else {
+//       searchBar.style.display = 'none';}}
 
 //**ALL FUNCTIONS */
 

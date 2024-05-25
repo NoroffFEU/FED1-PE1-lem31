@@ -79,7 +79,9 @@ h1,
 .login-here-link,
 .public-post-body,
 .Author,
-.Published-date {
+.Published-date,
+select,
+.filter-label {
   color: var(--secondary-color);
 }
 
@@ -115,7 +117,9 @@ h1,
 .no-account-link,
 .forgot-pw,
 .have-account-txt,
-.login-here-link {
+.login-here-link,
+select,
+.filter-label {
   font: var(--font-family-1);
   font-weight: bold;
 }
@@ -266,7 +270,8 @@ nav a:active {
   height: 35px;
 }
 
-.Search-bar {
+.Search-bar,
+.search-form {
   grid-area: Four;
 }
 
@@ -543,8 +548,31 @@ footer {
   width: 80%;
 }
 
-#continent {
-  padding-bottom: 10rem;
+.Blog-post-filter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding-bottom: 5rem;
+}
+
+.filter-label {
+  margin-bottom: 0.5rem;
+}
+
+.select-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.select-wrapper select {
+  appearance: none;
+  background-color: var(--primary-color);
+  outline: none;
+  border: 5px solid var(--tertiary-color);
+  text-align: center;
+  width: 50vw;
 }
 
 /*CREATE POST PAGE and EDIT POST PAGE*/
@@ -969,7 +997,7 @@ footer {
   }
 
   .search-bar {
-    display: none;
+    /* display: none; */
     width: 120px;
     margin-left: -4.8rem;
     margin-top: -2rem;
@@ -1259,7 +1287,7 @@ footer {
   }
 
   .search-bar {
-    display: none;
+    /* display: none; */
     width: 160px;
     margin-left: -7.6rem;
     margin-top: -2rem;

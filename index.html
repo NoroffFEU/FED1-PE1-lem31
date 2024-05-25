@@ -55,7 +55,7 @@
         </div>
       </div>
 
-      <form action="" method="get"></form>
+      <form class="search-form" action="" method="">
 
       <div class="Search-bar">
         <button class="Search-Btn">
@@ -66,6 +66,7 @@
           />
         </button>
         <input class="search-bar" type="text" placeholder="Search..." />
+      </form>
       </div>
     </header>
     <main>
@@ -176,17 +177,30 @@
         <h4>More of the latest Travel Guides</h4>
       </div>
       <div class="Blog-post-filter">
-        <label for="continent">Select Destination</label>
-        <select name="continent" id="continent">
-          <option id="All-option" value="All">All</option>
-          <option id="Europe-option" value="Europe">Europe</option>
-          <option id="USA-option" value="USA">USA</option>
-          <option id="Asia-option" value="Asia">Asia</option>
-          <option id="North-America-option" value="North America">
-            North America
-          </option>
-          <option id="Antarctica-option" value="Antarctica">Antarctica</option>
-        </select>
+        <label class="filter-label" for="continent">Select Destination</label>
+        <div class="select-wrapper">
+          <select class="continent-list" name="continent" id="continent">
+            <option class="continent-option" id="All-option" value="All">
+              All
+            </option>
+            <option class="continent-option" id="Europe-option" value="Europe">
+              Europe
+            </option>
+            <option class="continent-option" id="USA-option" value="USA">
+              USA
+            </option>
+            <option class="continent-option" id="Asia-option" value="Asia">
+              Asia
+            </option>
+            <option
+              class="continent-option"
+              id="North-America-option"
+              value="North America"
+            >
+              North America
+            </option>
+          </select>
+        </div>
       </div>
 
       <div class="Twelve-img-grid-container" id="grid-container">

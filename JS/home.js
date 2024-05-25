@@ -188,7 +188,6 @@ function createPostHtml(post) {
   const postHeader = document.createElement('h4');
 
   gridContainer.appendChild(postContainer);
-
   postContainer.appendChild(gridImage);
   postContainer.appendChild(textBackground);
   postContainer.appendChild(postHeader);
@@ -247,7 +246,6 @@ selectElement.addEventListener('change', (event) => {
 
 
 last12Posts.forEach(post => { createPostHtml(post) });
-
 
 
 
