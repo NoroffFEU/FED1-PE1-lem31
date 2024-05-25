@@ -533,6 +533,10 @@ footer {
   height: auto;
 }
 
+.h1-public-blog-post {
+  text-align: center;
+}
+
 .Public-Blog-Post-Img {
   width: 100%;
   height: auto;
@@ -1163,6 +1167,7 @@ footer {
     background-color: var(--primary-color);
     top: 35%;
     width: 55%;
+    text-align: center;
   }
 
   .button-wrapper-edit {
