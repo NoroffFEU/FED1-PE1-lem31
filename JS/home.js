@@ -138,7 +138,6 @@ buttonSix.addEventListener('click', () => {
 function displayCarouselPosts() {
 
 
-
 const carouselImage1= document.getElementById('carousel-image-1');
 
 const carouselImage2= document.getElementById('carousel-image-2');
@@ -176,7 +175,7 @@ carouselImage3.addEventListener('click', () => handleHeaderClick(11));
 
 }
 
-//FUNCTION TO DISPLAY BLOG POSTS IN THE 12 IMAGE GRID
+//FUNCTIONS TO DISPLAY BLOG POSTS IN THE 12 IMAGE GRID
 
 
 
@@ -192,11 +191,14 @@ function createPostHtml(post) {
 
   postContainer.appendChild(gridImage);
   postContainer.appendChild(textBackground);
-  textBackground.appendChild(postHeader);
+  postContainer.appendChild(postHeader);
+ 
 
   postContainer.classList.add('blog-post-container');
   textBackground.classList.add('text-background-grid');
   postHeader.classList.add('grid-header');
+
+
 
   gridImage.src = post.media.url;
   postHeader.innerHTML = post.title;
