@@ -233,7 +233,7 @@ selectElement.addEventListener('change', (event) => {
   const selectedOption = event.target.value;
   filterPosts(selectedOption);
 
-  if (selectedOption === 'All') {
+  if (selectedOption === 'All' ) {
     const gridContainer = document.getElementById('grid-container');
     gridContainer.innerHTML = '';
     last12Posts.forEach(post => {
@@ -243,14 +243,27 @@ selectElement.addEventListener('change', (event) => {
 
 });
 
+last12Posts.forEach(post => {
+  createPostHtml(post)});
 
+  
+  function searchPosts(event) {
+    if (event.key === 'Enter') {
+      const searchInput = document.getElementById('Search-bar');
+      const searchText = searchInput.value.toLowerCase();
+      const filteredPosts = blogPosts.filter(post => post.title.toLowerCase().includes(searchText));
+      const gridContainer = document.getElementById('grid-container');
+   
+      
+      gridContainer.innerHTML = '';
+      filteredPosts.forEach(post => {
+        createPostHtml(post);
+      });
+    }
+  }
 
-last12Posts.forEach(post => { createPostHtml(post) });
-
-
-
-
-
+  const searchInput = document.getElementById('Search-bar');
+  searchInput.addEventListener('keydown', searchPosts);
 
 //**CALL FUNCTIONS */
 
