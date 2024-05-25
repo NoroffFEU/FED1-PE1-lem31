@@ -23,12 +23,12 @@ async function regFormSubmit(event) {
       body: JSON.stringify(formDataObject),
     });
 
-    const data = await response.json();
+    // const data = await response.json();
   
 
     if (response.status === 201) {
       alert('You have successfully registered an account!');
-      window.location.href = '/account/login.html';
+      window.location.href = 'login.html';
     } else {
       alert('Something went wrong, please try again.');
     }
