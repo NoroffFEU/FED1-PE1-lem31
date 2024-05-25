@@ -378,7 +378,7 @@ nav a:active {
 .carousel-header {
   display: flex;
   position: absolute;
-  bottom: 25%;
+  bottom: 23%;
   width: 36vw;
   text-align: center;
 }
@@ -1061,6 +1061,7 @@ footer {
   .carousel-header {
     width: 50vw;
     height: 10vh;
+    bottom: 26%;
   }
 
   .destination {
@@ -1347,8 +1348,9 @@ footer {
   }
 
   .carousel-header {
-    width: 50vw;
+    width: 40vw;
     height: 6vh;
+    bottom: 25.5%;
   }
 
   .BP-header-container {
