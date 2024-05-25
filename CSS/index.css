@@ -278,6 +278,7 @@ nav a:active {
 
 .h2-container {
   height: 4rem;
+  padding-bottom: 2rem;
 }
 
 .Destinations-SH-box {
@@ -1056,6 +1057,7 @@ footer {
 
   .h2-container {
     height: 3rem;
+    padding-bottom: 0;
   }
 
   .carousel-header {
@@ -1345,6 +1347,7 @@ footer {
 
   .h2-container {
     height: 2rem;
+    padding-bottom: 0;
   }
 
   .carousel-header {
