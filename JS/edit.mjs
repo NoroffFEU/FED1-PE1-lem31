@@ -320,7 +320,11 @@ function deleteButtonFunction(event) {
   const id= deleteButton.dataset.postId;
  const idString= id.toString();
   const postId = idString;
-  deletePost(postId);}
+  const confirmDelete = confirm('Are you sure you want to delete this post?');
+  if (confirmDelete) {
+    deletePost(postId);
+  }
+  }
 
 
 //FUNCTION TO DELETE THE POST, WHICH GOES INSIDE THE DELETE BUTTON FUNCTION

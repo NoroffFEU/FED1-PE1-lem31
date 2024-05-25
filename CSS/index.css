@@ -32,18 +32,6 @@ main {
   overflow-x: hidden;
 }
 
-/* body {
-  border: 5px solid red;
-}
-
-html {
-  border: 5px solid green;
-}
-
-main {
-  border: 5px solid blue;
-} */
-
 nav a,
 h1,
 .h2-home,
@@ -1292,7 +1280,7 @@ footer {
   }
 
   .search-bar {
-    /* display: none; */
+    display: none;
     width: 160px;
     margin-left: -7.6rem;
     margin-top: -2rem;
