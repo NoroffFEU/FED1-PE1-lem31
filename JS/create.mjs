@@ -43,8 +43,6 @@ async function createFormSubmit(event) {
 
     });
 
-    // const userData = await response.json();
-
    
 
     if (response.status === 201) {

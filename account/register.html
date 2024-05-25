@@ -15,7 +15,7 @@
     />
     <link rel="stylesheet" href="../CSS/index.css" />
     <script defer src="../JS/header.js"></script>
-    <script type="module" defer src="../JS/register.mjs"></script>
+    <script type="module" src="../JS/register.mjs"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -54,8 +54,6 @@
         </div>
       </div>
 
-      <form action="" method="get"></form>
-
       <div class="Search-bar">
         <button class="Search-Btn">
           <img
@@ -90,7 +88,7 @@
             required
           />
 
-          <label class="register-label" id="email-label" for="email"
+          <label class="register-label" id="email-label" for="email-register"
             >Email</label
           >
           <input
@@ -113,7 +111,10 @@
             placeholder="Please enter your bio here"
           />
 
-          <label class="register-label" id="pw-label-register" for="password"
+          <label
+            class="register-label"
+            id="pw-label-register"
+            for="password-register"
             >Password</label
           >
           <input
@@ -121,8 +122,8 @@
             type="password"
             id="password-register"
             name="password"
-            min-length="8"
             placeholder="Please enter your password"
+            min-length="8"
             required
           />
 

@@ -8,7 +8,6 @@ import { API_FETCH_POSTS_URL} from "./GlobalConst.mjs";
 const logoutLink= document.getElementById('logout-link-edit');
 
 
-
 const API_PUT_POST = API_FETCH_POSTS_URL;
 
 //EVENT LISTENERS
@@ -255,10 +254,6 @@ async function editFormSubmit(event) {
 
 
 
- const id= localStorage.getItem('id');
- const idString= id.toString();
-
-  const API_URL = `${API_PUT_POST}/${idString}`;
 
   try {
     const blogPostObject = {
@@ -274,7 +269,11 @@ async function editFormSubmit(event) {
 
     const accessToken = sessionStorage.getItem('accessToken');
 
-  
+    const id = blogPostObject.id;
+    const idString= id.toString();
+   
+     const API_URL = `${API_PUT_POST}/${idString}`;
+
     const response = await fetch(API_URL, {
      
       method: 'PUT',
@@ -288,7 +287,6 @@ async function editFormSubmit(event) {
   
 
     if (response.status === 200) {
-      const userData = await response.json();
    
       alert('You have successfully saved this post!');
       window.location.reload();
