@@ -207,6 +207,10 @@ header {
   width: 23px;
 }
 
+.search-label {
+  display: none;
+}
+
 .header-logo,
 .footer-logo {
   width: 119px;
