@@ -43,12 +43,13 @@ async function createFormSubmit(event) {
 
     });
 
-    const userData = await response.json();
+    // const userData = await response.json();
 
    
 
     if (response.status === 201) {
       alert('You have successfully created a post!');
+      window.location.href = 'edit.html';
     } else {
       alert('Something went wrong, please try again.');
     }
