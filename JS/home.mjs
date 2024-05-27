@@ -77,7 +77,7 @@ async function fetchBlogPosts() {
     let posts = await response.json();
     let blogPosts = posts.data;
     localStorage.setItem('blogPosts', JSON.stringify(blogPosts));
-  
+  location.reload(true);
 
   } catch (error) {
     console.error('Error:', error);
