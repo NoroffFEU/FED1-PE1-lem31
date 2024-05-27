@@ -196,16 +196,16 @@ buttonSix.addEventListener('click', () => {
 //FUNCTION TO DISPLAY BLOG POSTS IN THE CAROUSEL
 
 function displayCarouselPosts() {
- 
-
   const carouselImage1 = document.getElementById('carousel-image-1');
   const carouselImage2 = document.getElementById('carousel-image-2');
   const carouselImage3 = document.getElementById('carousel-image-3');
 
- 
+  if (last12Posts.length >= 12) {
     carouselImage1.src = last12Posts[9].media.url;
     carouselImage2.src = last12Posts[10].media.url;
     carouselImage3.src = last12Posts[11].media.url;
+  }
+
 
     const carouselHeader1 = document.getElementById('carousel-header-1');
     const carouselHeader2 = document.getElementById('carousel-header-2');
@@ -244,8 +244,8 @@ function displayCarouselPosts() {
       localStorage.setItem('clickedBlogPost', JSON.stringify(last12Posts[11]));
       window.location.href = './post/index.html';
     });
+  
   }
-
 
 
 
