@@ -90,7 +90,7 @@ async function fetchBlogPosts() {
   }}
 
   
-
+  fetchBlogPosts();
 
 
 //VARIABLES FOR CAROUSEL AND GRID
@@ -361,5 +361,5 @@ selectElement.addEventListener('change', (event) => {
 
 
   postUserData();
-  fetchBlogPosts();
+
  
