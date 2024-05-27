@@ -90,7 +90,7 @@ async function fetchBlogPosts() {
   } catch (error) {
     console.error('Error:', error);
   }}
-  window.addEventListener('load', fetchBlogPosts, displayCarouselPosts, displayGridPosts);
+
 
 
 
