@@ -1,5 +1,6 @@
 
 import { API_FETCH_POSTS_URL } from './GlobalConst.mjs'
+import { API_LOGIN_URL } from './GlobalConst.mjs'
 //**CONSTANTS */
 
 
@@ -26,9 +27,8 @@ const image3= document.querySelector('#carousel-image-3');
 
 
 
-const blogPosts = JSON.parse(localStorage.getItem('blogPosts'));
-const last12Posts = blogPosts.slice(-12);
-
+// const blogPosts = JSON.parse(localStorage.getItem('blogPosts'));
+// const last12Posts = blogPosts.slice(-12);
 
 
 //**EVENT LISTENERS */
@@ -127,13 +127,46 @@ buttonSix.addEventListener('click', () => {
 
 //**FUNCTIONS */
 
+async function postUserData() {
+  const API_URL = API_LOGIN_URL;
+  const userData = 
+  {
+    "email": 'LeanneMeyer002@stud.noroff.no',
+    "password": "Hello002"
+  }
+  
+  try {
+    const response = await fetch(API_URL, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(userData),
+    });
+
+    if (response.ok) {
+      console.log('User data posted successfully');
+    } else {
+      console.error('Failed to post user data');
+    }
+  } catch (error) {
+    console.error(error);
+  }
+}
 
 
 
+const posts= localStorage.getItem('blogPosts');
+const blogPosts = JSON.parse(posts);
+const last12Posts = blogPosts.slice(-12);
+console.log(localStorage.getItem('blogPosts'));
 
 //FUNCTION TO DISPLAY BLOG POSTS IN THE CAROUSEL
 
+
+
 function displayCarouselPosts() {
+
 
 
 const carouselImage1= document.getElementById('carousel-image-1');
@@ -157,7 +190,9 @@ carouselHeader2.innerHTML = last12Posts[10].title;
 carouselHeader3.innerHTML = last12Posts[11].title;
 
 
+
 function handleHeaderClick(index) {
+
   localStorage.setItem('clickedBlogPost', JSON.stringify(last12Posts[index]));
   window.location.href = './post/index.html';
 }
@@ -213,9 +248,15 @@ function createPostHtml(post) {
   return postContainer;
 }
 
+
+
+function displayGridPosts() {
+
+  const blogPosts = JSON.parse(localStorage.getItem('blogPosts'));
+  const last12Posts = blogPosts.slice(-12);
 last12Posts.forEach(post => {
   createPostHtml(post)
-});
+});}
 
 
 function filterPosts(option) {
@@ -269,3 +310,6 @@ selectElement.addEventListener('change', (event) => {
   //**CALL FUNCTIONS */
 
   displayCarouselPosts();
+  displayGridPosts();
+
+postUserData();
