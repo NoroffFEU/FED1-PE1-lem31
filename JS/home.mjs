@@ -267,7 +267,7 @@ last12Posts.forEach(post => {
   
   function searchPosts(event) {
     if (event.key === 'Enter') {
-      const searchInput = document.getElementById('Search-bar');
+      const searchInput = document.getElementById('Search-input');
       const searchText = searchInput.value.toLowerCase();
       const filteredPosts = blogPosts.filter(post => post.title.toLowerCase().includes(searchText));
       const gridContainer = document.getElementById('grid-container');
@@ -280,7 +280,7 @@ last12Posts.forEach(post => {
     }
   }
 
-  const searchInput = document.getElementById('Search-bar');
+  const searchInput = document.getElementById('Search-input');
   searchInput.addEventListener('keydown', searchPosts);
 
 //**CALL FUNCTIONS */

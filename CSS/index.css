@@ -411,6 +411,12 @@ nav a:active {
   margin-top: -10rem;
 }
 
+.Search-bar-posts {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
 .Twelve-img-grid-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
