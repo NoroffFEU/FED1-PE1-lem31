@@ -59,7 +59,7 @@ async function postUserData() {
   }
 }
 
-postUserData();
+
 
 // FUNCTION TO FETCH BLOG POSTS
 async function fetchBlogPosts() {
@@ -89,7 +89,7 @@ async function fetchBlogPosts() {
   }}
 
 
-fetchBlogPosts();
+
 
 
 //VARIABLES FOR CAROUSEL AND GRID
@@ -249,7 +249,7 @@ function displayCarouselPosts() {
 
 
 
-displayCarouselPosts();
+
 
 //FUNCTIONS TO DISPLAY BLOG POSTS IN THE 12 IMAGE GRID
 
@@ -297,7 +297,7 @@ function displayGridPosts() {
 last12Posts.forEach(post => {
   createPostHtml(post)
 });}
-displayGridPosts();
+
 
 function filterPosts(option) {
   const filteredPosts = posts.filter(post => post.tags.includes(option));
@@ -354,4 +354,7 @@ selectElement.addEventListener('change', (event) => {
   //**CALL FUNCTIONS */
 
 
- 
+  postUserData();
+  fetchBlogPosts();
+  displayCarouselPosts();
+  displayGridPosts();
