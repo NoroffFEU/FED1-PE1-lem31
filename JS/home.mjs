@@ -1,4 +1,4 @@
-import { fetchBlogPosts } from './edit.mjs';
+
 
 //**CONSTANTS */
 
@@ -29,7 +29,7 @@ const last12Posts = blogPosts.slice(-12);
 
 
 
-//CONSTANT FOR IMAGE ROTATION CAROUSEL
+
 
 
 
@@ -268,4 +268,4 @@ last12Posts.forEach(post => {
 //**CALL FUNCTIONS */
 
 displayCarouselPosts();
-fetchBlogPosts();
+

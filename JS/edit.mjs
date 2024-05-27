@@ -353,4 +353,4 @@ async function deletePost(postId) {
 }
 
 //FUNCTION CALLS
-fetchBlogPosts();
+// fetchBlogPosts();

@@ -28,6 +28,7 @@ async function fetchClickedPost() {
 function createPostHtml(clickedPost) {
   const title = document.querySelector('.h1-public-blog-post');
   title.innerHTML = clickedPost.title;
+ 
   const image = document.querySelector('.Public-Blog-Post-Img');
   image.src = clickedPost.media.url;
   const body = document.querySelector('.public-post-body');
