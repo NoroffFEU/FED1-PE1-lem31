@@ -6,11 +6,9 @@ import { API_FETCH_POSTS_URL} from "./GlobalConst.mjs";
 
 const logoutLink = document.querySelector('.logout-link');
 
-if (logoutLink) {
+
   logoutLink.addEventListener('click', logout);
-} else {
-  console.error('Logout link not found');
-}
+
 
 
 
