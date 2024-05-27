@@ -183,12 +183,8 @@ async function fetchBlogPosts() {
 
 
 
-
-
-
-
 const posts = JSON.parse(localStorage.getItem('blogPosts'));
-const last12Posts = posts.slice(-12);
+const last12Posts = posts ? posts.slice(-12) : [];
 
 
 //FUNCTION TO DISPLAY BLOG POSTS IN THE CAROUSEL
@@ -281,9 +277,6 @@ function createPostHtml(post) {
 
 
 function displayGridPosts() {
-
-  const blogPosts = JSON.parse(localStorage.getItem('blogPosts'));
-  const last12Posts = blogPosts.slice(-12);
 last12Posts.forEach(post => {
   createPostHtml(post)
 });}
