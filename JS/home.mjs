@@ -25,15 +25,7 @@ const image3= document.querySelector('#carousel-image-3');
 
 
 const blogPosts = JSON.parse(localStorage.getItem('blogPosts'));
-const last12Posts = blogPosts ? blogPosts.slice(-12) : [];
-
-
-
-
-
-
-
-
+const last12Posts = blogPosts.slice(-12);
 
 
 
@@ -138,22 +130,25 @@ buttonSix.addEventListener('click', () => {
 function displayCarouselPosts() {
 
 
+const carouselImage1= document.getElementById('carousel-image-1');
 
-const carouselImage1 = document.getElementById('carousel-image-1');
-const carouselImage2 = document.getElementById('carousel-image-2');
-const carouselImage3 = document.getElementById('carousel-image-3');
-if (last12Posts.length >= 10 && last12Posts[9].title) {
-  carouselImage1.src = last12Posts[9].media.url;
-  carouselHeader1.innerHTML = last12Posts[9].title;
-}
-if (last12Posts.length >= 11 && last12Posts[10].title) {
-  carouselImage2.src = last12Posts[10].media.url;
-  carouselHeader2.innerHTML = last12Posts[10].title;
-}
-if (last12Posts.length >= 12 && last12Posts[11].title) {
-  carouselImage3.src = last12Posts[11].media.url;
-  carouselHeader3.innerHTML = last12Posts[11].title;
-}
+const carouselImage2= document.getElementById('carousel-image-2');
+
+const carouselImage3= document.getElementById('carousel-image-3');
+
+carouselImage1.src = last12Posts[9].media.url;
+carouselImage2.src = last12Posts[10].media.url;
+carouselImage3.src = last12Posts[11].media.url;
+
+const carouselHeader1= document.getElementById('carousel-header-1');
+const carouselHeader2= document.getElementById('carousel-header-2');
+const carouselHeader3= document.getElementById('carousel-header-3');
+
+
+
+carouselHeader1.innerHTML = last12Posts[9].title;
+carouselHeader2.innerHTML = last12Posts[10].title;
+carouselHeader3.innerHTML = last12Posts[11].title;
 
 
 function handleHeaderClick(index) {
