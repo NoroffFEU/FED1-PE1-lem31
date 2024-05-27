@@ -211,9 +211,11 @@ function displayCarouselPosts() {
     const carouselHeader2 = document.getElementById('carousel-header-2');
     const carouselHeader3 = document.getElementById('carousel-header-3');
 
-    carouselHeader1.innerHTML = last12Posts[9].title;
-    carouselHeader2.innerHTML = last12Posts[10].title;
-    carouselHeader3.innerHTML = last12Posts[11].title;
+    if (last12Posts.length >= 12) {
+      carouselHeader1.innerHTML = last12Posts[9].title;
+      carouselHeader2.innerHTML = last12Posts[10].title;
+      carouselHeader3.innerHTML = last12Posts[11].title;
+    }
 
     carouselHeader1.addEventListener('click', () => {
       localStorage.setItem('clickedBlogPost', JSON.stringify(last12Posts[9]));
