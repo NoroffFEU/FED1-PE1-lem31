@@ -139,10 +139,15 @@ async function postUserData() {
     const response = await fetch(API_URL, {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json',
+      'Content-Type': 'application/json',
       },
       body: JSON.stringify(userData),
     });
+
+    const data = await response.json();
+    const accessToken = data.accessToken;
+
+    localStorage.setItem('accessToken', accessToken);
 
     if (response.ok) {
       console.log('User data posted successfully');
@@ -155,11 +160,32 @@ async function postUserData() {
 }
 
 
+async function fetchBlogPosts() {
+  try {
+    const API_URL = API_FETCH_POSTS_URL;
+    const accessToken = localStorage.getItem('accessToken');
+    const response = await fetch(API_URL, {
+      headers: {
+        Authorization: `Bearer ${accessToken}`,
+      },
+    });
+
+    if (!response.ok) {
+      throw new Error('Failed to fetch blog posts');
+    }
+
+    const posts = await response.json();
+    const blogPosts = posts.data;
+    localStorage.setItem('blogPosts', JSON.stringify(blogPosts));
+  
+  } catch (error) {
+    console.error('Error:', error);
+  }
+}
 
 
 
-
-const posts= localStorage.getItem('blogPosts');
+const posts = JSON.parse(localStorage.getItem('blogPosts'));
 
 const last12Posts = posts.slice(-12);
 console.log(localStorage.getItem('blogPosts'));
@@ -314,5 +340,5 @@ selectElement.addEventListener('change', (event) => {
 
   displayCarouselPosts();
   displayGridPosts();
-
-postUserData();
+  fetchBlogPosts();
+  postUserData();
