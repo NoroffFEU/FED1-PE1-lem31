@@ -56,12 +56,13 @@ async function postUserData() {
     } else {
       console.error('Failed to post user data');
     }
-    displayCarouselPosts(); 
-    displayGridPosts(); 
-    fetchBlogPosts();
+   
   } catch (error) {
     console.error(error);
   }
+  displayCarouselPosts(); 
+  displayGridPosts(); 
+  fetchBlogPosts();
 }
 
 
