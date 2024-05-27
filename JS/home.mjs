@@ -72,13 +72,16 @@ async function fetchBlogPosts() {
       },
     });
 
+
+
+    let posts = await response.json();
+    let blogPosts = posts.data;
+    localStorage.setItem('blogPosts', JSON.stringify(blogPosts));
+
+
     if (!response.ok) {
       throw new Error('Failed to fetch blog posts');
     }
-
-    // let posts = await response.json();
-    // let blogPosts = posts.data;
-    // localStorage.setItem('blogPosts', JSON.stringify(blogPosts));
 
 
   } catch (error) {
