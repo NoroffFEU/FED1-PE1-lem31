@@ -297,9 +297,9 @@ nav a:active {
 .h1-home {
   background-color: rgba(255, 255, 255, 0.5);
   position: absolute;
-  top: 40%;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%);
   text-align: center;
   z-index: 1;
   text-wrap: nowrap;
@@ -1028,9 +1028,8 @@ footer {
   /*MAIN*/
 
   .h1-home {
-    top: 35%;
-    width: 78%;
-    height: 12%;
+    top: 40%;
+
     text-wrap: wrap;
   }
 
@@ -1327,7 +1326,7 @@ footer {
   }
 
   .h1-home {
-    top: 35%;
+    top: 45%;
   }
 
   .h4-home {
@@ -1447,7 +1446,7 @@ footer {
   }
 
   .h1-home {
-    top: 38%;
+    top: 45%;
   }
 
   .header-container {
