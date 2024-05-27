@@ -49,6 +49,9 @@ async function postUserData() {
 
     localStorage.setItem('accessToken', accessToken);
 
+    displayCarouselPosts(); 
+    displayGridPosts(); 
+
     if (response.ok) {
     
     } else {
@@ -87,7 +90,7 @@ async function fetchBlogPosts() {
   } catch (error) {
     console.error('Error:', error);
   }}
-  window.addEventListener('load', displayCarouselPosts, displayGridPosts);
+  window.addEventListener('load', fetchBlogPosts, displayCarouselPosts, displayGridPosts);
 
 
 
@@ -358,5 +361,4 @@ selectElement.addEventListener('change', (event) => {
 
   postUserData();
   fetchBlogPosts();
-  displayCarouselPosts();
-  displayGridPosts();
+ 
