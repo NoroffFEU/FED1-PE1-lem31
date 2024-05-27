@@ -81,7 +81,7 @@ async function fetchBlogPosts() {
 
   } catch (error) {
     console.error('Error:', error);
-  }
+  }}
 
 
 
