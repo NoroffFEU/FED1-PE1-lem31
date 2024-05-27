@@ -128,36 +128,7 @@ buttonSix.addEventListener('click', () => {
 //**FUNCTIONS */
 
 
-async function fetchBlogPosts() {
-  try {
-    const API_URL = API_FETCH_POSTS_URL;
-    const accessToken = localStorage.getItem('accessToken');
-    const response = await fetch(API_URL, {
-      headers: {
-        Authorization: `Bearer ${accessToken}`,
-      },
-    });
 
-    if (!response.ok) {
-      throw new Error('Failed to fetch blog posts');
-    }
-
-    const posts = await response.json();
-    const blogPosts = posts.data;
-    localStorage.setItem('blogPosts', JSON.stringify(blogPosts));
-
-    if (last12Posts) {
-      displayCarouselPosts(blogPosts);
-
-      last12Posts.forEach(post => {
-        createPostHtml(post)
-      });
-    }
-
-  } catch (error) {
-    console.error('Error:', error);
-  }
-}
 
 
 //FUNCTION TO DISPLAY BLOG POSTS IN THE CAROUSEL
@@ -242,7 +213,9 @@ function createPostHtml(post) {
   return postContainer;
 }
 
-
+last12Posts.forEach(post => {
+  createPostHtml(post)
+});
 
 
 function filterPosts(option) {
@@ -295,4 +268,4 @@ selectElement.addEventListener('change', (event) => {
 
 
 
-fetchBlogPosts();
+displayCarouselPosts();
