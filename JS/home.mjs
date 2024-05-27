@@ -330,7 +330,7 @@ selectElement.addEventListener('change', (event) => {
     }
   }
 
-  const searchInput = document.getElementById('Search-input');
+  const searchInput = document.getElementById('Search-input-two');
  
     searchInput.addEventListener('keydown', searchPosts);
 
