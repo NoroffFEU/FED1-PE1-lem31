@@ -138,15 +138,19 @@ buttonSix.addEventListener('click', () => {
 function displayCarouselPosts() {
 
 
-const carouselImage1= document.getElementById('carousel-image-1');
 
-const carouselImage2= document.getElementById('carousel-image-2');
-
-const carouselImage3= document.getElementById('carousel-image-3');
-
-carouselImage1.src = last12Posts[9].media.url;
-carouselImage2.src = last12Posts[10].media.url;
-carouselImage3.src = last12Posts[11].media.url;
+const carouselImage1 = document.getElementById('carousel-image-1');
+const carouselImage2 = document.getElementById('carousel-image-2');
+const carouselImage3 = document.getElementById('carousel-image-3');
+if (last12Posts.length >= 10) {
+  carouselImage1.src = last12Posts[9].media.url;
+}
+if (last12Posts.length >= 11) {
+  carouselImage2.src = last12Posts[10].media.url;
+}
+if (last12Posts.length >= 12) {
+  carouselImage3.src = last12Posts[11].media.url;
+}
 
 const carouselHeader1= document.getElementById('carousel-header-1');
 const carouselHeader2= document.getElementById('carousel-header-2');
