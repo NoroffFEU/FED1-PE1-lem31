@@ -4,16 +4,13 @@ import { API_FETCH_POSTS_URL} from "./GlobalConst.mjs";
 
 
 
+const logoutLink = document.querySelector('.logout-link');
 
-const logoutLink= document.getElementById('logout-link-edit');
-
-
-const API_PUT_POST = API_FETCH_POSTS_URL;
-
-//EVENT LISTENERS
-
-//EVENT LISTENER FOR THE LOGOUT LINK
-logoutLink.addEventListener('click', logout);
+if (logoutLink) {
+  logoutLink.addEventListener('click', logout);
+} else {
+  console.error('Logout link not found');
+}
 
 
 
@@ -51,20 +48,13 @@ export function logout() {
 
 //FUNCTION FOR FETCHING THE BLOG POSTS
 export async function fetchBlogPosts() {
- 
   try {
     const API_URL = API_FETCH_POSTS_URL;
-
     const accessToken = sessionStorage.getItem('accessToken');
-
-
-
     const response = await fetch(API_URL, {
       headers: {
-        method: 'GET',
         Authorization: `Bearer ${accessToken}`,
       },
-    
     });
 
     if (!response.ok) {
@@ -72,18 +62,9 @@ export async function fetchBlogPosts() {
     }
 
     const posts = await response.json();
-
-   
-
     const blogPosts = posts.data;
-
     localStorage.setItem('blogPosts', JSON.stringify(blogPosts));
-
     displayBlogPosts(blogPosts);
-
- 
-  
-
   } catch (error) {
     console.error('Error:', error);
   }
@@ -353,4 +334,4 @@ async function deletePost(postId) {
 }
 
 //FUNCTION CALLS
-// fetchBlogPosts();
+fetchBlogPosts();

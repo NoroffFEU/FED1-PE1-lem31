@@ -1,4 +1,4 @@
-
+import { fetchBlogPosts } from "./edit.mjs";
 
 //**CONSTANTS */
 
@@ -269,3 +269,4 @@ last12Posts.forEach(post => {
 
 displayCarouselPosts();
 
+fetchBlogPosts();
