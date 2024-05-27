@@ -176,7 +176,8 @@ async function fetchBlogPosts() {
     const posts = await response.json();
     const blogPosts = posts.data;
     localStorage.setItem('blogPosts', JSON.stringify(blogPosts));
-    displayCarouselPosts();
+  
+
   } catch (error) {
     console.error('Error:', error);
   }
@@ -336,7 +337,7 @@ selectElement.addEventListener('change', (event) => {
 
   //**CALL FUNCTIONS */
 
-
+  displayCarouselPosts();
   displayGridPosts();
   fetchBlogPosts();
   postUserData();
