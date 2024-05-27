@@ -4,17 +4,25 @@ import { API_FETCH_POSTS_URL} from "./GlobalConst.mjs";
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 const logoutLink = document.getElementById('logout-link-edit');
 
-
-logoutLink.addEventListener('click', logout);
-
-
-
-
+if (logoutLink) {
+  logoutLink.addEventListener('click', logout);
+}
 
 // FUNCTIONS
-
 
 
 //FUNCTION FOR LOGGING OUT
@@ -60,9 +68,10 @@ export async function fetchBlogPosts() {
 //FUNCTION FOR DISPLAYING BLOG POSTS
 
 function displayBlogPosts(blogPosts) {
-  const blogPostsWrapper = document.querySelector('.blog-posts-wrapper');
+
 
   blogPosts.forEach((post, index) => {
+    const blogPostsWrapper = document.createElement('div');
     const blogPostBox = document.createElement("div");
     const image = document.createElement("img");
     const headerContainer = document.createElement("div");
@@ -71,6 +80,8 @@ function displayBlogPosts(blogPosts) {
     const editButton = document.createElement("button");
     const deleteButton = document.createElement("button");
 
+
+blogPostsWrapper.classList.add('blog-posts-wrapper');
     blogPostBox.classList.add('blog-post');
     headerContainer.classList.add('header-container');
     header.classList.add('h2-Edit-Page');
@@ -81,11 +92,29 @@ function displayBlogPosts(blogPosts) {
     image.src = post.media.url;
     header.textContent = post.title;
     editButton.textContent = 'Edit';
+    if (blogPostsWrapper) {
+      blogPostsWrapper.appendChild(blogPostBox);
+      blogPostBox.appendChild(image);
+      blogPostBox.appendChild(headerContainer);
+      blogPostBox.appendChild(header);
+      blogPostBox.appendChild(buttonWrapper);
+      buttonWrapper.appendChild(editButton);
+      buttonWrapper.appendChild(deleteButton);
+      blogPostsWrapper.appendChild(blogPostBox);
+    }
     deleteButton.textContent = 'Delete';
     deleteButton.dataset.postId = post.id;
-    blogPostBox.appendChild(image);
-    blogPostBox.appendChild(headerContainer);
-    blogPostBox.appendChild(header);
+
+
+    if (blogPostsWrapper) {
+      blogPostBox.appendChild(image);
+      blogPostBox.appendChild(headerContainer);
+      blogPostBox.appendChild(header);
+      blogPostBox.appendChild(buttonWrapper);
+      buttonWrapper.appendChild(editButton);
+      buttonWrapper.appendChild(deleteButton);
+      blogPostsWrapper.appendChild(blogPostBox);
+    }
     blogPostBox.appendChild(buttonWrapper);
     buttonWrapper.appendChild(editButton);
     buttonWrapper.appendChild(deleteButton);
