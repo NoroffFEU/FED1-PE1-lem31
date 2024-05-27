@@ -342,8 +342,8 @@ nav a:active {
 }
 
 .Slide img {
-  width: 45%;
-  height: 65%;
+  width: 42%;
+  height: 75%;
   align-items: center;
   align-self: center;
 }
@@ -355,7 +355,7 @@ nav a:active {
 .BP-header-container {
   display: flex;
   position: absolute;
-  bottom: 22%;
+  bottom: 16%;
   width: 80rem;
   height: 6rem;
   opacity: 0.8;
@@ -379,7 +379,7 @@ nav a:active {
 .carousel-header {
   display: flex;
   position: absolute;
-  bottom: 23%;
+  bottom: 19%;
   width: 36vw;
   text-align: center;
 }
@@ -1061,7 +1061,7 @@ footer {
   }
 
   .carousel-header {
-    width: 50vw;
+    width: 45vw;
     height: 14vh;
   }
 
@@ -1351,8 +1351,7 @@ footer {
 
   .carousel-header {
     width: 40vw;
-    height: 6vh;
-    bottom: 25.5%;
+    height: 10vh;
   }
 
   .BP-header-container {
