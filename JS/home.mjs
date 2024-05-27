@@ -156,9 +156,12 @@ async function postUserData() {
 
 
 
+
+
+
 const posts= localStorage.getItem('blogPosts');
-const blogPosts = JSON.parse(posts);
-const last12Posts = blogPosts.slice(-12);
+
+const last12Posts = posts.slice(-12);
 console.log(localStorage.getItem('blogPosts'));
 
 //FUNCTION TO DISPLAY BLOG POSTS IN THE CAROUSEL
