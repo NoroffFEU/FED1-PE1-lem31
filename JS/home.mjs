@@ -62,34 +62,34 @@ async function postUserData() {
 postUserData();
 
 //FUNCTION TO FETCH BLOG POSTS
-async function fetchBlogPosts() {
-  try {
-    const API_URL = API_FETCH_POSTS_URL;
-    const accessToken = localStorage.getItem('accessToken');
-    const response = await fetch(API_URL, {
-      headers: {
-        Authorization: `Bearer ${accessToken}`,
-      },
-    });
+// async function fetchBlogPosts() {
+//   try {
+//     const API_URL = API_FETCH_POSTS_URL;
+//     const accessToken = localStorage.getItem('accessToken');
+//     const response = await fetch(API_URL, {
+//       headers: {
+//         Authorization: `Bearer ${accessToken}`,
+//       },
+//     });
 
 
 
-    let posts = await response.json();
-    let blogPosts = posts.data;
-    localStorage.setItem('blogPosts', JSON.stringify(blogPosts));
+//     let posts = await response.json();
+//     let blogPosts = posts.data;
+//     localStorage.setItem('blogPosts', JSON.stringify(blogPosts));
 
 
-    if (!response.ok) {
-      throw new Error('Failed to fetch blog posts');
-    }
+//     if (!response.ok) {
+//       throw new Error('Failed to fetch blog posts');
+//     }
 
 
-  } catch (error) {
-    console.error('Error:', error);
-  }}
+//   } catch (error) {
+//     console.error('Error:', error);
+//   }}
 
 
-fetchBlogPosts();
+
 
 
 //VARIABLES FOR CAROUSEL AND GRID
@@ -202,6 +202,8 @@ buttonSix.addEventListener('click', () => {
 
 
 function displayCarouselPosts() {
+ 
+
   let posts = JSON.parse(localStorage.getItem('blogPosts'));
   let last12Posts = posts ? posts.slice(-12) : [];
 
