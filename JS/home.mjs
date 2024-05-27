@@ -50,7 +50,7 @@ async function postUserData() {
     localStorage.setItem('accessToken', accessToken);
 
     if (response.ok) {
-     fetchBlogPosts();
+    
     } else {
       console.error('Failed to post user data');
     }
@@ -58,6 +58,8 @@ async function postUserData() {
     console.error(error);
   }
 }
+
+postUserData();
 
 //FUNCTION TO FETCH BLOG POSTS
 async function fetchBlogPosts() {
@@ -219,7 +221,7 @@ function displayCarouselPosts() {
   }
 }
 
-
+displayCarouselPosts();
 
 //FUNCTIONS TO DISPLAY BLOG POSTS IN THE 12 IMAGE GRID
 
@@ -267,7 +269,7 @@ function displayGridPosts() {
 last12Posts.forEach(post => {
   createPostHtml(post)
 });}
-
+displayGridPosts();
 
 function filterPosts(option) {
   const filteredPosts = posts.filter(post => post.tags.includes(option));
@@ -323,6 +325,5 @@ selectElement.addEventListener('change', (event) => {
 
   //**CALL FUNCTIONS */
 
-  displayCarouselPosts();
-  displayGridPosts();
-  postUserData();
+
+ 
