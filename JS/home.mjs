@@ -24,8 +24,11 @@ const image3= document.querySelector('#carousel-image-3');
 
 
 
+
+
 const blogPosts = JSON.parse(localStorage.getItem('blogPosts'));
 const last12Posts = blogPosts.slice(-12);
+
 
 
 
@@ -146,10 +149,15 @@ async function fetchBlogPosts() {
 
     displayCarouselPosts(blogPosts);
 
+
+    last12Posts.forEach(post => {
+      createPostHtml(post)});
+
   } catch (error) {
     console.error('Error:', error);
   }
 }
+
 
 //FUNCTION TO DISPLAY BLOG POSTS IN THE CAROUSEL
 
@@ -261,8 +269,7 @@ selectElement.addEventListener('change', (event) => {
 
 });
 
-last12Posts.forEach(post => {
-  createPostHtml(post)});
+
 
   
   function searchPosts(event) {
