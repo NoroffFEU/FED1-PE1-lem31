@@ -203,7 +203,8 @@ header {
   display: none;
 }
 
-.Search-icon {
+.Search-icon,
+.Search-icon-two {
   width: 23px;
 }
 
@@ -249,7 +250,8 @@ nav a:active {
   filter: drop-shadow(2px 5px 1px #27aae1);
 }
 
-.Search-Btn {
+.Search-Btn,
+.Search-Btn-two {
   border: none;
   background: none;
   margin-left: 205px;
@@ -257,7 +259,8 @@ nav a:active {
   position: absolute;
 }
 
-.search-bar {
+.search-bar,
+.search-bar-two {
   width: 247px;
   height: 35px;
 }
@@ -996,7 +999,6 @@ footer {
   }
 
   .search-bar {
-    /* display: none; */
     width: 120px;
     margin-left: -4.8rem;
     margin-top: -2rem;
