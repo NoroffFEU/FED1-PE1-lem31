@@ -23,7 +23,7 @@ function createPostHtml(clickedPost) {
   title.innerHTML = clickedPost.title;
  
   const image = document.querySelector('.Public-Blog-Post-Img');
-  image.src = clickedPost.media.url;
+  image.src = clickedPost.media ? clickedPost.media.url : '';
   const body = document.querySelector('.public-post-body');
   body.textContent = clickedPost.body;
 

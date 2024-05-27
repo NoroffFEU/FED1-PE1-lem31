@@ -61,35 +61,35 @@ async function postUserData() {
 
 postUserData();
 
-//FUNCTION TO FETCH BLOG POSTS
-// async function fetchBlogPosts() {
-//   try {
-//     const API_URL = API_FETCH_POSTS_URL;
-//     const accessToken = localStorage.getItem('accessToken');
-//     const response = await fetch(API_URL, {
-//       headers: {
-//         Authorization: `Bearer ${accessToken}`,
-//       },
-//     });
+// FUNCTION TO FETCH BLOG POSTS
+async function fetchBlogPosts() {
+  try {
+    const API_URL = API_FETCH_POSTS_URL;
+    const accessToken = localStorage.getItem('accessToken');
+    const response = await fetch(API_URL, {
+      headers: {
+        Authorization: `Bearer ${accessToken}`,
+      },
+    });
 
 
 
-//     let posts = await response.json();
-//     let blogPosts = posts.data;
-//     localStorage.setItem('blogPosts', JSON.stringify(blogPosts));
+    let posts = await response.json();
+    let blogPosts = posts.data;
+    localStorage.setItem('blogPosts', JSON.stringify(blogPosts));
 
 
-//     if (!response.ok) {
-//       throw new Error('Failed to fetch blog posts');
-//     }
+    if (!response.ok) {
+      throw new Error('Failed to fetch blog posts');
+    }
 
 
-//   } catch (error) {
-//     console.error('Error:', error);
-//   }}
+  } catch (error) {
+    console.error('Error:', error);
+  }}
 
 
-
+fetchBlogPosts();
 
 
 //VARIABLES FOR CAROUSEL AND GRID
@@ -200,10 +200,7 @@ buttonSix.addEventListener('click', () => {
 
 //FUNCTION TO DISPLAY BLOG POSTS IN THE CAROUSEL
 
-
 function displayCarouselPosts() {
- 
-
   let posts = JSON.parse(localStorage.getItem('blogPosts'));
   let last12Posts = posts ? posts.slice(-12) : [];
 
@@ -211,7 +208,7 @@ function displayCarouselPosts() {
   const carouselImage2 = document.getElementById('carousel-image-2');
   const carouselImage3 = document.getElementById('carousel-image-3');
 
-  if (last12Posts.length >= 12) {
+ 
     carouselImage1.src = last12Posts[9].media.url;
     carouselImage2.src = last12Posts[10].media.url;
     carouselImage3.src = last12Posts[11].media.url;
@@ -223,8 +220,44 @@ function displayCarouselPosts() {
     carouselHeader1.innerHTML = last12Posts[9].title;
     carouselHeader2.innerHTML = last12Posts[10].title;
     carouselHeader3.innerHTML = last12Posts[11].title;
+
+    carouselHeader1.addEventListener('click', () => {
+      localStorage.setItem('clickedBlogPost', JSON.stringify(last12Posts[9]));
+      window.location.href = './post/index.html';
+    });
+
+    carouselHeader2.addEventListener('click', () => {
+      localStorage.setItem('clickedBlogPost', JSON.stringify(last12Posts[10]));
+      window.location.href = './post/index.html';
+    });
+
+    carouselHeader3.addEventListener('click', () => {
+      localStorage.setItem('clickedBlogPost', JSON.stringify(last12Posts[11]));
+      window.location.href = './post/index.html';
+    });
+
+    carouselImage1.addEventListener('click', () => {
+      localStorage.setItem('clickedBlogPost', JSON.stringify(last12Posts[9]));
+      window.location.href = './post/index.html';
+    });
+  
+    carouselImage2.addEventListener('click', () => {
+      localStorage.setItem('clickedBlogPost', JSON.stringify(last12Posts[10]));
+      window.location.href = './post/index.html';
+    });
+  
+    carouselImage3.addEventListener('click', () => {
+      localStorage.setItem('clickedBlogPost', JSON.stringify(last12Posts[11]));
+      window.location.href = './post/index.html';
+    });
   }
-}
+
+  
+
+
+
+
+
 
 displayCarouselPosts();
 
