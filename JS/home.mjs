@@ -142,25 +142,18 @@ function displayCarouselPosts() {
 const carouselImage1 = document.getElementById('carousel-image-1');
 const carouselImage2 = document.getElementById('carousel-image-2');
 const carouselImage3 = document.getElementById('carousel-image-3');
-if (last12Posts.length >= 10) {
+if (last12Posts.length >= 10 && last12Posts[9].title) {
   carouselImage1.src = last12Posts[9].media.url;
+  carouselHeader1.innerHTML = last12Posts[9].title;
 }
-if (last12Posts.length >= 11) {
+if (last12Posts.length >= 11 && last12Posts[10].title) {
   carouselImage2.src = last12Posts[10].media.url;
+  carouselHeader2.innerHTML = last12Posts[10].title;
 }
-if (last12Posts.length >= 12) {
+if (last12Posts.length >= 12 && last12Posts[11].title) {
   carouselImage3.src = last12Posts[11].media.url;
+  carouselHeader3.innerHTML = last12Posts[11].title;
 }
-
-const carouselHeader1= document.getElementById('carousel-header-1');
-const carouselHeader2= document.getElementById('carousel-header-2');
-const carouselHeader3= document.getElementById('carousel-header-3');
-
-
-
-carouselHeader1.innerHTML = last12Posts[9].title;
-carouselHeader2.innerHTML = last12Posts[10].title;
-carouselHeader3.innerHTML = last12Posts[11].title;
 
 
 function handleHeaderClick(index) {
