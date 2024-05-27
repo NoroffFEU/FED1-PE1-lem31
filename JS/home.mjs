@@ -54,9 +54,7 @@ async function postUserData() {
   } catch (error) {
     console.error(error);
   }
-  displayCarouselPosts(); 
-  displayGridPosts(); 
-  fetchBlogPosts();
+ 
 }
 
 
@@ -78,6 +76,10 @@ async function fetchBlogPosts() {
     let blogPosts = posts.data;
     localStorage.setItem('blogPosts', JSON.stringify(blogPosts));
 
+    displayCarouselPosts(); 
+    displayGridPosts(); 
+    
+
 
     if (!response.ok) {
       throw new Error('Failed to fetch blog posts');
@@ -88,7 +90,7 @@ async function fetchBlogPosts() {
     console.error('Error:', error);
   }}
 
-
+ 
 
 
 
