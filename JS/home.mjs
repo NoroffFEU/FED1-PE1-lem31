@@ -288,7 +288,7 @@ last12Posts.forEach(post => {
 
 
 function filterPosts(option) {
-  const filteredPosts = blogPosts.filter(post => post.tags.includes(option));
+  const filteredPosts = posts.filter(post => post.tags.includes(option));
   const gridContainer = document.getElementById('grid-container');
   
   gridContainer.innerHTML = '';
@@ -319,7 +319,7 @@ selectElement.addEventListener('change', (event) => {
     if (event.key === 'Enter') {
       const searchInput = document.getElementById('Search-input');
       const searchText = searchInput.value.toLowerCase();
-      const filteredPosts = blogPosts.filter(post => post.title.toLowerCase().includes(searchText));
+      const filteredPosts = posts.filter(post => post.title.toLowerCase().includes(searchText));
       const gridContainer = document.getElementById('grid-container');
    
       
