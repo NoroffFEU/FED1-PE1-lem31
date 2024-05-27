@@ -27,10 +27,6 @@ const image3= document.querySelector('#carousel-image-3');
 
 
 
-// const blogPosts = JSON.parse(localStorage.getItem('blogPosts'));
-// const last12Posts = blogPosts.slice(-12);
-
-
 //**EVENT LISTENERS */
 
 
@@ -160,6 +156,9 @@ async function postUserData() {
 }
 
 
+
+
+
 async function fetchBlogPosts() {
   try {
     const API_URL = API_FETCH_POSTS_URL;
@@ -177,11 +176,12 @@ async function fetchBlogPosts() {
     const posts = await response.json();
     const blogPosts = posts.data;
     localStorage.setItem('blogPosts', JSON.stringify(blogPosts));
-  
   } catch (error) {
     console.error('Error:', error);
   }
 }
+
+
 
 
 
