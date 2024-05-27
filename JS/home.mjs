@@ -188,8 +188,8 @@ async function fetchBlogPosts() {
 
 
 
-const posts = JSON.parse(localStorage.getItem('blogPosts'));
-const last12Posts = posts ? posts.slice(-12) : [];
+let posts = JSON.parse(localStorage.getItem('blogPosts'));
+let last12Posts = posts ? posts.slice(-12) : [];
 
 
 //FUNCTION TO DISPLAY BLOG POSTS IN THE CAROUSEL
