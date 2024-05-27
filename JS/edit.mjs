@@ -50,7 +50,7 @@ export function logout() {
 
 
 //FUNCTION FOR FETCHING THE BLOG POSTS
-async function fetchBlogPosts() {
+export async function fetchBlogPosts() {
  
   try {
     const API_URL = API_FETCH_POSTS_URL;
