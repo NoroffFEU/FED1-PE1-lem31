@@ -1,15 +1,5 @@
 import { API_FETCH_POSTS_URL} from "./GlobalConst.mjs";
-
-
-
-
-
-
-
-
-
-
-
+import { API_PUT_POST } from "./GlobalConst.mjs";
 
 
 
@@ -42,7 +32,7 @@ export function logout() {
 
 
 //FUNCTION FOR FETCHING THE BLOG POSTS
-export async function fetchBlogPosts() {
+ async function fetchBlogPosts() {
   try {
     const API_URL = API_FETCH_POSTS_URL;
     const accessToken = sessionStorage.getItem('accessToken');
@@ -68,10 +58,10 @@ export async function fetchBlogPosts() {
 //FUNCTION FOR DISPLAYING BLOG POSTS
 
 function displayBlogPosts(blogPosts) {
-
+const blogPostsWrapper = document.querySelector('.blog-posts-wrapper');
 
   blogPosts.forEach((post, index) => {
-    const blogPostsWrapper = document.createElement('div');
+   
     const blogPostBox = document.createElement("div");
     const image = document.createElement("img");
     const headerContainer = document.createElement("div");
@@ -81,7 +71,7 @@ function displayBlogPosts(blogPosts) {
     const deleteButton = document.createElement("button");
 
 
-blogPostsWrapper.classList.add('blog-posts-wrapper');
+
     blogPostBox.classList.add('blog-post');
     headerContainer.classList.add('header-container');
     header.classList.add('h2-Edit-Page');
@@ -92,8 +82,8 @@ blogPostsWrapper.classList.add('blog-posts-wrapper');
     image.src = post.media.url;
     header.textContent = post.title;
     editButton.textContent = 'Edit';
-    if (blogPostsWrapper) {
-      blogPostsWrapper.appendChild(blogPostBox);
+
+    
       blogPostBox.appendChild(image);
       blogPostBox.appendChild(headerContainer);
       blogPostBox.appendChild(header);
@@ -101,7 +91,7 @@ blogPostsWrapper.classList.add('blog-posts-wrapper');
       buttonWrapper.appendChild(editButton);
       buttonWrapper.appendChild(deleteButton);
       blogPostsWrapper.appendChild(blogPostBox);
-    }
+    
     deleteButton.textContent = 'Delete';
     deleteButton.dataset.postId = post.id;
 
