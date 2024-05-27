@@ -519,8 +519,7 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 50rem;
-  height: auto;
+  position: relative;
 }
 
 .h1-public-blog-post {
@@ -528,8 +527,9 @@ footer {
 }
 
 .Public-Blog-Post-Img {
-  width: 100%;
-  height: auto;
+  width: 80%;
+  height: 20%;
+  display: fit-content;
 }
 
 .public-post-body {
