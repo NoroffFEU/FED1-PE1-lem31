@@ -129,43 +129,42 @@ buttonSix.addEventListener('click', () => {
 
 function displayCarouselPosts() {
 
+  if (last12Posts.length >= 12) {
+    const carouselImage1 = document.getElementById('carousel-image-1');
+    const carouselImage2 = document.getElementById('carousel-image-2');
+    const carouselImage3 = document.getElementById('carousel-image-3');
 
-const carouselImage1= document.getElementById('carousel-image-1');
+    carouselImage1.src = last12Posts[9].media.url;
+    carouselImage2.src = last12Posts[10].media.url;
+    carouselImage3.src = last12Posts[11].media.url;
 
-const carouselImage2= document.getElementById('carousel-image-2');
+    const carouselHeader1 = document.getElementById('carousel-header-1');
+    const carouselHeader2 = document.getElementById('carousel-header-2');
+    const carouselHeader3 = document.getElementById('carousel-header-3');
 
-const carouselImage3= document.getElementById('carousel-image-3');
+    carouselHeader1.innerHTML = last12Posts[9].title;
+    carouselHeader2.innerHTML = last12Posts[10].title;
+    carouselHeader3.innerHTML = last12Posts[11].title;
 
-carouselImage1.src = last12Posts[9].media.url;
-carouselImage2.src = last12Posts[10].media.url;
-carouselImage3.src = last12Posts[11].media.url;
+    function handleHeaderClick(index) {
+      localStorage.setItem('clickedBlogPost', JSON.stringify(last12Posts[index]));
+      window.location.href = './post/index.html';
+    }
 
-const carouselHeader1= document.getElementById('carousel-header-1');
-const carouselHeader2= document.getElementById('carousel-header-2');
-const carouselHeader3= document.getElementById('carousel-header-3');
+    carouselHeader1.addEventListener('click', () => handleHeaderClick(9));
+    carouselHeader2.addEventListener('click', () => handleHeaderClick(10));
+    carouselHeader3.addEventListener('click', () => handleHeaderClick(11));
 
-
-
-carouselHeader1.innerHTML = last12Posts[9].title;
-carouselHeader2.innerHTML = last12Posts[10].title;
-carouselHeader3.innerHTML = last12Posts[11].title;
-
-
-function handleHeaderClick(index) {
-  localStorage.setItem('clickedBlogPost', JSON.stringify(last12Posts[index]));
-  window.location.href = './post/index.html';
+    carouselImage1.addEventListener('click', () => handleHeaderClick(9));
+    carouselImage2.addEventListener('click', () => handleHeaderClick(10));
+    carouselImage3.addEventListener('click', () => handleHeaderClick(11));
+  }
 }
 
-carouselHeader1.addEventListener('click', () => handleHeaderClick(9));
-carouselHeader2.addEventListener('click', () => handleHeaderClick(10));
-carouselHeader3.addEventListener('click', () => handleHeaderClick(11));
-
-carouselImage1.addEventListener('click', () => handleHeaderClick(9));
-carouselImage2.addEventListener('click', () => handleHeaderClick(10));
-carouselImage3.addEventListener('click', () => handleHeaderClick(11));
+displayCarouselPosts();
 
 
-}
+
 
 //FUNCTIONS TO DISPLAY BLOG POSTS IN THE 12 IMAGE GRID
 
