@@ -25,7 +25,7 @@ const image3= document.querySelector('#carousel-image-3');
 
 
 const blogPosts = JSON.parse(localStorage.getItem('blogPosts'));
-const last12Posts = blogPosts.slice(-12);
+const last12Posts = blogPosts ? blogPosts.slice(-12) : [];
 
 
 
