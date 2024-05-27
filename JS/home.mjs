@@ -195,51 +195,73 @@ let last12Posts = posts ? posts.slice(-12) : [];
 //FUNCTION TO DISPLAY BLOG POSTS IN THE CAROUSEL
 
 
-
 function displayCarouselPosts() {
+  let posts = JSON.parse(localStorage.getItem('blogPosts'));
+  let last12Posts = posts ? posts.slice(-12) : [];
 
+  const carouselImage1 = document.getElementById('carousel-image-1');
+  const carouselImage2 = document.getElementById('carousel-image-2');
+  const carouselImage3 = document.getElementById('carousel-image-3');
 
-let posts = JSON.parse(localStorage.getItem('blogPosts'));
-let last12Posts = posts ? posts.slice(-12) : [];
+  if (last12Posts.length >= 12) {
+    carouselImage1.src = last12Posts[9].media.url;
+    carouselImage2.src = last12Posts[10].media.url;
+    carouselImage3.src = last12Posts[11].media.url;
 
-const carouselImage1= document.getElementById('carousel-image-1');
+    const carouselHeader1 = document.getElementById('carousel-header-1');
+    const carouselHeader2 = document.getElementById('carousel-header-2');
+    const carouselHeader3 = document.getElementById('carousel-header-3');
 
-const carouselImage2= document.getElementById('carousel-image-2');
-
-const carouselImage3= document.getElementById('carousel-image-3');
-
-carouselImage1.src = last12Posts[9].media.url;
-carouselImage2.src = last12Posts[10].media.url;
-carouselImage3.src = last12Posts[11].media.url;
-
-const carouselHeader1= document.getElementById('carousel-header-1');
-const carouselHeader2= document.getElementById('carousel-header-2');
-const carouselHeader3= document.getElementById('carousel-header-3');
-
-
-
-carouselHeader1.innerHTML = last12Posts[9].title;
-carouselHeader2.innerHTML = last12Posts[10].title;
-carouselHeader3.innerHTML = last12Posts[11].title;
-
-
-
-function handleHeaderClick(index) {
-
-  localStorage.setItem('clickedBlogPost', JSON.stringify(last12Posts[index]));
-  window.location.href = './post/index.html';
+    carouselHeader1.innerHTML = last12Posts[9].title;
+    carouselHeader2.innerHTML = last12Posts[10].title;
+    carouselHeader3.innerHTML = last12Posts[11].title;
+  }
 }
 
-carouselHeader1.addEventListener('click', () => handleHeaderClick(9));
-carouselHeader2.addEventListener('click', () => handleHeaderClick(10));
-carouselHeader3.addEventListener('click', () => handleHeaderClick(11));
-
-carouselImage1.addEventListener('click', () => handleHeaderClick(9));
-carouselImage2.addEventListener('click', () => handleHeaderClick(10));
-carouselImage3.addEventListener('click', () => handleHeaderClick(11));
+// function displayCarouselPosts() {
 
 
-}
+// let posts = JSON.parse(localStorage.getItem('blogPosts'));
+// let last12Posts = posts ? posts.slice(-12) : [];
+
+// const carouselImage1= document.getElementById('carousel-image-1');
+
+// const carouselImage2= document.getElementById('carousel-image-2');
+
+// const carouselImage3= document.getElementById('carousel-image-3');
+
+// carouselImage1.src = last12Posts[9].media.url;
+// carouselImage2.src = last12Posts[10].media.url;
+// carouselImage3.src = last12Posts[11].media.url;
+
+// const carouselHeader1= document.getElementById('carousel-header-1');
+// const carouselHeader2= document.getElementById('carousel-header-2');
+// const carouselHeader3= document.getElementById('carousel-header-3');
+
+
+
+// carouselHeader1.innerHTML = last12Posts[9].title;
+// carouselHeader2.innerHTML = last12Posts[10].title;
+// carouselHeader3.innerHTML = last12Posts[11].title;
+
+
+
+// function handleHeaderClick(index) {
+
+//   localStorage.setItem('clickedBlogPost', JSON.stringify(last12Posts[index]));
+//   window.location.href = './post/index.html';
+// }
+
+// carouselHeader1.addEventListener('click', () => handleHeaderClick(9));
+// carouselHeader2.addEventListener('click', () => handleHeaderClick(10));
+// carouselHeader3.addEventListener('click', () => handleHeaderClick(11));
+
+// carouselImage1.addEventListener('click', () => handleHeaderClick(9));
+// carouselImage2.addEventListener('click', () => handleHeaderClick(10));
+// carouselImage3.addEventListener('click', () => handleHeaderClick(11));
+
+
+// }
 
 //FUNCTIONS TO DISPLAY BLOG POSTS IN THE 12 IMAGE GRID
 
