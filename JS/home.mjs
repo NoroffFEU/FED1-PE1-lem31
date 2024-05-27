@@ -90,7 +90,7 @@ async function fetchBlogPosts() {
     console.error('Error:', error);
   }}
 
- 
+  fetchBlogPosts();
 
 
 
