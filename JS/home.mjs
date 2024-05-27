@@ -31,7 +31,6 @@ const last12Posts = blogPosts.slice(-12);
 
 
 
-
 //**EVENT LISTENERS */
 
 
@@ -147,11 +146,13 @@ async function fetchBlogPosts() {
     const blogPosts = posts.data;
     localStorage.setItem('blogPosts', JSON.stringify(blogPosts));
 
-    displayCarouselPosts(blogPosts);
+    if (last12Posts) {
+      displayCarouselPosts(blogPosts);
 
-
-    last12Posts.forEach(post => {
-      createPostHtml(post)});
+      last12Posts.forEach(post => {
+        createPostHtml(post)
+      });
+    }
 
   } catch (error) {
     console.error('Error:', error);
