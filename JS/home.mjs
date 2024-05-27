@@ -1,5 +1,5 @@
 
-
+import { API_FETCH_POSTS_URL } from './GlobalConst.mjs'
 //**CONSTANTS */
 
 
@@ -144,6 +144,8 @@ async function fetchBlogPosts() {
     const blogPosts = posts.data;
     localStorage.setItem('blogPosts', JSON.stringify(blogPosts));
 
+    displayCarouselPosts(blogPosts);
+
   } catch (error) {
     console.error('Error:', error);
   }
@@ -283,6 +285,6 @@ last12Posts.forEach(post => {
 
 //**CALL FUNCTIONS */
 
-displayCarouselPosts();
+
 
 fetchBlogPosts();
