@@ -125,10 +125,11 @@ buttonSix.addEventListener('click', () => {
 
 async function postUserData() {
   const API_URL = API_LOGIN_URL;
+  const userInfo = localStorage.getItem('userInfo');
   const userData = 
   {
-    "email": 'LeanneMeyer002@stud.noroff.no',
-    "password": "Hello002"
+    "email": userInfo.email,
+    "password": userInfo.password,
   }
   
   try {
