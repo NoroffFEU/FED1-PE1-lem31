@@ -262,10 +262,10 @@ selectElement.addEventListener('change', (event) => {
   }
 
   const searchInput = document.getElementById('Search-input');
-  searchInput.addEventListener('keydown', searchPosts);
-
-//**CALL FUNCTIONS */
-
+ 
+    searchInput.addEventListener('keydown', searchPosts);
 
 
-displayCarouselPosts();
+  //**CALL FUNCTIONS */
+
+  displayCarouselPosts();
