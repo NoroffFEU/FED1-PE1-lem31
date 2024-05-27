@@ -128,8 +128,8 @@ async function postUserData() {
   const userInfo = localStorage.getItem('userInfo');
   const userData = 
   {
-    "email": userInfo.email,
-    "password": userInfo.password,
+    "email": 'LeanneMeyer002@stud.noroff.no',
+    "password": "Hello002"
   }
   
   try {
