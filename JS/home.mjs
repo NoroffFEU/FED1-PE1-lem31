@@ -49,15 +49,16 @@ async function postUserData() {
 
     localStorage.setItem('accessToken', accessToken);
 
-    displayCarouselPosts(); 
-    displayGridPosts(); 
-    fetchBlogPosts();
+    
 
     if (response.ok) {
     
     } else {
       console.error('Failed to post user data');
     }
+    displayCarouselPosts(); 
+    displayGridPosts(); 
+    fetchBlogPosts();
   } catch (error) {
     console.error(error);
   }
