@@ -50,12 +50,6 @@ async function postUserData() {
     localStorage.setItem('accessToken', accessToken);
 
     
-
-    if (response.ok) {
-    
-    } else {
-      console.error('Failed to post user data');
-    }
    
   } catch (error) {
     console.error(error);
