@@ -127,7 +127,7 @@ async function postUserData() {
   const API_URL = API_LOGIN_URL;
   const userData = 
   {
-    "email": 'LeanneMeyer002@stud.noroff.no',
+    "email": "LeanneMeyer002@stud.noroff.no",
     "password": "Hello002"
   }
   
