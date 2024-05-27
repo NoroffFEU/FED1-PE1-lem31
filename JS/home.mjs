@@ -24,10 +24,73 @@ const image3= document.querySelector('#carousel-image-3');
 //CONSTANTS FOR HOME PAGE CAROUSEL AND 12 IMAGE GRID
 
 
+//FUNCTION TO POST USER DATA
+
+
+async function postUserData() {
+  const API_URL = API_LOGIN_URL;
+  const userData = 
+  {
+    "email": "LeanneMeyer002@stud.noroff.no",
+    "password": "Hello002"
+  }
+  
+  try {
+    const response = await fetch(API_URL, {
+      method: 'POST',
+      headers: {
+      'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(userData),
+    });
+
+    const data = await response.json();
+    const accessToken = data.accessToken;
+
+    localStorage.setItem('accessToken', accessToken);
+
+    if (response.ok) {
+     fetchBlogPosts();
+    } else {
+      console.error('Failed to post user data');
+    }
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+//FUNCTION TO FETCH BLOG POSTS
+async function fetchBlogPosts() {
+  try {
+    const API_URL = API_FETCH_POSTS_URL;
+    const accessToken = localStorage.getItem('accessToken');
+    const response = await fetch(API_URL, {
+      headers: {
+        Authorization: `Bearer ${accessToken}`,
+      },
+    });
+
+    if (!response.ok) {
+      throw new Error('Failed to fetch blog posts');
+    }
+
+    let posts = await response.json();
+    let blogPosts = posts.data;
+    localStorage.setItem('blogPosts', JSON.stringify(blogPosts));
+  
+
+  } catch (error) {
+    console.error('Error:', error);
+  }
 
 
 
-//**EVENT LISTENERS */
+
+
+//VARIABLES FOR CAROUSEL AND GRID
+
+let posts = JSON.parse(localStorage.getItem('blogPosts'));
+let last12Posts = posts ? posts.slice(-12) : [];
 
 
 
@@ -121,75 +184,13 @@ buttonSix.addEventListener('click', () => {
 
 
 
-//**FUNCTIONS */
-
-async function postUserData() {
-  const API_URL = API_LOGIN_URL;
-  const userData = 
-  {
-    "email": "LeanneMeyer002@stud.noroff.no",
-    "password": "Hello002"
-  }
-  
-  try {
-    const response = await fetch(API_URL, {
-      method: 'POST',
-      headers: {
-      'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(userData),
-    });
-
-    const data = await response.json();
-    const accessToken = data.accessToken;
-
-    localStorage.setItem('accessToken', accessToken);
-
-    if (response.ok) {
-     fetchBlogPosts();
-    } else {
-      console.error('Failed to post user data');
-    }
-  } catch (error) {
-    console.error(error);
-  }
-}
 
 
 
 
 
-async function fetchBlogPosts() {
-  try {
-    const API_URL = API_FETCH_POSTS_URL;
-    const accessToken = localStorage.getItem('accessToken');
-    const response = await fetch(API_URL, {
-      headers: {
-        Authorization: `Bearer ${accessToken}`,
-      },
-    });
-
-    if (!response.ok) {
-      throw new Error('Failed to fetch blog posts');
-    }
-
-    let posts = await response.json();
-    let blogPosts = posts.data;
-    localStorage.setItem('blogPosts', JSON.stringify(blogPosts));
-  
-
-  } catch (error) {
-    console.error('Error:', error);
-  }
 
 
-
-}
-
-
-
-let posts = JSON.parse(localStorage.getItem('blogPosts'));
-let last12Posts = posts ? posts.slice(-12) : [];
 
 
 //FUNCTION TO DISPLAY BLOG POSTS IN THE CAROUSEL
@@ -290,8 +291,12 @@ selectElement.addEventListener('change', (event) => {
       createPostHtml(post);
     });
   } 
-
 });
+
+
+
+
+
 
 
 
