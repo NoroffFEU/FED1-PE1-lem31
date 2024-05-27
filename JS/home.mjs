@@ -193,16 +193,10 @@ buttonSix.addEventListener('click', () => {
 
 
 
-
-
-
-
-
 //FUNCTION TO DISPLAY BLOG POSTS IN THE CAROUSEL
 
 function displayCarouselPosts() {
-  let posts = JSON.parse(localStorage.getItem('blogPosts'));
-  let last12Posts = posts ? posts.slice(-12) : [];
+ 
 
   const carouselImage1 = document.getElementById('carousel-image-1');
   const carouselImage2 = document.getElementById('carousel-image-2');
@@ -251,10 +245,6 @@ function displayCarouselPosts() {
       window.location.href = './post/index.html';
     });
   }
-
-  
-
-
 
 
 
