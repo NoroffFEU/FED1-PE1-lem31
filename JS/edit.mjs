@@ -1,5 +1,5 @@
 import { API_FETCH_POSTS_URL} from "./GlobalConst.mjs";
-import { API_PUT_POST } from "./GlobalConst.mjs";
+// import { API_PUT_POST } from "./GlobalConst.mjs";
 
 
 
@@ -257,7 +257,7 @@ async function editFormSubmit(event) {
     const id = blogPostObject.id;
     const idString= id.toString();
    
-     const API_URL = `${API_PUT_POST}/${idString}`;
+     const API_URL = `${API_FETCH_POSTS_URL}/${idString}`;
 
     const response = await fetch(API_URL, {
      
@@ -315,7 +315,7 @@ function deleteButtonFunction(event) {
 //FUNCTION TO DELETE THE POST, WHICH GOES INSIDE THE DELETE BUTTON FUNCTION
 
 async function deletePost(postId) {
-  const API_URL = `${API_PUT_POST}/${postId}`;
+  const API_URL = `${API_FETCH_POSTS_URL}/${postId}`;
 
   try {
     const accessToken = sessionStorage.getItem('accessToken');
