@@ -173,8 +173,8 @@ async function fetchBlogPosts() {
       throw new Error('Failed to fetch blog posts');
     }
 
-    const posts = await response.json();
-    const blogPosts = posts.data;
+    let posts = await response.json();
+    let blogPosts = posts.data;
     localStorage.setItem('blogPosts', JSON.stringify(blogPosts));
   
 
