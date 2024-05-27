@@ -131,7 +131,7 @@ buttonSix.addEventListener('click', () => {
 async function fetchBlogPosts() {
   try {
     const API_URL = API_FETCH_POSTS_URL;
-    const accessToken = sessionStorage.getItem('accessToken');
+    const accessToken = localStorage.getItem('accessToken');
     const response = await fetch(API_URL, {
       headers: {
         Authorization: `Bearer ${accessToken}`,

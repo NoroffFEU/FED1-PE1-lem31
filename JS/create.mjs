@@ -27,7 +27,7 @@ async function createFormSubmit(event) {
   }
    }
     
-    const accessToken = sessionStorage.getItem('accessToken');
+    const accessToken = localStorage.getItem('accessToken');
 
   
 
@@ -60,7 +60,7 @@ async function createFormSubmit(event) {
 function logout() {
 
  
-  const accessToken = sessionStorage.getItem('accessToken');
+  const accessToken = localStorage.getItem('accessToken');
 
 
  
@@ -69,7 +69,7 @@ function logout() {
     return;
     
   } else if(accessToken !== null) {
-    sessionStorage.removeItem('accessToken');
+    localStorage.removeItem('accessToken');
    
   window.href.location = '../account/login.html';
 

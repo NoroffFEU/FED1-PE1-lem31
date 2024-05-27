@@ -17,12 +17,12 @@ if (logoutLink) {
 
 //FUNCTION FOR LOGGING OUT
 export function logout() {
-  const accessToken = sessionStorage.getItem('accessToken');
+  const accessToken = localStorage.getItem('accessToken');
   if (accessToken === null) {
     alert('You are already logged out!');
     return;
   } else if (accessToken !== null) {
-    sessionStorage.removeItem('accessToken');
+    localStorage.removeItem('accessToken');
     window.location.href = '../account/login.html';
   } else {
     alert('An error has occurred. Please try again.');
@@ -35,7 +35,7 @@ export function logout() {
  async function fetchBlogPosts() {
   try {
     const API_URL = API_FETCH_POSTS_URL;
-    const accessToken = sessionStorage.getItem('accessToken');
+    const accessToken = localStorage.getItem('accessToken');
     const response = await fetch(API_URL, {
       headers: {
         Authorization: `Bearer ${accessToken}`,
@@ -252,7 +252,7 @@ async function editFormSubmit(event) {
       id: localStorage.getItem('id')
     };
 
-    const accessToken = sessionStorage.getItem('accessToken');
+    const accessToken = localStorage.getItem('accessToken');
 
     const id = blogPostObject.id;
     const idString= id.toString();
@@ -318,7 +318,7 @@ async function deletePost(postId) {
   const API_URL = `${API_FETCH_POSTS_URL}/${postId}`;
 
   try {
-    const accessToken = sessionStorage.getItem('accessToken');
+    const accessToken = localStorage.getItem('accessToken');
 
     const response = await fetch(API_URL, {
       method: 'DELETE',

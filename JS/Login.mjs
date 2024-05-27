@@ -28,8 +28,8 @@ async function loginFormSubmit(event) {
     const info = userData.data;
 
 
-   sessionStorage.setItem('accessToken', info.accessToken);
-   sessionStorage.setItem('userInfo', JSON.stringify(userData.data));
+   localStorage.setItem('accessToken', info.accessToken);
+   localStorage.setItem('userInfo', JSON.stringify(userData.data));
    
 
     if (response.status === 200) {
