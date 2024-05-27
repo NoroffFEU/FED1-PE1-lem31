@@ -51,6 +51,7 @@ async function postUserData() {
 
     displayCarouselPosts(); 
     displayGridPosts(); 
+    fetchBlogPosts();
 
     if (response.ok) {
     
