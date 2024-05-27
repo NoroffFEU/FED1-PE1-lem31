@@ -146,7 +146,7 @@ async function postUserData() {
     localStorage.setItem('accessToken', accessToken);
 
     if (response.ok) {
-      console.log('User data posted successfully');
+     fetchBlogPosts();
     } else {
       console.error('Failed to post user data');
     }
@@ -320,5 +320,4 @@ selectElement.addEventListener('change', (event) => {
 
   displayCarouselPosts();
   displayGridPosts();
-  fetchBlogPosts();
   postUserData();
