@@ -4,10 +4,10 @@ import { API_FETCH_POSTS_URL} from "./GlobalConst.mjs";
 
 
 
-const logoutLink = document.querySelector('.logout-link');
+const logoutLink = document.getElementById('logout-link-edit');
 
 
-  logoutLink.addEventListener('click', logout);
+logoutLink.addEventListener('click', logout);
 
 
 
