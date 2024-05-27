@@ -199,9 +199,8 @@ let last12Posts = posts ? posts.slice(-12) : [];
 function displayCarouselPosts() {
 
 
-
-  let posts = JSON.parse(localStorage.getItem('blogPosts'));
-  let last12Posts = posts ? posts.slice(-12) : [];
+let posts = JSON.parse(localStorage.getItem('blogPosts'));
+let last12Posts = posts ? posts.slice(-12) : [];
 
 const carouselImage1= document.getElementById('carousel-image-1');
 
