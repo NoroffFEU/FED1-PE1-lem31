@@ -19,27 +19,16 @@ logoutLink.addEventListener('click', logout);
 
 //FUNCTION FOR LOGGING OUT
 export function logout() {
-
   const accessToken = sessionStorage.getItem('accessToken');
-
-
- 
-  if(accessToken === null) {
+  if (accessToken === null) {
     alert('You are already logged out!');
     return;
-    
-  } else if(accessToken !== null) {
-   sessionStorage.removeItem('accessToken');
-
-   window.location.href = '../account/login.html';
-  }
-
-  else {
+  } else if (accessToken !== null) {
+    sessionStorage.removeItem('accessToken');
+    window.location.href = '../account/login.html';
+  } else {
     alert('An error has occurred. Please try again.');
   }
-
- 
-
 }
 
 
