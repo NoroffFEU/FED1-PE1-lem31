@@ -69,7 +69,8 @@ h1,
 .Author,
 .Published-date,
 select,
-.filter-label {
+.filter-label,
+.read-more {
   color: var(--secondary-color);
 }
 
@@ -81,14 +82,14 @@ select,
   width: 10rem;
   height: 3rem;
   margin-top: 2rem;
-  border: var(--tertiary-color) 3px solid;
   background-color: var(--primary-color);
 }
 
 .BP-header-container,
 .header-container,
 .edit-page-edit-btn,
-.edit-page-delete-btn {
+.edit-page-delete-btn,
+.read-more {
   background-color: var(--primary-color);
 }
 
@@ -127,7 +128,8 @@ nav a,
 .login-label,
 .login-btn,
 .register-label,
-.register-btn {
+.register-btn,
+.read-more {
   font: var(--font-family-2);
   font-weight: bold;
 }
@@ -281,6 +283,15 @@ nav a:active {
 
 .h2-container {
   height: 8rem;
+}
+
+.read-more {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  margin-bottom: 18rem;
+  border: solid 3px var(--tertiary-color);
+  padding: 1rem 2rem 1rem 2rem;
 }
 
 .Destinations-SH-box {
@@ -755,7 +766,8 @@ footer {
 .edit-page-delete-btn:hover,
 .Save-button:hover,
 .save-btn:hover,
-.cancel-btn:hover {
+.cancel-btn:hover,
+.read-more:hover {
   border: 4px var(--tertiary-color) solid;
 }
 
@@ -763,7 +775,8 @@ footer {
 .edit-page-delete-btn:active,
 .Save-button:active,
 .save-btn:active,
-.cancel-btn:active {
+.cancel-btn:active,
+.read-more:active {
   border: 6px var(--tertiary-color) solid;
 }
 
