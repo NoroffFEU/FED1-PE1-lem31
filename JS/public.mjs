@@ -22,7 +22,8 @@ async function createPostHtml(clickedPost) {
 
   const body = document.querySelector(".public-post-body");
   if (body) {
-    body.textContent = clickedPost.body;
+    const paragraphs = clickedPost.body.split("\n");
+    body.innerHTML = paragraphs.map((p) => `<p>${p}</p>`).join("");
   }
 
   const author = document.querySelector(".Author");
