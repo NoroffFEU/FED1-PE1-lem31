@@ -12,9 +12,8 @@ async function fetchClickedPost() {
   const postId = clickedPost.id;
 
   const url = new URL(window.location.href);
-  history.pushState({}, "", `${postId}`);
-  url.searchParams.set('postId', `${postId}`); 
-  //Looked to this website for help inserting the post ID into the URL : https://developer.mozilla.org/en-US/docs/Web/API/History/pushState
+  url.searchParams.set('postId', `${postId}`);
+  history.pushState({}, "", url.href);
 }
 
 //FUNCTION TO CREATE HTML FOR CLICKED POST
