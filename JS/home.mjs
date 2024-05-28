@@ -49,7 +49,7 @@ async function postUserData() {
 
     localStorage.setItem('accessToken', accessToken);
 
-    fetchBlogPosts();
+   
    
   } catch (error) {
     console.error(error);
@@ -81,6 +81,9 @@ async function fetchBlogPosts() {
   const last12Posts = blogPosts.slice(-12);
 
 localStorage.setItem('last12Posts', JSON.stringify(last12Posts));
+
+displayCarouselPosts(last12Posts);
+displayGridPosts(last12Posts);
 
 
   } catch (error) {
@@ -193,7 +196,7 @@ buttonSix.addEventListener('click', () => {
 
 //FUNCTION TO DISPLAY BLOG POSTS IN THE CAROUSEL
 
-function displayCarouselPosts() {
+function displayCarouselPosts(last12Posts) {
   const carouselImage1 = document.getElementById('carousel-image-1');
   const carouselImage2 = document.getElementById('carousel-image-2');
   const carouselImage3 = document.getElementById('carousel-image-3');
@@ -293,7 +296,7 @@ function createPostHtml(post) {
 
 
 
-function displayGridPosts() {
+function displayGridPosts(last12Posts) {
 last12Posts.forEach(post => {
   createPostHtml(post)
 });}
@@ -356,8 +359,7 @@ selectElement.addEventListener('change', (event) => {
  
 fetchBlogPosts();
 
-displayCarouselPosts(last12Posts);
-displayGridPosts(last12Posts);
+
 
 
  
