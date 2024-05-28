@@ -1,25 +1,28 @@
 
 
 
-
-
-
-
-//FUNCTIONS
 async function fetchClickedPost() {
   const clickedPost = JSON.parse(localStorage.getItem('clickedBlogPost'));
-  
-  if (clickedPost) {
-    const postId = clickedPost.id;
-    const url = new URL(window.location.href);
-    url.searchParams.set('postId', `${postId}`);
-    history.pushState({}, "", url.href);
-    await createPostHtml(clickedPost);
+  if (!clickedPost) {
+    return;
   }
-}
+
+ 
+  await createPostHtml(clickedPost);
+
+
+  const newURL = window.location.origin + '/posts/' + encodeURIComponent(clickedPost.id);
+  history.pushState(null, '', newURL);
+
+  
+  }
+
+
 
 //FUNCTION TO CREATE HTML FOR CLICKED POST
 async function createPostHtml(clickedPost) {
+ 
+
   const title = document.querySelector('.h1-public-blog-post');
   if (title) {
     title.innerHTML = clickedPost.title;
@@ -44,11 +47,11 @@ async function createPostHtml(clickedPost) {
   if (publishedDate) {
     publishedDate.innerHTML = "Published:" + clickedPost.created;
   }
+ 
 }
 
-
-
-
-
-
 fetchClickedPost();
+
+
+
+

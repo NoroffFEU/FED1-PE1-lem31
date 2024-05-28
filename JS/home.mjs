@@ -275,17 +275,20 @@ function createPostHtml(post) {
   postContainer.classList.add('blog-post-container');
   textBackground.classList.add('text-background-grid');
   postHeader.classList.add('grid-header');
+  gridImage.classList.add('grid-image');
 
 
 
   gridImage.src = post.media.url;
   postHeader.innerHTML = post.title;
 
+
   postHeader.addEventListener('click', () => {
     localStorage.setItem('clickedBlogPost', JSON.stringify(post));
+    console.log(post);
     window.location.href = './post/index.html';
   });
-
+  
   gridImage.addEventListener('click', () => {
     localStorage.setItem('clickedBlogPost', JSON.stringify(post));
     window.location.href = './post/index.html';
@@ -293,6 +296,10 @@ function createPostHtml(post) {
 
   return postContainer;
 }
+
+
+
+
 
 
 
