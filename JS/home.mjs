@@ -340,6 +340,7 @@ selectElement.addEventListener('change', (event) => {
   
   function searchPosts(event) {
     if (event.key === 'Enter') {
+       let posts = JSON.parse(localStorage.getItem('blogPosts'));
       const searchInput = document.getElementById('Search-input-two');
       const searchText = searchInput.value.toLowerCase();
       const filteredPosts = posts.filter(post => post.title.toLowerCase().includes(searchText));
