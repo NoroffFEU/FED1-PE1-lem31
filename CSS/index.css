@@ -1178,9 +1178,9 @@ footer {
   }
 
   .Public-Blog-Post-Img {
-    width: 80%;
-    height: auto;
-    object-fit: contain;
+    width: 20rem;
+    height: 14rem;
+    object-fit: cover;
   }
 
   .button-wrapper-edit {
