@@ -784,6 +784,7 @@ footer {
   background-color: var(--primary-color);
   border: 8px var(--tertiary-color) solid;
   padding-bottom: 3rem;
+  overflow-y: scroll;
 }
 
 .post-image-container {
