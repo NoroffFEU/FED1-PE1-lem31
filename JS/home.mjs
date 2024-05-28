@@ -70,34 +70,29 @@ async function fetchBlogPosts() {
       },
     });
 
-
-
-    let posts = await response.json();
-    let blogPosts = posts.data;
-    localStorage.setItem('blogPosts', JSON.stringify(blogPosts));
-
-   
-    
-
-
     if (!response.ok) {
       throw new Error('Failed to fetch blog posts');
     }
 
+    let postData = await response.json();
+    let blogPosts = postData.data;
+    localStorage.setItem('blogPosts', JSON.stringify(blogPosts));
+
+    
+
+    
 
   } catch (error) {
     console.error('Error:', error);
-  }}
+  }
+}
 
   
-  
+  let posts = JSON.parse(localStorage.getItem('blogPosts'));
+    const last12Posts = posts.slice(-12);
 
 
 //VARIABLES FOR CAROUSEL AND GRID
-
-let posts = JSON.parse(localStorage.getItem('blogPosts'));
-let last12Posts = posts ? posts.slice(-12) : [];
-
 
 
 
@@ -356,10 +351,14 @@ selectElement.addEventListener('change', (event) => {
 
   //**CALL FUNCTIONS */
 
-  displayCarouselPosts(); 
-  displayGridPosts(); 
+  // displayCarouselPosts(); 
+  // displayGridPosts(); 
 
 
-  postUserData();
+postUserData();
+displayCarouselPosts(last12Posts);
+displayGridPosts(last12Posts);
+filterPosts(option);
+ 
 
  
