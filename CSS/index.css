@@ -32,6 +32,9 @@ main {
   overflow-x: hidden;
 }
 
+main {
+  overflow-y: hidden;
+}
 nav a,
 h1,
 .h2-home,
@@ -445,7 +448,8 @@ nav a:active {
   padding: 0;
 }
 
-.blog-post-container {
+.blog-post-container,
+.blog-post {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -453,7 +457,8 @@ nav a:active {
   margin-bottom: -4.5rem;
 }
 
-.blog-post-container img {
+.blog-post-container img,
+.blog-post img {
   width: 90%;
   height: 70%;
   margin: 0;
@@ -724,22 +729,6 @@ footer {
   width: 100%;
 }
 
-.blog-post img {
-  width: 50rem;
-  height: auto;
-  margin: 0;
-  padding: 0;
-}
-
-.header-container {
-  display: flex;
-  position: absolute;
-  width: 100vw;
-  height: 50vh;
-  opacity: 0.8;
-  z-index: 11;
-}
-
 .h2-Edit-Page {
   height: 11rem;
   margin-top: -12rem;
@@ -795,7 +784,6 @@ footer {
   background-color: var(--primary-color);
   border: 8px var(--tertiary-color) solid;
   padding-bottom: 3rem;
-  overflow-y: scroll;
 }
 
 .post-image-container {
@@ -1135,16 +1123,8 @@ footer {
     height: 15%;
   }
 
-  .header-container {
-    width: 70%;
-  }
-
   .blog-posts-wrapper {
     grid-template-columns: 50%;
-  }
-
-  .blog-post img {
-    width: 65vw;
   }
 
   .Three-header-box-2,
@@ -1206,6 +1186,7 @@ footer {
   .h2-Edit-Page {
     width: 60vw;
   }
+  /* Edit page */
 }
 
 @media (min-width: 601px) and (max-width: 800px) {
@@ -1436,16 +1417,8 @@ footer {
 
 /*CREATE POST PAGE and EDIT POST PAGE*/
 
-.header-container {
-  width: 35rem;
-}
-
 .blog-posts-wrapper {
   grid-template-columns: 50%;
-}
-
-.blog-post img {
-  width: 70vw;
 }
 
 .Two-links-box {
