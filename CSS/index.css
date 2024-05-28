@@ -83,6 +83,7 @@ select,
   height: 3rem;
   margin-top: 2rem;
   background-color: var(--primary-color);
+  border: 3px var(--tertiary-color) solid;
 }
 
 .BP-header-container,
