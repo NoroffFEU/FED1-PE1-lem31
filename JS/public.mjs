@@ -8,8 +8,6 @@ async function fetchClickedPost() {
   createPostHtml(blogPost.data);
 }
 
-let clickedPost = JSON.parse(localStorage.getItem("clickedPost"));
-
 //FUNCTION TO CREATE HTML FOR CLICKED POST
 async function createPostHtml(clickedPost) {
   const title = document.querySelector(".h1-public-blog-post");
