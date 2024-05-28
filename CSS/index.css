@@ -573,11 +573,6 @@ footer {
   height: auto;
 }
 
-/* .h1-blog-post {
-  text-align: center;
-  width: 80%;
-} */
-
 .Blog-post-filter {
   display: flex;
   flex-direction: column;
@@ -682,6 +677,7 @@ footer {
 #edit-body {
   padding-bottom: 10rem;
 }
+
 #body {
   height: 20rem;
 }
@@ -714,34 +710,38 @@ footer {
 .blog-posts-wrapper {
   display: grid;
   grid-template-columns: 50% 50%;
-  width: 100%;
+  grid-template-rows: auto;
   justify-content: center;
   align-items: center;
   margin: 0;
   padding: 0;
 }
 
-.blog-post {
-  display: flex;
-  flex-direction: column;
-  justify-content: end;
-  align-items: center;
-  width: 100%;
-}
-
 .h2-Edit-Page {
-  height: 11rem;
-  margin-top: -12rem;
-  width: 60vw;
+  height: 15rem;
+  width: 30vw;
   z-index: 12;
   position: absolute;
   text-align: center;
+}
+
+.header-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5rem;
+  width: 40rem;
+  margin-top: -5rem;
+  background-color: rgba(255, 255, 255, 0.8);
+
+  z-index: 11;
 }
 
 .btn-wrapper {
   display: flex;
   flex-direction: row;
   padding-top: 2rem;
+  margin-bottom: 5rem;
   z-index: 12;
   justify-content: space-evenly;
   width: 100%;
@@ -1184,7 +1184,7 @@ footer {
   }
 
   .h2-Edit-Page {
-    width: 60vw;
+    width: 40vw;
   }
   /* Edit page */
 }
@@ -1411,7 +1411,7 @@ footer {
   }
 
   .h2-Edit-Page {
-    width: 60vw;
+    width: 45vw;
   }
 }
 
