@@ -89,7 +89,7 @@ async function fetchBlogPosts() {
 
   
   let posts = JSON.parse(localStorage.getItem('blogPosts'));
-    const last12Posts = posts.slice(-12);
+  let last12Posts = posts.slice(-12);
 
 
 //VARIABLES FOR CAROUSEL AND GRID
@@ -351,8 +351,7 @@ selectElement.addEventListener('change', (event) => {
 
   //**CALL FUNCTIONS */
 
-  // displayCarouselPosts(); 
-  // displayGridPosts(); 
+ 
 
 
 postUserData();
