@@ -734,16 +734,16 @@ footer {
 .header-container {
   display: flex;
   position: absolute;
-  width: 30rem;
-  height: 13rem;
+  width: 100vw;
+  height: 50vh;
   opacity: 0.8;
   z-index: 11;
 }
 
 .h2-Edit-Page {
-  width: 30%;
   height: 11rem;
   margin-top: -12rem;
+  width: 60vw;
   z-index: 12;
   position: absolute;
   text-align: center;
@@ -1163,10 +1163,6 @@ footer {
     margin-bottom: 1rem;
   }
 
-  .h2-Edit-Page {
-    width: 60vw;
-  }
-
   .btn-wrapper {
     justify-content: space-between;
   }
@@ -1205,6 +1201,10 @@ footer {
 
   .button-wrapper-edit {
     gap: 10px;
+  }
+
+  .h2-Edit-Page {
+    width: 60vw;
   }
 }
 
@@ -1428,6 +1428,10 @@ footer {
   .read-more {
     margin-top: 49%;
   }
+
+  .h2-Edit-Page {
+    width: 60vw;
+  }
 }
 
 /*CREATE POST PAGE and EDIT POST PAGE*/
@@ -1459,10 +1463,6 @@ footer {
 
 .edit-page-edit-btn,
 .edit-page-delete-btn {
-  width: 40%;
-}
-
-.h2-Edit-Page {
   width: 40%;
 }
 
@@ -1498,10 +1498,6 @@ footer {
     top: 45%;
   }
 
-  .header-container {
-    width: 20rem;
-  }
-
   .Two-links-box {
     display: flex;
     flex-direction: column;
@@ -1510,11 +1506,6 @@ footer {
 
   .Logout-link {
     margin: 0;
-  }
-
-  .h2-Edit-Page {
-    width: 30%;
-    height: 12rem;
   }
 
   .button-wrapper-edit {
