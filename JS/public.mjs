@@ -5,17 +5,17 @@ async function fetchClickedPost() {
   const clickedPost = JSON.parse(localStorage.getItem('clickedBlogPost'));
   if (!clickedPost) {
     return;
+
+    
   }
 
  
   await createPostHtml(clickedPost);
 
 
-  const newURL = window.location.origin + '/posts/' + encodeURIComponent(clickedPost.id);
-  history.pushState(null, '', newURL);
+ 
+    }
 
-  
-  }
 
 
 
