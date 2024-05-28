@@ -8,12 +8,14 @@
 //FUNCTIONS
 async function fetchClickedPost() {
   const clickedPost = JSON.parse(localStorage.getItem('clickedBlogPost'));
- 
-  const postId = clickedPost.id;
-  const url = new URL(window.location.href);
-  url.searchParams.set('postId', `${postId}`);
-  history.pushState({}, "", url.href);
-  await createPostHtml(clickedPost);
+  
+  if (clickedPost) {
+    const postId = clickedPost.id;
+    const url = new URL(window.location.href);
+    url.searchParams.set('postId', `${postId}`);
+    history.pushState({}, "", url.href);
+    await createPostHtml(clickedPost);
+  }
 }
 
 //FUNCTION TO CREATE HTML FOR CLICKED POST
