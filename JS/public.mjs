@@ -8,16 +8,17 @@
 //FUNCTIONS
 async function fetchClickedPost() {
   const clickedPost = JSON.parse(localStorage.getItem('clickedBlogPost'));
-  createPostHtml(clickedPost);
+ 
   const postId = clickedPost.id;
-
   const url = new URL(window.location.href);
   url.searchParams.set('postId', `${postId}`);
   history.pushState({}, "", url.href);
+  createPostHtml(clickedPost);
 }
 
 //FUNCTION TO CREATE HTML FOR CLICKED POST
 function createPostHtml(clickedPost) {
+  
   const title = document.querySelector('.h1-public-blog-post');
   title.innerHTML = clickedPost.title;
  
