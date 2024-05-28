@@ -49,7 +49,7 @@ async function postUserData() {
 
     localStorage.setItem('accessToken', accessToken);
 
-    
+    fetchBlogPosts();
    
   } catch (error) {
     console.error(error);
@@ -90,7 +90,7 @@ async function fetchBlogPosts() {
   }}
 
   
-  fetchBlogPosts();
+  
 
 
 //VARIABLES FOR CAROUSEL AND GRID
