@@ -1163,7 +1163,7 @@ footer {
   .h1-public-blog-post {
     position: absolute;
     background-color: rgba(255, 255, 255, 0.5);
-    top: 57%;
+    top: 17rem;
     width: 18rem;
     text-align: center;
     z-index: 1;
