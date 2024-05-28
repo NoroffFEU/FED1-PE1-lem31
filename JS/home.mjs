@@ -89,7 +89,7 @@ localStorage.setItem('last12Posts', JSON.stringify(last12Posts));
   }
 }
 
-const last12Posts = JSON.parse(localStorage.getItem('last12Posts'));
+let last12Posts = JSON.parse(localStorage.getItem('last12Posts'));
   
   let posts = JSON.parse(localStorage.getItem('blogPosts'));
 
@@ -356,8 +356,6 @@ selectElement.addEventListener('change', (event) => {
 
  
 fetchBlogPosts();
-
-
 
 displayCarouselPosts(last12Posts);
 displayGridPosts(last12Posts);
