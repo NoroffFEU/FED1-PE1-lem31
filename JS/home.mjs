@@ -303,6 +303,9 @@ last12Posts.forEach(post => {
 
 
 function filterPosts(option) {
+
+  
+  let posts = JSON.parse(localStorage.getItem('blogPosts'));
   const filteredPosts = posts.filter(post => post.tags.includes(option));
   const gridContainer = document.getElementById('grid-container');
   
@@ -318,6 +321,7 @@ selectElement.addEventListener('change', (event) => {
   filterPosts(selectedOption);
 
   if (selectedOption === 'All' ) {
+    let last12Posts = JSON.parse(localStorage.getItem('last12Posts'));
     const gridContainer = document.getElementById('grid-container');
     gridContainer.innerHTML = '';
     last12Posts.forEach(post => {
