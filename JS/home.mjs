@@ -57,6 +57,7 @@ async function postUserData() {
  
 }
 
+postUserData();
 
 
 // FUNCTION TO FETCH BLOG POSTS
@@ -76,20 +77,22 @@ async function fetchBlogPosts() {
 
     let postData = await response.json();
     let blogPosts = postData.data;
-    localStorage.setItem('blogPosts', JSON.stringify(blogPosts));
+    // localStorage.setItem('blogPosts', JSON.stringify(blogPosts));
+  const last12Posts = blogPosts.slice(-12);
 
-    
+localStorage.setItem('last12Posts', JSON.stringify(last12Posts));
 
-    
+
 
   } catch (error) {
     console.error('Error:', error);
   }
 }
 
+const last12Posts = JSON.parse(localStorage.getItem('last12Posts'));
   
   let posts = JSON.parse(localStorage.getItem('blogPosts'));
-  let last12Posts = posts.slice(-12);
+
 
 
 //VARIABLES FOR CAROUSEL AND GRID
@@ -352,12 +355,14 @@ selectElement.addEventListener('change', (event) => {
   //**CALL FUNCTIONS */
 
  
+fetchBlogPosts();
 
 
-postUserData();
+
 displayCarouselPosts(last12Posts);
 displayGridPosts(last12Posts);
-filterPosts(option);
+
+
  
 
  
