@@ -77,11 +77,10 @@ async function fetchBlogPosts() {
 
     let postData = await response.json();
     let blogPosts = postData.data;
-    // localStorage.setItem('blogPosts', JSON.stringify(blogPosts));
+    localStorage.setItem('blogPosts', JSON.stringify(blogPosts));
   const last12Posts = blogPosts.slice(-12);
 
 localStorage.setItem('last12Posts', JSON.stringify(last12Posts));
-
 
 
   } catch (error) {
