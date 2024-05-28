@@ -538,7 +538,6 @@ footer {
 .Public-Blog-Post-Img {
   width: 90%;
   height: 20%;
-  display: fit-content;
 }
 
 .public-post-body {
@@ -546,10 +545,10 @@ footer {
   height: auto;
 }
 
-.h1-blog-post {
+/* .h1-blog-post {
   text-align: center;
   width: 80%;
-}
+} */
 
 .Blog-post-filter {
   display: flex;
@@ -1163,8 +1162,8 @@ footer {
   .h1-public-blog-post {
     position: absolute;
     background-color: rgba(255, 255, 255, 0.5);
-    top: 17rem;
-    width: 18rem;
+    top: 242px;
+    width: 250px;
     text-align: center;
     z-index: 1;
   }
