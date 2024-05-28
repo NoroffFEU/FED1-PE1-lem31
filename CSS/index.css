@@ -535,9 +535,15 @@ footer {
   text-align: center;
 }
 
+.Blog-post-img-box {
+  width: 100%;
+  height: auto;
+}
+
 .Public-Blog-Post-Img {
-  width: 90%;
-  height: 20%;
+  width: 40rem;
+  height: 20rem;
+  object-fit: cover;
 }
 
 .public-post-body {
@@ -1168,15 +1174,6 @@ footer {
     z-index: 1;
   }
 
-  .Blog-post-img-box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    width: 100%;
-    height: auto;
-  }
-
   .Public-Blog-Post-Img {
     width: 20rem;
     height: 14rem;
@@ -1245,6 +1242,12 @@ footer {
   .Author,
   .Published-date {
     font-size: var(--font-size-Body-Mobile);
+  }
+
+  .Public-Blog-Post-Img {
+    width: 35rem;
+    height: 20rem;
+    object-fit: cover;
   }
 
   .H5-home {
@@ -1487,5 +1490,10 @@ footer {
 
   .button-wrapper-edit {
     gap: 50px;
+  }
+
+  .Blog-post-img-box {
+    width: 100%;
+    height: auto;
   }
 }
