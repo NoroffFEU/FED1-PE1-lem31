@@ -192,6 +192,21 @@ function displayCarouselPosts(last12Posts) {
   carouselImage3.addEventListener("click", () => {
     window.location.href = "./post/index.html" + "?" + last12Posts[11].id;
   });
+
+  const readMoreBtn = document.getElementById("read-more-btn-1");
+  readMoreBtn.addEventListener("click", () => {
+    window.location.href = "./post/index.html" + "?" + last12Posts[9].id;
+  });
+
+  const readMoreBtn2 = document.getElementById("read-more-btn-2");
+  readMoreBtn2.addEventListener("click", () => {
+    window.location.href = "./post/index.html" + "?" + last12Posts[10].id;
+  });
+
+  const readMoreBtn3 = document.getElementById("read-more-btn-3");
+  readMoreBtn3.addEventListener("click", () => {
+    window.location.href = "./post/index.html" + "?" + last12Posts[11].id;
+  });
 }
 
 //FUNCTIONS TO DISPLAY BLOG POSTS IN THE 12 IMAGE GRID
