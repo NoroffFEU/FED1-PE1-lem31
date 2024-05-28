@@ -284,8 +284,7 @@ function createPostHtml(post) {
 
 
   postHeader.addEventListener('click', () => {
-    localStorage.setItem('clickedBlogPost', JSON.stringify(post));
-    console.log(post);
+
   window.location.href = './post/index.html'+ '?' + post.id;
    
      

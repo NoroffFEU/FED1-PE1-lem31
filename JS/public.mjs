@@ -1,57 +1,39 @@
-
-
+import { API_FETCH_POSTS_URL } from "./GlobalConst.mjs";
 
 async function fetchClickedPost() {
-  const clickedPost = JSON.parse(localStorage.getItem('clickedBlogPost'));
-  if (!clickedPost) {
-    return;
+  const id = window.location.search.slice(1);
 
-    
-  }
-
- 
-  await createPostHtml(clickedPost);
-
-
- 
-    }
-
-
-
+  const response = await fetch(`${API_FETCH_POSTS_URL}/${id}`);
+  const blogPost = await response.json();
+  createPostHtml(blogPost.data);
+}
 
 //FUNCTION TO CREATE HTML FOR CLICKED POST
 async function createPostHtml(clickedPost) {
- 
-
-  const title = document.querySelector('.h1-public-blog-post');
+  const title = document.querySelector(".h1-public-blog-post");
   if (title) {
     title.innerHTML = clickedPost.title;
   }
- 
-  const image = document.querySelector('.Public-Blog-Post-Img');
+
+  const image = document.querySelector(".Public-Blog-Post-Img");
   if (image) {
-    image.src = clickedPost.media ? clickedPost.media.url : '';
+    image.src = clickedPost.media ? clickedPost.media.url : "";
   }
-  
-  const body = document.querySelector('.public-post-body');
+
+  const body = document.querySelector(".public-post-body");
   if (body) {
     body.textContent = clickedPost.body;
   }
 
-  const author = document.querySelector('.Author');
+  const author = document.querySelector(".Author");
   if (author) {
     author.innerHTML = "Author:" + clickedPost.author.name;
   }
-  
-  const publishedDate = document.querySelector('.Published-date');
+
+  const publishedDate = document.querySelector(".Published-date");
   if (publishedDate) {
     publishedDate.innerHTML = "Published:" + clickedPost.created;
   }
- 
 }
 
 fetchClickedPost();
-
-
-
-
