@@ -129,7 +129,8 @@
             id="password-register"
             name="password"
             placeholder="Please enter your password"
-            min-length="8"
+            pattern="^.{8,}$"
+            title="Please enter a password that is at least 8 characters long."
             required
           />
 
